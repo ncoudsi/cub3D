@@ -31,8 +31,9 @@ SRCS		=	cube.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c fill_map_params.c get_map_file.c \
-				map_file_parsing.c resolution_parsing.c colors_parsing.c \
-				map_line_parsing.c is_cardinal_point.c textures_parsing.c \
+				cube_file_parsing.c resolution_parsing.c colors_parsing.c \
+				map_parsing.c is_cardinal_point.c textures_parsing.c \
+				fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
 				\

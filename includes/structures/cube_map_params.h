@@ -30,11 +30,21 @@ void            free_map_params(t_map_params *to_free);
 */
 
 char            **get_map_file(int fd);
+void            fill_params(char *param_line, t_map_params *to_fill);
+void            fill_map(char *map_line, t_map_params *to_fill);
+
+/*
+**  PARSING
+*/
+
 void            textures_parsing(char   **textures_parsing);
-void            map_file_parsing(char **map_file);
+void            cube_file_parsing(char **map_file);
 void            resolution_parsing(char **resolution_line);
 void            colors_parsing(char **colors_line);
-void            map_line_parsing(char **map_line);
+void            map_parsing(char **map_file, int *index);
 t_bool          is_cardinal_point(char c);
+t_bool          is_valid_map_entry(char c);
+t_bool          is_walled(char **map, t_vector index);
+t_bool          is_tile(char c);
 
 #endif

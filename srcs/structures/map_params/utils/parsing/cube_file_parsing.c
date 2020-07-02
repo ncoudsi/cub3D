@@ -1,6 +1,6 @@
 #include "cube.h"
 
-void    map_file_parsing(char **map_file)
+void    cube_file_parsing(char **map_file)
 {
     int     index;
     char    **splitted_line;
@@ -19,7 +19,7 @@ void    map_file_parsing(char **map_file)
             else if (splitted_line[0][0] == 'C' || splitted_line[0][0] == 'F' )
                 colors_parsing(splitted_line);
             else if (splitted_line[0][0] == '1')
-                map_line_parsing(splitted_line);
+                map_parsing(map_file, &index);
             else
                 error_exit(MAP_ENTRY);
         }

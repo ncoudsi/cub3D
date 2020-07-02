@@ -14,8 +14,8 @@
 # define CUBE_INCLUDES_H
 
 #include "libft.h"
-#include "cube_map_params.h"
 #include "cube_vector.h"
+#include "cube_map_params.h"
 #include "cube_errors.h"
  
 #endif
