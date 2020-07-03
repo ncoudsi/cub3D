@@ -18,9 +18,7 @@ int	ft_tab_len(void	**tab)
 
 	index = 0;
 	if (tab == NULL)
-	{
 		return (index);
-	}
 	while (tab[index] != NULL)
 		index++;
 	return (index);

@@ -46,5 +46,6 @@ t_bool          is_cardinal_point(char c);
 t_bool          is_valid_map_entry(char c);
 t_bool          is_walled(char **map, t_vector index);
 t_bool          is_tile(char c);
+t_bool          is_valid_line_len(char **map, int index);
 
 #endif

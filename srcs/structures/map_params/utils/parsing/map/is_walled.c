@@ -66,7 +66,9 @@ static t_bool   is_left_walled(char **map, t_vector index)
 
 t_bool          is_walled(char **map, t_vector index)
 {
-    if (is_up_walled(map, index) == false)
+    if (is_valid_line_len(map, index.y) == false)
+        return (false);
+    else if (is_up_walled(map, index) == false)
         return (false);
     else if (is_down_walled(map, index) == false)
         return (false);
