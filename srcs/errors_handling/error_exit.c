@@ -3,7 +3,7 @@
 static void fill_errors_tab(char **errors_tab)
 {
     errors_tab[MAP_ENTRY] = ft_strdup("[Invalid entry in .cub file.]\n");
-    errors_tab[RES_ERROR] = ft_strdup("[Invalid resolution settings.]\n");
+    errors_tab[RES_ERROR] = ft_strdup("[Invalid resolution settings. MIN : 400x300, MAX : 1920x1080]\n");
     errors_tab[TEX_ERROR] = ft_strdup("[Invalid textures.]\n");
     errors_tab[COL_ERROR] = ft_strdup("[Invalid colors.]\n");
     errors_tab[MAP_ERROR] = ft_strdup("[Invalid map.]\n");
