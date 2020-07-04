@@ -7,7 +7,7 @@ int main()
 
     fd = open("./ressources/map.cub", O_RDONLY);
     if (fd == -1)
-        return (1);
+        error_exit(FILE_ERROR);
     map_params = malloc_map_params();
     fill_map_params(fd, map_params);
     free_map_params(map_params);

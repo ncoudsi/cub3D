@@ -7,6 +7,8 @@ static void fill_errors_tab(char **errors_tab)
     errors_tab[TEX_ERROR] = ft_strdup("[Invalid textures.]\n");
     errors_tab[COL_ERROR] = ft_strdup("[Invalid colors.]\n");
     errors_tab[MAP_ERROR] = ft_strdup("[Invalid map.]\n");
+    errors_tab[FILE_ERROR] = ft_strdup("[Invalid map file.]\n");
+    errors_tab[MISS_PARAM_ERROR] = ft_strdup("[Map file is missing parameter.]\n");
 }
 
 static char **malloc_errors_tab()

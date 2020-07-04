@@ -34,11 +34,11 @@ SRCS		=	cube.c \
 				cube_file_parsing.c resolution_parsing.c colors_parsing.c \
 				map_parsing.c is_cardinal_point.c textures_parsing.c \
 				fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \
-				is_valid_line_len.c \
+				is_valid_line_len.c is_only_digits.c is_xpm_file.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
 				\
-				error_exit.c is_only_digits.c is_xpm_file.c \
+				error_exit.c \
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 

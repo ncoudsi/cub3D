@@ -4,14 +4,14 @@ t_map_params    create_map_params()
 {
     t_map_params    result;
 
-    result.resolution = (char **)ft_tab_new(3);
-    result.no_textures = (char **)ft_tab_new(2);
-    result.so_textures = (char **)ft_tab_new(2);
-    result.we_textures = (char **)ft_tab_new(2);
-    result.ea_textures = (char **)ft_tab_new(2);
-    result.sprite_textures = (char **)ft_tab_new(2);
-    result.ceiling_colors = (char **)ft_tab_new(2);
-    result.floor_colors = (char **)ft_tab_new(2);
+    result.resolution = NULL;
+    result.no_textures = NULL;
+    result.so_textures = NULL;
+    result.we_textures = NULL;
+    result.ea_textures = NULL;
+    result.sprite_textures = NULL;
+    result.ceiling_colors = NULL;
+    result.floor_colors = NULL;
     result.map = NULL;
     return (result);
 }

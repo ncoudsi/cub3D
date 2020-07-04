@@ -47,5 +47,7 @@ t_bool          is_valid_map_entry(char c);
 t_bool          is_walled(char **map, t_vector index);
 t_bool          is_tile(char c);
 t_bool          is_valid_line_len(char **map, int index);
+t_bool          is_only_digits(char *str);
+t_bool          is_xpm_file(char *file_path);
 
 #endif
