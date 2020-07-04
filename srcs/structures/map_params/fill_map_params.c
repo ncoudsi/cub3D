@@ -46,11 +46,15 @@ void            fill_map_params(int fd, t_map_params *to_fill)
     map_file = get_map_file(fd);
     cube_file_parsing(map_file);
     while (map_file[index] != NULL)
-    {    
-        if (is_map_line(map_file[index]) == false)
-            fill_params(map_file[index], to_fill);
-        else
-            fill_map(map_file[index], to_fill);
+    {   
+        if (map_file[index][0] != '\0')
+        {
+            if (is_map_line(map_file[index]) == false)
+                fill_params(map_file[index], to_fill);
+            else
+                fill_map(map_file[index], to_fill);
+        }
+        
         index++;
     }
     ft_free_tab((void **)map_file);
