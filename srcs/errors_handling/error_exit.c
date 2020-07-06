@@ -21,6 +21,7 @@ static void fill_errors_tab(char **errors_tab)
     errors_tab[MAP_ERROR] = ft_strdup("[Invalid map.]\n");
     errors_tab[FILE_ERROR] = ft_strdup("[Invalid map file.]\n");
     errors_tab[MISS_PARAM_ERROR] = ft_strdup("[Map file is missing parameter.]\n");
+    errors_tab[DOUBLE_PARAM_ERROR] = ft_strdup("[A parameter is set multiple times.]\n");
 }
 
 static char **malloc_errors_tab()

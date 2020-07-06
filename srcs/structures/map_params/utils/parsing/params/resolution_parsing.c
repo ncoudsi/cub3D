@@ -19,6 +19,8 @@ static t_bool   is_valid_resolution_x(char *resolution_value)
     value = ft_atoi(resolution_value);
     if (value < 400 || value > 1920)
         return (false);
+    else if (ft_strlen(resolution_value) < 3 || ft_strlen(resolution_value) > 4)
+        return (false);
     return (true);
 }
 
@@ -28,6 +30,8 @@ static t_bool   is_valid_resolution_y(char *resolution_value)
 
     value = ft_atoi(resolution_value);
     if (value < 300 || value > 1080)
+        return (false);
+    else if (ft_strlen(resolution_value) < 3 || ft_strlen(resolution_value) > 4)
         return (false);
     return (true);
 }

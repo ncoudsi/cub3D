@@ -13,6 +13,6 @@
 #ifndef CUBE_H
 # define CUBE_H
 
-#include "cube_includes.h"
+# include "cube_includes.h"
 
 #endif

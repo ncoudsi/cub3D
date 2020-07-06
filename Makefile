@@ -17,13 +17,13 @@ CC			=	gcc
 SRCS_DIR	= 	$(shell find srcs -type d)
 INC_DIR		= 	$(shell find includes -type d) \
 				$(shell find libs/libft/includes -type d)
-LIB_DIR		=	libs/libft
+LIB_DIR		=	libs/libft libs/mlx
 OBJS_DIR	= 	objs
 
 vpath %.c $(foreach dir, $(SRCS_DIR), $(dir))
 
 # List de toute les library a linker au projet (le nom - le lib et - le .a)
-LIB			=	ft
+LIB			=	ft mlx mlx_Linux
 
 #SRCS = $(foreach dir, $(SRCS_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
 
@@ -45,7 +45,7 @@ OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 #Compilation flag
 CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
 
-IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir))
+IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir)) -I libs/mlx
 
 LFLAGS		=	$(foreach dir, $(LIB_DIR), -L $(dir)) \
 				$(foreach lib, $(LIB), -l $(lib)) \
@@ -76,7 +76,7 @@ $(OBJS_DIR)/%.o :		%.c
 
 $(NAME): 				$(INC_DIR) $(OBJS) Makefile
 				@echo "-----\nCreating Executable $@ ... \c"
-				@$(CC) $(CFLAGS) $(LFLAGS) $(OBJS) -o $(NAME) libs/libft/libft.a
+				@$(CC) $(LFLAGS) -o $(NAME) $(OBJS) libs/mlx/libmlx.a libs/mlx/libmlx_Linux.a libs/libft/libft.a $(CFLAGS) -lXext -lX11 -lm -lbsd
 				@echo "DONE\n-----"
 
 norme:

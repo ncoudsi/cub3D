@@ -14,6 +14,8 @@
 
 int main()
 {
+    void    *mlx_ptr;
+    void    *win_ptr;
     int fd;
     t_map_params    *map_params;
 
@@ -22,6 +24,10 @@ int main()
         error_exit(FILE_ERROR);
     map_params = malloc_map_params();
     fill_map_params(fd, map_params);
+    mlx_ptr = mlx_init();
+    win_ptr = mlx_new_window(mlx_ptr, 800, 600, "LOL CA MARCHE ?");
+    mlx_destroy_window(mlx_ptr, win_ptr);
+    (void)win_ptr;
     free_map_params(map_params);
     return(0);
 }
