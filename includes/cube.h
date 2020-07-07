@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:28:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/07 13:16:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 # define CUBE_H
 
 # include "cube_includes.h"
+
+/*
+**  KEY_HANDLING
+*/
+
+int key_handler(int key);
 
 #endif

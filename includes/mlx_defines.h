@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_includes.h                                    :+:      :+:    :+:   */
+/*   mlx_defines.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:59:10 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/07 13:18:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_INCLUDES_H
-# define CUBE_INCLUDES_H
+#ifndef MLX_DEFINES_H
+# define MLX_DEFINES_H
 
-#include "libft.h"
-#include "mlx.h"
-#include "mlx_defines.h"
-#include "cube_vector.h"
-#include "cube_color.h"
-#include "cube_map_params.h"
-#include "cube_errors.h"
- 
+#define ESC_KEY 65307
+
 #endif

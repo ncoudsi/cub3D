@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:28:49 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/07 14:02:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 typedef struct  s_map_params
 {
-    char    **resolution;
-    char    **no_textures;
-    char    **so_textures;
-    char    **we_textures;
-    char    **ea_textures;
-    char    **sprite_textures;
-    char    **ceiling_colors;
-    char    **floor_colors;
-    char    **map;
+    t_vector    *resolution;
+    char        *no_textures;
+    char        *so_textures;
+    char        *we_textures;
+    char        *ea_textures;
+    char        *sprite_textures;
+    t_color     *ceiling_colors;
+    t_color     *floor_colors;
+    char        **map;
 }               t_map_params;
 
 void            fill_map_params(int fd, t_map_params *to_fill);

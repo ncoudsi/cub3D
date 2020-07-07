@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_includes.h                                    :+:      :+:    :+:   */
+/*   cube_color.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:59:10 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/07 13:50:42 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/07 13:54:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_INCLUDES_H
-# define CUBE_INCLUDES_H
+#ifndef CUBE_COLOR_H
+# define CUBE_COLOR_H
 
-#include "libft.h"
-#include "mlx.h"
-#include "mlx_defines.h"
-#include "cube_vector.h"
-#include "cube_color.h"
-#include "cube_map_params.h"
-#include "cube_errors.h"
- 
+typedef struct  s_color
+{
+    unsigned char   r;
+    unsigned char   g;
+    unsigned char   b;
+}               t_color;
+
+/*
+**  CREATORS & DESTRUCTORS
+*/
+
+t_color create_color(unsigned char r, unsigned char g, unsigned char b);
+t_color *malloc_color(unsigned char r, unsigned char g, unsigned char b);
+void    free_color(t_color *to_free);
+
 #endif

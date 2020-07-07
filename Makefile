@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/06 13:31:39 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/07 13:58:50 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,10 @@ SRCS		=	cube.c \
 				is_valid_line_len.c is_only_digits.c is_xpm_file.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
+				\
+				create_color.c malloc_color.c free_color.c \
+				\
+				key_handler.c \
 				\
 				error_exit.c \
 

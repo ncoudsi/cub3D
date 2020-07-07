@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_includes.h                                    :+:      :+:    :+:   */
+/*   key_handler.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:59:10 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/07 13:05:27 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/07 13:20:08 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_INCLUDES_H
-# define CUBE_INCLUDES_H
+#include "cube.h"
 
-#include "libft.h"
-#include "mlx.h"
-#include "mlx_defines.h"
-#include "cube_vector.h"
-#include "cube_color.h"
-#include "cube_map_params.h"
-#include "cube_errors.h"
- 
-#endif
+int key_handler(int key)
+{
+    ft_putnbr(key);
+    ft_putchar('\n');
+    if (key == ESC_KEY)
+        exit(0);
+    return (key);
+}
