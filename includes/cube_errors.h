@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:29:07 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:29:07 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/08 11:38:19 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/08 11:38:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@
 # define MISS_PARAM_ERROR 6
 # define DOUBLE_PARAM_ERROR 7
 
-void    error_exit(int error_code);
+void error_exit(int error_code);
 #endif

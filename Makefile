@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/07 13:58:50 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/08 12:15:05 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,10 @@ LIB			=	ft mlx mlx_Linux
 #SRCS = $(foreach dir, $(SRCS_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
 
 SRCS		=	cube.c \
+				\
+				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
+				\
+				create_player.c malloc_player.c destroy_player.c free_player.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c fill_map_params.c get_map_file.c \
