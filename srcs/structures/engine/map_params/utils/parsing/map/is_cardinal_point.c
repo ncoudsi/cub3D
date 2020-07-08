@@ -5,16 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:30:04 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:30:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 01:37:06 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/09 01:37:06 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_bool  is_cardinal_point(char c)
+t_bool	is_cardinal_point(char c)
 {
-    if (c == 'N' || c == 'S' || c == 'E' || c == 'W')
-        return (true);
-    return (false);
+	if (c == 'N' || c == 'S' || c == 'E' || c == 'W')
+		return (true);
+	return (false);
 }
+
