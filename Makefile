@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/08 12:30:51 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/08 20:59:44 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ LIB			=	ft mlx mlx_Linux
 
 #SRCS = $(foreach dir, $(SRCS_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
 
-SRCS		=	cube.c cube_file_fd.c \
+SRCS		=	cube.c cube_file_fd.c get_pixel_index.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
 				\
@@ -41,6 +41,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				map_parsing.c is_cardinal_point.c textures_parsing.c \
 				fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \
 				is_valid_line_len.c is_only_digits.c is_xpm_file.c \
+				\
+				create_mlx_params.c malloc_mlx_params.c destroy_mlx_params.c free_mlx_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				\

@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_engine.h                                      :+:      :+:    :+:   */
+/*   get_pixel_index.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 21:21:02 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/08 20:21:12 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/08 20:30:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_ENGINE_H
-# define CUBE_ENGINE_H
+#include "cube.h"
 
-typedef struct s_engine
+int	get_pixel_index(t_vector pos, t_engine engine)
 {
-	t_map_params	*map_params;
-	// t_mlx_params	*mlx_params;
-	t_player		*player;
-}				t_engine;
+	int	pixel_index;
 
-/*
-**	CREATORS & DESTRUCTORS
-*/
-
-t_engine	create_engine();
-t_engine	*malloc_engine();
-void		destroy_engine(t_engine to_destroy);
-void		free_engine(t_engine *to_free);
-#endif
+	pixel_index = (pos.x + (engine.map_params->resolution->x * pos.y)) * 4;
+	return (pixel_index);
+}

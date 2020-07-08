@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_engine.h                                      :+:      :+:    :+:   */
+/*   malloc_mlx_params.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 21:21:02 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/08 20:56:06 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/08 20:57:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_ENGINE_H
-# define CUBE_ENGINE_H
+#include "cube.h"
 
-typedef struct s_engine
+t_mlx_params	*malloc_mlx_params()
 {
-	t_map_params	*map_params;
-	// t_mlx_params	*mlx_params;
-	t_player		*player;
-}				t_engine;
+	t_mlx_params	*result;
 
-/*
-**	CREATORS & DESTRUCTORS
-*/
-
-t_engine	create_engine();
-t_engine	*malloc_engine();
-void		destroy_engine(t_engine to_destroy);
-void		free_engine(t_engine *to_free);
-#endif
+	result = (t_mlx_params *)malloc(sizeof(t_mlx_params));
+	if (result == NULL)
+		return (NULL);
+	*result = create_mlx_params();
+	return (result);
+}
