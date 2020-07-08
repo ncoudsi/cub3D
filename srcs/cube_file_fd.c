@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube.c                                             :+:      :+:    :+:   */
+/*   cube_file_check.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 12:30:30 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/08 12:28:03 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/08 12:29:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	main(void)
+int	cube_file_fd()
 {
-	t_engine		*engine;
+	int	fd;
 
-	engine = malloc_engine();
-	fill_map_params(cube_file_fd(), engine->map_params);
-	run_application(engine);
-	free_engine(engine);
-	return (0);
+	fd = open("./ressources/map.cub", O_RDONLY);
+	if (fd == -1)
+		error_exit(FILE_ERROR);
+	return (fd);
 }
