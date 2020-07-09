@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/09 12:00:43 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/09 12:31:23 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ LIB			=	ft mlx mlx_Linux
 
 #SRCS = $(foreach dir, $(SRCS_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
 
-SRCS		=	cube.c cube_file_fd.c get_pixel_index.c \
+SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
 				\
@@ -48,9 +48,10 @@ SRCS		=	cube.c cube_file_fd.c get_pixel_index.c \
 				get_mlx_ptr.c set_mlx_ptr.c get_win_ptr.c set_win_ptr.c \
 				get_img_ptr.c set_img_ptr.c get_pixels.c set_pixels.c \
 				get_bits_per_pixel.c set_bits_per_pixel.c get_size_line.c \
-				set_size_line.c get_endian.c set_endian.c \
+				set_size_line.c get_endian.c set_endian.c get_resolution_x.c \
+				get_resolution_y.c \
 				\
-				run_application.c \
+				run_application.c get_pixel_index.c put_pixel.c draw_rectangle.c \
 				\
 				key_handler.c \
 				\

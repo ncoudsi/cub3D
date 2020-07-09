@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_pixel_index.c                                  :+:      :+:    :+:   */
+/*   get_resolution_x.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:21:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:23:17 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 12:09:41 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/09 12:15:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	get_pixel_index(t_vector pos)
+int	resolution_x()
 {
-	int	pixel_index;
-
-	pixel_index = (pos.x + (g_engine->map_params->resolution->x * pos.y)) * 4;
-	return (pixel_index);
+	return (g_engine->map_params->resolution->x);
 }

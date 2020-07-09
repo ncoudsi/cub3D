@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_pixel_index.c                                  :+:      :+:    :+:   */
+/*   put_pixel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:21:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:23:17 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 12:23:30 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/09 12:25:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	get_pixel_index(t_vector pos)
+void	put_pixel(t_vector pos, t_color color)
 {
 	int	pixel_index;
 
-	pixel_index = (pos.x + (g_engine->map_params->resolution->x * pos.y)) * 4;
-	return (pixel_index);
+	pixel_index = get_pixel_index(pos);
+	g_engine->mlx_params->pixels[pixel_index + RED_INDEX] = color.r;
+	g_engine->mlx_params->pixels[pixel_index + GREEN_INDEX] = color.g;
+	g_engine->mlx_params->pixels[pixel_index + BLUE_INDEX] = color.b;
 }

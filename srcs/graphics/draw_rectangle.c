@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_pixel_index.c                                  :+:      :+:    :+:   */
+/*   draw_rectangle.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:21:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:23:17 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 12:28:41 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/09 12:33:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	get_pixel_index(t_vector pos)
+void	draw_rectangle(t_vector pos, t_vector dimension, t_color color)
 {
-	int	pixel_index;
+	t_vector	index;
 
-	pixel_index = (pos.x + (g_engine->map_params->resolution->x * pos.y)) * 4;
-	return (pixel_index);
+	index = create_vector(0, 0);
+	while (index.y < dimension.y)
+	{
+		index.x = 0;
+		while (index.x < dimension.x)
+		{
+			put_pixel(create_vector(index.x + pos.x, index.y + pos.y), color);
+			index.x++;
+		}
+		index.y++;
+	}
 }

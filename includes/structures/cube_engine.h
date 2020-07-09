@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 11:57:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/09 12:15:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,6 @@ int		size_line();
 void	set_size_line(int value);
 int		endian();
 void	set_size_line(int value);
+int		resolution_x();
+int		resolution_y();
 #endif
