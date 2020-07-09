@@ -13,6 +13,10 @@
 #ifndef CUBE_ERRORS_H
 # define CUBE_ERRORS_H
 
+/*
+**	BASIC ERRORS
+*/
+
 # define ERRORS_NBR 8
 # define MAP_ENTRY 0
 # define RES_ERROR 1
@@ -23,5 +27,14 @@
 # define MISS_PARAM_ERROR 6
 # define DOUBLE_PARAM_ERROR 7
 
-void error_exit(int error_code);
+void	error_exit(int error_code);
+
+/*
+**	VECTOR ERRORS
+*/
+
+# define VECTOR_ERRORS_NBR 1
+# define PIXEL_POS_ERROR 0
+
+void	error_exit_vector(t_vector pos, int error_code);
 #endif

@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/09 12:31:23 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/09 12:52:45 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				key_handler.c \
 				\
-				error_exit.c \
+				error_exit.c error_exit_vector.c \
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
