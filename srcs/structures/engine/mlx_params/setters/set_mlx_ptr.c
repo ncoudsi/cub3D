@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_engine.c                                      :+:      :+:    :+:   */
+/*   set_mlx_ptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 12:07:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 11:16:32 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 10:47:07 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/09 11:19:51 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	free_engine()
+void	set_mlx_ptr(void *value)
 {
-	destroy_engine(*g_engine);
-	free(g_engine);
+	g_engine->mlx_params->mlx_ptr = value;
 }

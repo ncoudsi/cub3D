@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 21:39:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/09 11:18:18 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int		key_handler(int key);
 **	APPLICATION
 */
 
-void	run_application(t_engine *engine);
-int		get_pixel_index(t_vector pos, t_engine *engine);
+void	run_application();
+int		get_pixel_index(t_vector pos);
 #endif

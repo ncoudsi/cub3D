@@ -43,9 +43,9 @@ static t_bool   is_all_map_params(t_map_params *to_fill)
     else if (to_fill->ceiling_colors == NULL)
         return (false);
     else if (to_fill->floor_colors == NULL)
-        return (false);               
+        return (false);
     else if (to_fill->map == NULL)
-        return (false);                         
+        return (false);
     return (true);
 }
 
@@ -58,7 +58,7 @@ void            fill_map_params(int fd, t_map_params *to_fill)
     map_file = get_map_file(fd);
     cube_file_parsing(map_file);
     while (map_file[index] != NULL)
-    {   
+    {
         if (map_file[index][0] != '\0')
         {
             if (is_map_line(map_file[index]) == false)
@@ -66,7 +66,7 @@ void            fill_map_params(int fd, t_map_params *to_fill)
             else
                 fill_map(map_file[index], to_fill);
         }
-        
+
         index++;
     }
     ft_free_tab((void **)map_file);

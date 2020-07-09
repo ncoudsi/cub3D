@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/08 20:59:44 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/09 11:00:25 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRCS		=	cube.c cube_file_fd.c get_pixel_index.c \
 				create_mlx_params.c malloc_mlx_params.c destroy_mlx_params.c free_mlx_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
+				set_mlx_ptr.c \
 				\
 				run_application.c \
 				\
