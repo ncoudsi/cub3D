@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/09 12:52:45 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/09 14:44:43 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
 				\
+				create_fvector.c malloc_fvector.c free_fvector.c \
+				\
 				create_color.c malloc_color.c free_color.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
@@ -52,8 +54,11 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_resolution_y.c \
 				\
 				run_application.c get_pixel_index.c put_pixel.c draw_rectangle.c \
+				draw_circle.c \
 				\
 				key_handler.c \
+				\
+				power.c \
 				\
 				error_exit.c error_exit_vector.c \
 
