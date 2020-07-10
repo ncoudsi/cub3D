@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   distance_calculation.c                             :+:      :+:    :+:   */
+/*   render_wall.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 09:11:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:28:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/10 10:00:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/10 10:05:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
-#include <stdio.h>
 
-float	distance_calculation(t_vector starting_point, t_vector end_point)
+void	render_wall(t_vector map_index)
 {
-	int tmp;
-	int tmp2;
+	t_vector	size;
+	t_vector	pos;
+	t_color		color;
 
-	tmp = pow(end_point.x - starting_point.x, 2);
-	tmp2 = pow(end_point.y - starting_point.y, 2);
-	return ((float)sqrt(tmp + tmp2));
+	size = get_tile_size(get_minimap_tiles_nbr());
+	pos = create_vector(map_index.x * size.x, map_index.y * size.y);
+	color = create_color(255, 0, 0);
+	draw_rectangle(pos, size, color);
 }

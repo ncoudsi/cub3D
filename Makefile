@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/10 09:19:42 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/10 10:06:31 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_resolution_y.c \
 				\
 				run_application.c get_pixel_index.c put_pixel.c draw_rectangle.c \
-				draw_circle.c \
+				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
+				render_wall.c render_tile.c \
 				\
 				key_handler.c \
 				\

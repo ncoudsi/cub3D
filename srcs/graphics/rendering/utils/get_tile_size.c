@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   distance_calculation.c                             :+:      :+:    :+:   */
+/*   get_tile_size.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 09:11:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:28:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/10 09:42:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/10 10:09:53 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
-#include <stdio.h>
 
-float	distance_calculation(t_vector starting_point, t_vector end_point)
+t_vector	get_tile_size(t_vector minimap_tiles_nbr)
 {
-	int tmp;
-	int tmp2;
+	t_vector	result;
 
-	tmp = pow(end_point.x - starting_point.x, 2);
-	tmp2 = pow(end_point.y - starting_point.y, 2);
-	return ((float)sqrt(tmp + tmp2));
+	result.x = resolution_x() / minimap_tiles_nbr.x;
+	result.y = resolution_y() / minimap_tiles_nbr.y;
+	return (result);
 }

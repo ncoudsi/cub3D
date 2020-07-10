@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   distance_calculation.c                             :+:      :+:    :+:   */
+/*   get_minimap_size.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 09:11:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:28:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/10 09:30:39 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/10 09:48:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
-#include <stdio.h>
 
-float	distance_calculation(t_vector starting_point, t_vector end_point)
+t_vector	get_minimap_tiles_nbr()
 {
-	int tmp;
-	int tmp2;
+	t_vector	result;
+	int			index;
+	int			tmp;
 
-	tmp = pow(end_point.x - starting_point.x, 2);
-	tmp2 = pow(end_point.y - starting_point.y, 2);
-	return ((float)sqrt(tmp + tmp2));
+	result.x = 0;
+	index = 0;
+	while (g_engine->map_params->map[index] != NULL)
+	{
+		tmp = ft_strlen(g_engine->map_params->map[index]);
+		if (tmp > result.x)
+			result.x = tmp;
+		index++;
+	}
+	result.y = index;
+	return (result);
 }
