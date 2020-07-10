@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 14:27:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/10 09:20:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	draw_circle(t_vector center, int radius, t_color color);
 **	MATHS
 */
 
-int		power(int nbr, int exponent);
+float		f_power(float nbr, int exponent);
+float		distance_calculation(t_vector starting_point, t_vector end_point);
 #endif

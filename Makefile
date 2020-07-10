@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/09 14:44:43 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/10 09:19:42 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				key_handler.c \
 				\
-				power.c \
+				f_power.c distance_calculation.c \
 				\
 				error_exit.c error_exit_vector.c \
 

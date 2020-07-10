@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_includes.h                                    :+:      :+:    :+:   */
+/*   distance_calculation.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:03:58 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/10 09:11:43 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/10 09:14:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_INCLUDES_H
-# define CUBE_INCLUDES_H
+#include "cube.h"
 
-#include <math.h>
-#include "libft.h"
-#include "mlx.h"
-#include "mlx_defines.h"
-#include "cube_vector.h"
-#include "cube_fvector.h"
-#include "cube_color.h"
-#include "cube_player.h"
-#include "cube_map_params.h"
-#include "cube_mlx_params.h"
-#include "cube_engine.h"
-#include "cube_errors.h"
+float	distance_calculation(t_vector starting_point, t_vector end_point)
+{
+	float tmp;
+	float tmp2;
 
-#endif
+	tmp = pow(end_point.x - starting_point.x, 2);
+	tmp2 = pow(end_point.y - starting_point.y, 2);
+	return ((float)sqrt(tmp + tmp2));
+}
