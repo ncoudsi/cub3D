@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/10 10:06:31 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/13 15:15:33 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,6 @@ LIB			=	ft mlx mlx_Linux
 SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_vector.c malloc_vector.c free_vector.c \
-				\
-				create_fvector.c malloc_fvector.c free_fvector.c \
 				\
 				create_color.c malloc_color.c free_color.c \
 				\
@@ -59,7 +57,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				key_handler.c \
 				\
-				f_power.c distance_calculation.c \
+				distance_calculation.c \
 				\
 				error_exit.c error_exit_vector.c \
 

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mlx_defines.h                                      :+:      :+:    :+:   */
+/*   cube_defines.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:22:29 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/13 15:18:06 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MLX_DEFINES_H
-# define MLX_DEFINES_H
+#ifndef CUBE_DEFINES_H
+# define CUBE_DEFINES_H
 
 /*
 **	COLOR SORTING
@@ -28,4 +28,10 @@
 
 #define ESC_KEY 65307
 
+/*
+**	MINIMAP
+*/
+
+#define TILE_COLOR 0, 0, 255
+#define WALL_COLOR 255, 0, 0
 #endif

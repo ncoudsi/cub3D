@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 10:06:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/13 15:15:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,5 @@ void		render_tile(t_vector map_index);
 **	MATHS
 */
 
-float		f_power(float nbr, int exponent);
 float		distance_calculation(t_vector starting_point, t_vector end_point);
 #endif
