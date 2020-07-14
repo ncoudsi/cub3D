@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/13 15:15:33 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/14 12:05:10 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,22 +36,27 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
-				free_map_params.c fill_map_params.c get_map_file.c \
+				free_map_params.c get_map_file.c \
+				get_resolution_x.c get_resolution_y.c get_no_textures.c \
+				get_so_textures.c get_we_textures.c get_ea_textures.c \
+				get_sprite_textures.c get_ceiling_colors.c get_floor_colors.c \
+				get_map.c \
 				cube_file_parsing.c resolution_parsing.c colors_parsing.c \
 				map_parsing.c is_cardinal_point.c textures_parsing.c \
 				fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \
 				is_valid_line_len.c is_only_digits.c is_xpm_file.c \
 				\
 				create_mlx_params.c malloc_mlx_params.c destroy_mlx_params.c free_mlx_params.c \
-				\
-				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				get_mlx_ptr.c set_mlx_ptr.c get_win_ptr.c set_win_ptr.c \
 				get_img_ptr.c set_img_ptr.c get_pixels.c set_pixels.c \
 				get_bits_per_pixel.c set_bits_per_pixel.c get_size_line.c \
-				set_size_line.c get_endian.c set_endian.c get_resolution_x.c \
-				get_resolution_y.c \
+				set_size_line.c get_endian.c set_endian.c \
 				\
-				run_application.c get_pixel_index.c put_pixel.c draw_rectangle.c \
+				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
+				load_game.c close_game.c get_map_params.c \
+				get_mlx_params.c get_player.c \
+				\
+				run_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
 				render_wall.c render_tile.c \
 				\

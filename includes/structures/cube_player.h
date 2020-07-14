@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 12:09:30 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 11:41:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 typedef struct s_player
 {
-	t_vector	pos;
+	t_vector	*pos;
+	t_vector	*forward;
+	t_vector	*right;
+	t_color		*color;
 }				t_player;
 
 /*

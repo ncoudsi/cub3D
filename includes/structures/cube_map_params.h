@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 14:02:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 11:56:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ typedef struct  s_map_params
     char        **map;
 }               t_map_params;
 
-void            fill_map_params(int fd, t_map_params *to_fill);
-
 /*
 **  CREATORS & DESTRUCTORS
 */
@@ -36,6 +34,21 @@ t_map_params    create_map_params();
 t_map_params    *malloc_map_params();
 void            destroy_map_params(t_map_params to_destroy);
 void            free_map_params(t_map_params *to_free);
+
+/*
+**	GETTERS & SETTERS
+*/
+
+int				resolution_x();
+int				resolution_y();
+char			*no_textures();
+char			*so_textures();
+char			*we_textures();
+char			*ea_textures();
+char			*sprite_textures();
+t_color			*ceiling_colors();
+t_color			*floor_colors();
+char			**map();
 
 /*
 **  UTILS

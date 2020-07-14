@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/13 15:15:48 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 11:31:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int			key_handler(int key);
 **	RENDERING
 */
 
-void		run_application();
+void		run_game();
 int			get_pixel_index(t_vector pos);
 void		put_pixel(t_vector pos, t_color color);
 void		draw_rectangle(t_vector pos, t_vector dimension, t_color color);

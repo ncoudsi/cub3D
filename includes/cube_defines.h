@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/13 15:18:06 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 11:42:53 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 **	MINIMAP
 */
 
-#define TILE_COLOR 0, 0, 255
-#define WALL_COLOR 255, 0, 0
+#define TILE_COLOR 53, 35, 30
+#define WALL_COLOR 165, 47, 12
+#define PLAYER_COLOR 47, 216, 60
 #endif

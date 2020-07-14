@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_map_params.c                                  :+:      :+:    :+:   */
+/*   load_game.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -49,9 +49,9 @@ static t_bool   is_all_map_params(t_map_params *to_fill)
     return (true);
 }
 
-void            fill_map_params(int fd, t_map_params *to_fill)
+static void		load_map_params(int fd, t_map_params *to_fill)
 {
-    int     index;
+	int     index;
     char    **map_file;
 
     index = 0;
@@ -73,4 +73,10 @@ void            fill_map_params(int fd, t_map_params *to_fill)
     if (is_all_map_params(to_fill) == false)
         error_exit(MISS_PARAM_ERROR);
     (void)to_fill;
+}
+
+void            load_game(int fd)
+{
+	load_map_params(fd, g_engine->map_params);
+	// load_player(fd, g_engine->player);
 }
