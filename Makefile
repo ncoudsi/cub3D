@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/14 13:32:36 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/14 14:23:14 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_color.c set_color.c get_forward.c set_forward.c get_forward_x.c \
 				get_forward_y.c get_pos.c set_pos.c get_pos_x.c get_pos_y.c get_right.c \
-				set_right.c get_right_x.c get_right_y.c \
+				set_right.c get_right_x.c get_right_y.c load_player.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c get_map_file.c \
@@ -62,7 +62,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				run_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
-				render_wall.c render_tile.c \
+				render_wall.c render_tile.c map_pos_to_pixel_pos.c render_player.c \
 				\
 				key_handler.c \
 				\

@@ -76,5 +76,5 @@ static void		load_map_params(int fd)
 void            load_game(int fd)
 {
 	load_map_params(fd);
-	// load_player();
+	load_player();
 }

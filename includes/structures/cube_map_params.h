@@ -6,34 +6,34 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 13:05:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 13:52:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_MAP_PARAMS_H
 # define CUBE_MAP_PARAMS_H
 
-typedef struct  s_map_params
+typedef struct	s_map_params
 {
-    t_vector    *resolution;
-    char        *no_textures;
-    char        *so_textures;
-    char        *we_textures;
-    char        *ea_textures;
-    char        *sprite_textures;
-    t_color     *ceiling_colors;
-    t_color     *floor_colors;
-    char        **map;
-}               t_map_params;
+	t_vector	*resolution;
+	char		*no_textures;
+	char		*so_textures;
+	char		*we_textures;
+	char		*ea_textures;
+	char		*sprite_textures;
+	t_color		*ceiling_colors;
+	t_color		*floor_colors;
+	char		**map;
+}				t_map_params;
 
 /*
 **  CREATORS & DESTRUCTORS
 */
 
-t_map_params    create_map_params();
-t_map_params    *malloc_map_params();
-void            destroy_map_params(t_map_params to_destroy);
-void            free_map_params(t_map_params *to_free);
+t_map_params	create_map_params();
+t_map_params	*malloc_map_params();
+void			destroy_map_params(t_map_params to_destroy);
+void			free_map_params(t_map_params *to_free);
 
 /*
 **	GETTERS & SETTERS

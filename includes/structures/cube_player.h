@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 13:31:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 14:24:02 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ typedef struct s_player
 	t_vector	*right;
 	t_color		*color;
 }				t_player;
+
+void		load_player();
 
 /*
 **	CREATORS & DESTRUCTORS

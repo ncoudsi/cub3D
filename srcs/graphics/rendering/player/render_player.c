@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_forward_x.c                                    :+:      :+:    :+:   */
+/*   render_player.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 13:18:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 13:33:36 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/14 14:19:14 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/14 14:24:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	forward_x()
+void	render_player()
 {
-	return (g_engine->player->forward->x);
+	t_vector	*player_pos;
+
+	player_pos = pos();
+	draw_circle(*player_pos, PLAYER_SIZE, create_color(PLAYER_COLOR));
 }
