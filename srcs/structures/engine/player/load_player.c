@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:35:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 14:47:15 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,5 @@ void	load_player()
 	t_vector	spawn_pos;
 
 	spawn_pos = map_pos_to_pixel_pos(get_spawn_pos());
-	ft_putnbr(spawn_pos.x);
-	ft_putchar('\n');
-	ft_putnbr(spawn_pos.y);
-	ft_putchar('\n');
 	set_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
 }

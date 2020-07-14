@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/13 15:17:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 14:45:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CUBE_INCLUDES_H
 
 #include <math.h>
+#include <stdio.h>
 #include "libft.h"
 #include "mlx.h"
 #include "cube_defines.h"
