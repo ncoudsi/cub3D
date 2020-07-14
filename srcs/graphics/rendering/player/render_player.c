@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 14:19:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:24:41 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 15:51:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	render_player()
 {
-	t_vector	*player_pos;
+	t_vector	center;
 
-	player_pos = pos();
-	draw_circle(*player_pos, PLAYER_SIZE, create_color(PLAYER_COLOR));
+	center = create_vector(pos_x(), pos_y());
+	draw_circle(center, PLAYER_SIZE, create_color(PLAYER_COLOR));
 }

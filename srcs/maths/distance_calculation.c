@@ -6,12 +6,11 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 09:11:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:28:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 15:47:55 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
-#include <stdio.h>
 
 float	distance_calculation(t_vector starting_point, t_vector end_point)
 {

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 13:55:03 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:34:30 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 15:23:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_vector	map_pos_to_pixel_pos(t_vector map_pos)
 
 	map_size = get_minimap_tiles_nbr();
 	tile_size = get_tile_size(map_size);
-	result.x = resolution_x() / (map_size.x / map_pos.x) + (tile_size.x / 2);
-	result.y = resolution_y() / (map_size.y / map_pos.y) + (tile_size.y / 2);
+	result.x = (resolution_x() / (map_size.x / (int)map_pos.x)) + (tile_size.x / 2);
+	result.y = (resolution_y() / (map_size.y / (int)map_pos.y)) + (tile_size.y / 2);
 	return (result);
 }
