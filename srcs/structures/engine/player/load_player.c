@@ -6,10 +6,10 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 11:44:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 12:10:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	load_player(int )
+void	load_player()

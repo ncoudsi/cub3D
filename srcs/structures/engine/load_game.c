@@ -49,7 +49,7 @@ static t_bool   is_all_map_params(t_map_params *to_fill)
     return (true);
 }
 
-static void		load_map_params(int fd, t_map_params *to_fill)
+static void		load_map_params(int fd)
 {
 	int     index;
     char    **map_file;
@@ -62,21 +62,20 @@ static void		load_map_params(int fd, t_map_params *to_fill)
         if (map_file[index][0] != '\0')
         {
             if (is_map_line(map_file[index]) == false)
-                fill_params(map_file[index], to_fill);
+                fill_params(map_file[index]);
             else
-                fill_map(map_file[index], to_fill);
+                fill_map(map_file[index]);
         }
 
         index++;
     }
     ft_free_tab((void **)map_file);
-    if (is_all_map_params(to_fill) == false)
+    if (is_all_map_params(map_params()) == false)
         error_exit(MISS_PARAM_ERROR);
-    (void)to_fill;
 }
 
 void            load_game(int fd)
 {
-	load_map_params(fd, g_engine->map_params);
-	// load_player(fd, g_engine->player);
+	load_map_params(fd);
+	// load_player();
 }

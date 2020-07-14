@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_floor_color.c                                  :+:      :+:    :+:   */
+/*   set_ceiling_color.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 12:04:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:50:27 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/14 12:32:38 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/14 12:47:21 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_color	*floor_colors()
+void	set_ceiling_color(t_color *value)
 {
-	return (g_engine->map_params->floor_colors);
+	g_engine->map_params->ceiling_colors = value;
 }

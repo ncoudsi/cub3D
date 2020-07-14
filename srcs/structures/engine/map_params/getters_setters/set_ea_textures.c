@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_floor_color.c                                  :+:      :+:    :+:   */
+/*   set_ea_textures.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 12:04:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:50:27 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/14 12:31:49 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/14 12:33:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_color	*floor_colors()
+void	set_ea_textures(char *value)
 {
-	return (g_engine->map_params->floor_colors);
+	g_engine->map_params->ea_textures = value;
 }

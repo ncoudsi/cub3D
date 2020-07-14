@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 11:56:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 12:50:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,24 @@ void            free_map_params(t_map_params *to_free);
 **	GETTERS & SETTERS
 */
 
+t_vector		*resolution();
 int				resolution_x();
 int				resolution_y();
+void			set_resolution(t_vector *value);
 char			*no_textures();
+void			set_no_textures(char *value);
 char			*so_textures();
+void			set_so_textures(char *value);
 char			*we_textures();
+void			set_we_textures(char *value);
 char			*ea_textures();
+void			set_ea_textures(char *value);
 char			*sprite_textures();
+void			set_sprite_textures(char *value);
 t_color			*ceiling_colors();
+void			set_ceiling_color(t_color *value);
 t_color			*floor_colors();
+void			set_floor_color(t_color *value);
 char			**map();
 
 /*
@@ -55,8 +64,8 @@ char			**map();
 */
 
 char            **get_map_file(int fd);
-void            fill_params(char *param_line, t_map_params *to_fill);
-void            fill_map(char *map_line, t_map_params *to_fill);
+void            fill_params(char *param_line);
+void            fill_map(char *map_line);
 
 /*
 **  PARSING

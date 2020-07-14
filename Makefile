@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/14 12:05:10 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/14 12:51:39 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,11 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c get_map_file.c \
-				get_resolution_x.c get_resolution_y.c get_no_textures.c \
-				get_so_textures.c get_we_textures.c get_ea_textures.c \
-				get_sprite_textures.c get_ceiling_colors.c get_floor_colors.c \
-				get_map.c \
+				get_resolution.c get_resolution_x.c get_resolution_y.c set_resolution.c \
+				get_no_textures.c set_no_textures.c get_so_textures.c set_so_textures.c \
+				get_we_textures.c set_we_textures.c get_ea_textures.c set_ea_textures.c \
+				get_sprite_textures.c set_sprite_textures.c get_ceiling_colors.c set_ceiling_colors.c \
+				get_floor_colors.c set_floor_colors.c get_map.c \
 				cube_file_parsing.c resolution_parsing.c colors_parsing.c \
 				map_parsing.c is_cardinal_point.c textures_parsing.c \
 				fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \
