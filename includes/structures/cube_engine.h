@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:10:57 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 13:31:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,5 @@ void			set_size_line(int value);
 int				endian();
 void			set_size_line(int value);
 t_player		*player();
+
 #endif
