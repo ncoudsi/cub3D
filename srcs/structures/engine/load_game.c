@@ -26,25 +26,25 @@ static t_bool   is_map_line(char *line)
     return (true);
 }
 
-static t_bool   is_all_map_params(t_map_params *to_fill)
+static t_bool   is_all_map_params()
 {
-    if (to_fill->resolution == NULL)
+    if (resolution() == NULL)
         return (false);
-    else if (to_fill->no_textures == NULL)
+    else if (no_textures() == NULL)
         return (false);
-    else if (to_fill->so_textures == NULL)
+    else if (so_textures() == NULL)
         return (false);
-    else if (to_fill->we_textures == NULL)
+    else if (we_textures() == NULL)
         return (false);
-    else if (to_fill->ea_textures == NULL)
+    else if (ea_textures() == NULL)
         return (false);
-    else if (to_fill->sprite_textures == NULL)
+    else if (sprite_textures() == NULL)
         return (false);
-    else if (to_fill->ceiling_colors == NULL)
+    else if (ceiling_colors() == NULL)
         return (false);
-    else if (to_fill->floor_colors == NULL)
+    else if (floor_colors() == NULL)
         return (false);
-    else if (to_fill->map == NULL)
+    else if (map() == NULL)
         return (false);
     return (true);
 }
@@ -66,11 +66,10 @@ static void		load_map_params(int fd)
             else
                 fill_map(map_file[index]);
         }
-
         index++;
     }
     ft_free_tab((void **)map_file);
-    if (is_all_map_params(map_params()) == false)
+    if (is_all_map_params() == false)
         error_exit(MISS_PARAM_ERROR);
 }
 

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:50:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/14 13:05:21 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void			set_ceiling_color(t_color *value);
 t_color			*floor_colors();
 void			set_floor_color(t_color *value);
 char			**map();
+char			***map_adr();
 
 /*
 **  UTILS
