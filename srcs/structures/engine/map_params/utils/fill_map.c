@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-void    fill_map(char *map_line)
+void		fill_map(char *map_line)
 {
     char    *tmp;
 

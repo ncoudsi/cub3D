@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 13:52:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 12:17:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ typedef struct	s_map_params
 	t_color		*ceiling_colors;
 	t_color		*floor_colors;
 	char		**map;
+	char		cardinal_point;
 }				t_map_params;
+
+void		load_map_params(int fd);
 
 /*
 **  CREATORS & DESTRUCTORS
@@ -59,6 +62,8 @@ t_color			*floor_colors();
 void			set_floor_color(t_color *value);
 char			**map();
 char			***map_adr();
+char			cardinal_point();
+void			set_cardinal_point(char value);
 
 /*
 **  UTILS

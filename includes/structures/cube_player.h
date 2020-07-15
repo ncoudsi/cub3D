@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:36:58 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 11:51:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ typedef struct s_player
 	t_vector	*forward;
 	t_vector	*right;
 	int			move_speed;
+	int			rotation_speed;
+	float		pitch;
 }				t_player;
 
 void		load_player();
@@ -48,5 +50,11 @@ t_vector	*right();
 int			right_x();
 int			right_y();
 void		set_right(t_vector *value);
+int			move_speed();
+void		set_move_speed(int value);
+int			rotation_speed();
+void		set_rotation_speed(int value);
+float		pitch();
+void		set_pitch(float value);
 
 #endif

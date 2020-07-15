@@ -25,5 +25,6 @@ t_map_params    create_map_params()
     result.ceiling_colors = NULL;
     result.floor_colors = NULL;
     result.map = NULL;
+	result.cardinal_point = '\0';
     return (result);
 }

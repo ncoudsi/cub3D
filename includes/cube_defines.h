@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:36:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 11:48:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,12 @@
 #define WALL_COLOR 165, 47, 12
 #define PLAYER_COLOR 47, 216, 60
 #define PLAYER_SIZE 10
+
+/*
+**	PLAYER
+*/
+
+#define MOVE_SPEED 3
+#define ROTATION_SPEED 5
 
 #endif
