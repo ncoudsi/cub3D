@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/15 12:17:04 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/07/15 12:46:24 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_pos.c set_pos.c get_pos_x.c get_pos_y.c get_right.c \
 				set_right.c get_right_x.c get_right_y.c load_player.c \
 				get_move_speed.c set_move_speed.c get_rotation_speed.c \
-				set_rotation_speed.c get_pitch.c set_pitch.c \
-				\
+				set_rotation_speed.c get_pitch.c set_pitch.c get_pitch_value.c \
+				get_forward_value.c get_right_value.c \
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c load_map_params.c get_map_file.c \
 				get_resolution.c get_resolution_x.c get_resolution_y.c set_resolution.c \

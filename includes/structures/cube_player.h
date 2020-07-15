@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:51:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 12:46:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,11 @@ void		set_rotation_speed(int value);
 float		pitch();
 void		set_pitch(float value);
 
+/*
+**	UTILS
+*/
+
+float		get_pitch_value();
+t_vector	get_forward_value();
+t_vector	get_right_value();
 #endif

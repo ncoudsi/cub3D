@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_player.c                                    :+:      :+:    :+:   */
+/*   get_pitch_value.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 12:10:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 12:19:43 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/15 12:24:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/15 12:30:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_player	create_player()
+float	get_pitch_value()
 {
-	t_player	result;
+	float	result;
 
-	result.pos = NULL;
-	result.forward = NULL;
-	result.right = NULL;
-	result.move_speed = MOVE_SPEED;
-	result.rotation_speed = ROTATION_SPEED;
-	result.pitch = 0;
+	result = 0.0f;
+	if (cardinal_point() == 'N')
+		return(result);
+	else if (cardinal_point() == 'S')
+		result = M_PI;
+	else if (cardinal_point() == 'W')
+		result = 3 * M_PI / 2;
+	else if (cardinal_point() == 'E')
+		result = M_PI / 2;
 	return (result);
 }

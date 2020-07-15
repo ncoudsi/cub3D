@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_player.c                                    :+:      :+:    :+:   */
+/*   get_right_value.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 12:10:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 12:19:43 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/15 12:46:55 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/07/15 12:47:32 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_player	create_player()
+t_vector	get_right_value()
 {
-	t_player	result;
+	t_vector	result;
 
-	result.pos = NULL;
-	result.forward = NULL;
-	result.right = NULL;
-	result.move_speed = MOVE_SPEED;
-	result.rotation_speed = ROTATION_SPEED;
-	result.pitch = 0;
+	result.x = cosf(pitch() - M_PI / 2) * move_speed();
+	result.y = -(sinf(pitch() - M_PI / 2)) * move_speed();
 	return (result);
 }

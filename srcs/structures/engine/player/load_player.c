@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:40:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 12:49:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,14 @@ static t_vector	get_spawn_pos()
 void	load_player()
 {
 	t_vector	spawn_pos;
+	t_vector	forward_value;
+	t_vector	right_value;
 
 	spawn_pos = map_pos_to_pixel_pos(get_spawn_pos());
 	set_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
+	set_pitch(get_pitch_value());
+	forward_value = get_forward_value();
+	right_value	= get_right_value();
+	set_forward(malloc_vector(forward_value.x, forward_value.y));
+	set_right(malloc_vector(right_value.x, right_value.y));
 }
