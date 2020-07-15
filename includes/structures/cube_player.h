@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:24:02 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/07/15 11:36:58 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ typedef struct s_player
 	t_vector	*pos;
 	t_vector	*forward;
 	t_vector	*right;
-	t_color		*color;
+	int			move_speed;
 }				t_player;
 
 void		load_player();
@@ -48,7 +48,5 @@ t_vector	*right();
 int			right_x();
 int			right_y();
 void		set_right(t_vector *value);
-t_color		*color();
-void		set_color(t_color *value);
 
 #endif
