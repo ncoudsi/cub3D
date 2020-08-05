@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube.c                                             :+:      :+:    :+:   */
+/*   key_release.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/03 12:23:51 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/08/05 13:10:26 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/08/05 13:15:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_engine	*g_engine = NULL;
-
-int	main(void)
+int key_release(int key)
 {
-	g_engine = malloc_engine();
-	load_game(cube_file_fd());
-	run_game();
-	close_game();
-	return (0);
+	unset_moves(key);
+	return (key);
 }

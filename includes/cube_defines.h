@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:48:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/05 13:03:33 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,21 @@
 #define ALPHA_INDEX 3
 
 /*
-**	KEY CODES
+**	MLX KEY CODES
 */
 
 #define ESC_KEY 65307
+#define W_KEY 119
+#define S_KEY 115
+#define A_KEY 97
+#define D_KEY 100
+
+/*
+**	MLX EVENT CODES
+*/
+
+#define KEY_PRESS 2
+#define KEY_RELEASE 3
 
 /*
 **	MINIMAP

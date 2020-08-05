@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube.c                                             :+:      :+:    :+:   */
+/*   is_movement_key.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/03 12:23:51 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/08/05 12:46:18 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/08/05 13:07:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_engine	*g_engine = NULL;
-
-int	main(void)
+t_bool	is_movement_key(int key)
 {
-	g_engine = malloc_engine();
-	load_game(cube_file_fd());
-	run_game();
-	close_game();
-	return (0);
+	if (key == W_KEY || key == S_KEY || key == A_KEY || key == D_KEY)
+		return (true);
+	return (false);
 }

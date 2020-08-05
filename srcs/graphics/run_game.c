@@ -21,6 +21,7 @@ void	run_game()
 	render_map();
 	render_player();
 	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
-	mlx_key_hook(win_ptr(), &key_handler, NULL);
+	mlx_hook(win_ptr(), KEY_PRESS, (1L << 0), &key_press, NULL);
+	mlx_hook(win_ptr(), KEY_RELEASE, (1L << 1), &key_release, NULL);
 	mlx_loop(mlx_ptr());
 }

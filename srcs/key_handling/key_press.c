@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_handler.c                                      :+:      :+:    :+:   */
+/*   key_press.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:05:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:20:08 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/05 12:47:39 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int key_handler(int key)
+int key_press(int key)
 {
     ft_putnbr(key);
     ft_putchar('\n');
     if (key == ESC_KEY)
-        exit(0);
+		exit(0);
+	if (is_movement_key(key) == true)
+		set_moves(key);
     return (key);
 }

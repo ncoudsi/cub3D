@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:22:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/05 13:11:18 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int			cube_file_fd();
 **  KEY_HANDLING
 */
 
-int			key_handler(int key);
+int			key_press(int key);
+int			key_release(int key);
+t_bool		is_movement_key(int key);
+
 
 /*
 **	RENDERING

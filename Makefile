@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/07/15 12:46:24 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/08/05 13:11:33 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
 				render_wall.c render_tile.c map_pos_to_pixel_pos.c render_player.c \
 				\
-				key_handler.c \
+				key_press.c key_release.c is_movement_key.c \
 				\
 				distance_calculation.c \
 				\
