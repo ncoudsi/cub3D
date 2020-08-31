@@ -52,7 +52,7 @@
 **	PLAYER
 */
 
-#define MOVE_SPEED 3
+#define MOVE_SPEED 1
 #define ROTATION_SPEED 5
 
 #endif

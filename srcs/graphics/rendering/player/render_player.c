@@ -16,6 +16,6 @@ void	render_player()
 {
 	t_vector	center;
 
-	center = create_vector(pos_x(), pos_y());
+	center = map_pos_to_pixel_pos(create_vector(pos_x(), pos_y()));
 	draw_circle(center, PLAYER_SIZE, create_color(PLAYER_COLOR));
 }

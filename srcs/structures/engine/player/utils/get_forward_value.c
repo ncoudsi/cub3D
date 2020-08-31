@@ -17,6 +17,6 @@ t_vector	get_forward_value()
 	t_vector	result;
 
 	result.x = cosf(pitch()) * move_speed();
-	result.y = -(sinf(pitch())) * move_speed();
+	result.y = (sinf(pitch())) * move_speed();
 	return (result);
 }

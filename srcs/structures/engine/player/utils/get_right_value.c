@@ -16,7 +16,7 @@ t_vector	get_right_value()
 {
 	t_vector	result;
 
-	result.x = cosf(pitch() - M_PI / 2) * move_speed();
+	result.x = -(cosf(pitch() - M_PI / 2)) * move_speed();
 	result.y = -(sinf(pitch() - M_PI / 2)) * move_speed();
 	return (result);
 }

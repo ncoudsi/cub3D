@@ -42,7 +42,7 @@ void	load_player()
 	t_vector	forward_value;
 	t_vector	right_value;
 
-	spawn_pos = map_pos_to_pixel_pos(get_spawn_pos());
+	spawn_pos = get_spawn_pos();
 	set_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
 	set_pitch(get_pitch_value());
 	forward_value = get_forward_value();

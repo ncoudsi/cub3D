@@ -6,7 +6,7 @@ SO               ./ressources/alien.xpm
 EA ./ressources/alien.xpm
 S ./ressources/alien.xpm
 
-C 225,30,0
+C 225,0,0
 
 F 255,0,2
 
