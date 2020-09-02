@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/05 13:03:33 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/31 16:55:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@
 #define S_KEY 115
 #define A_KEY 97
 #define D_KEY 100
+#define RIGHT_ARROW 65363
+#define LEFT_ARROW 65361
 
 /*
 **	MLX EVENT CODES
@@ -53,6 +55,6 @@
 */
 
 #define MOVE_SPEED 1
-#define ROTATION_SPEED 5
+#define ROTATION_SPEED M_PI
 
 #endif

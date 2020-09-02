@@ -18,7 +18,7 @@ int key_press(int key)
     ft_putchar('\n');
     if (key == ESC_KEY)
 		exit(0);
-	if (is_movement_key(key) == true)
+	if (is_movement_key(key) == true || is_rotation_key(key) == true)
 		set_moves(key);
-    return (key);
+  return (key);
 }

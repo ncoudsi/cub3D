@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/08/31 14:21:11 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/08/31 16:47:41 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,9 +39,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
 				get_pos.c set_pos.c get_pos_x.c get_pos_y.c get_right.c \
 				set_right.c get_right_x.c get_right_y.c set_moves.c unset_moves.c \
-				load_player.c get_move_speed.c set_move_speed.c get_rotation_speed.c \
+				load_player.c update_player.c get_move_speed.c set_move_speed.c get_rotation_speed.c \
 				set_rotation_speed.c get_pitch.c set_pitch.c get_pitch_value.c \
-				get_forward_value.c get_right_value.c \
+				get_forward_value.c get_right_value.c update_direction.c \
+				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c load_map_params.c get_map_file.c \
 				get_resolution.c get_resolution_x.c get_resolution_y.c set_resolution.c \
@@ -64,11 +65,12 @@ SRCS		=	cube.c cube_file_fd.c \
 				load_game.c close_game.c get_map_params.c \
 				get_mlx_params.c get_player.c \
 				\
-				run_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
+				run_game.c update_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
 				render_wall.c render_tile.c map_pos_to_pixel_pos.c render_player.c \
+				update_map.c \
 				\
-				key_press.c key_release.c is_movement_key.c \
+				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\
 				distance_calculation.c \
 				\

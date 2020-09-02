@@ -16,11 +16,8 @@ void	run_game()
 {
 	set_mlx_ptr(mlx_init());
 	set_win_ptr(mlx_new_window(mlx_ptr(), resolution_x(), resolution_y(), "Cube3D"));
-	set_img_ptr(mlx_new_image(mlx_ptr(), resolution_x(), resolution_y()));
-	set_pixels(mlx_get_data_addr(img_ptr(), &g_engine->mlx_params->bits_per_pixel, &g_engine->mlx_params->size_line, &g_engine->mlx_params->endian));
-	render_map();
-	render_player();
-	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
+    set_img_ptr(mlx_new_image(mlx_ptr(), resolution_x(), resolution_y()));
+	mlx_loop_hook (mlx_ptr(), &update_game, NULL);
 	mlx_hook(win_ptr(), KEY_PRESS, (1L << 0), &key_press, NULL);
 	mlx_hook(win_ptr(), KEY_RELEASE, (1L << 1), &key_release, NULL);
 	mlx_loop(mlx_ptr());

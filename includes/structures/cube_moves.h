@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 13:58:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 14:01:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/31 16:06:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ typedef struct  s_moves
     t_bool  backward;
     t_bool  right;
     t_bool  left;
+    t_bool  rotation_right;
+    t_bool  rotation_left;
 }               t_moves;
 
 /*

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 14:19:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/08/31 16:46:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_player
 }				t_player;
 
 void		load_player();
+void		update_player();
 
 /*
 **	CREATORS & DESTRUCTORS
@@ -65,6 +66,7 @@ void		set_pitch(float value);
 float		get_pitch_value();
 t_vector	get_forward_value();
 t_vector	get_right_value();
+void    	update_direction(float new_pitch_value);
 void		set_moves(int key);
 void		unset_moves(int key);
 #endif
