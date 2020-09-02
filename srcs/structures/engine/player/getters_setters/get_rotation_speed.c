@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 11:55:53 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:56:15 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 09:57:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	rotation_speed()
+float	rotation_speed()
 {
 	return (g_engine->player->rotation_speed);
 }

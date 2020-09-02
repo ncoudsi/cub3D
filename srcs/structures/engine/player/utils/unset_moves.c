@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:20:15 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 16:50:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 09:30:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    unset_moves(int key)
 {
-       if (key == W_KEY)
+    if (key == W_KEY)
         g_engine->player->moves->forward = false;
     else if (key == S_KEY)
         g_engine->player->moves->backward = false;

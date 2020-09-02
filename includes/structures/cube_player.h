@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 16:46:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 09:56:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,20 @@ void		free_player(t_player *to_free);
 */
 
 t_vector	*pos();
-int			pos_x();
-int			pos_y();
+float		pos_x();
+float		pos_y();
 void		set_pos(t_vector *value);
 t_vector	*forward();
-int			forward_x();
-int			forward_y();
+float		forward_x();
+float		forward_y();
 void		set_forward(t_vector *value);
 t_vector	*right();
-int			right_x();
-int			right_y();
+float		right_x();
+float		right_y();
 void		set_right(t_vector *value);
-int			move_speed();
+float		move_speed();
 void		set_move_speed(int value);
-int			rotation_speed();
+float		rotation_speed();
 void		set_rotation_speed(int value);
 float		pitch();
 void		set_pitch(float value);
