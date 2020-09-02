@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 10:01:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 12:08:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void    update_player()
 
     new_pos = pos();
     if (g_engine->player->moves->rotation_right == true)
-        update_direction(pitch() + ROTATION_SPEED);
-    if (g_engine->player->moves->rotation_left == true)
         update_direction(pitch() - ROTATION_SPEED);
+    if (g_engine->player->moves->rotation_left == true)
+        update_direction(pitch() + ROTATION_SPEED);
     if (g_engine->player->moves->forward == true)
         *new_pos = create_vector(pos_x() + forward_x(), pos_y() + forward_y());
     if (g_engine->player->moves->backward == true)

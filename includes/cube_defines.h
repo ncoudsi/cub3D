@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 10:01:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 11:47:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@
 **	PLAYER
 */
 
-#define MOVE_SPEED 0.5f
-#define ROTATION_SPEED M_PI
+#define MOVE_SPEED 0.2f
+#define ROTATION_SPEED M_PI / 16
 
 #endif
