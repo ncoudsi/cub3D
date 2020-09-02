@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 12:16:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 15:39:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,33 @@ static void	fill_cardinal_point()
 		}
 		index.y++;
 	}
+}
+
+static void fill_map_size()
+{
+    t_vector    *map_size;
+    t_vector    index;
+
+    map_size = (t_vector *)malloc(sizeof(t_vector));
+    if (map_size == NULL)
+    {
+        set_map_size(NULL);
+        return;
+    }
+    index = create_vector(0, 0);
+    while (g_engine->map_params->map[(int)index.y] != NULL)
+    {
+        index.x = 0;
+        while (g_engine->map_params->map[(int)index.y][(int)index.x] != '\0')
+        {
+            index.x++;
+            if (index.x > map_size->x)
+                map_size->x = index.x;
+        }
+        index.y++;
+    }
+    map_size->y = index.y;
+    set_map_size(map_size);
 }
 
 static t_bool   is_map_line(char *line)
@@ -68,6 +95,8 @@ static t_bool   is_all_map_params()
         return (false);
 	else if (cardinal_point() == '\0')
 		return (false);
+    else if (map_size() == NULL)
+        return (false);
     return (true);
 }
 
@@ -91,6 +120,7 @@ void		load_map_params(int fd)
         index++;
     }
 	fill_cardinal_point();
+    fill_map_size();
     ft_free_tab((void **)map_file);
     if (is_all_map_params() == false)
         error_exit(MISS_PARAM_ERROR);

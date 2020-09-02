@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 11:36:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 14:58:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ t_vector	get_right_value();
 void    	update_direction(float new_pitch_value);
 void		set_moves(int key);
 void		unset_moves(int key);
+
 #endif

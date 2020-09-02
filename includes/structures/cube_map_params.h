@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 12:17:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/02 15:27:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct	s_map_params
 	t_color		*ceiling_colors;
 	t_color		*floor_colors;
 	char		**map;
+	t_vector	*map_size;
 	char		cardinal_point;
 }				t_map_params;
 
@@ -61,6 +62,10 @@ void			set_ceiling_color(t_color *value);
 t_color			*floor_colors();
 void			set_floor_color(t_color *value);
 char			**map();
+t_vector		*map_size();
+float			map_size_x();
+float			map_size_y();
+void			set_map_size(t_vector *value);
 char			***map_adr();
 char			cardinal_point();
 void			set_cardinal_point(char value);
