@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:03:56 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 14:49:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include "mlx.h"
 #include "cube_defines.h"
 #include "cube_vector.h"
+#include "cube_int_vector.h"
 #include "cube_color.h"
 #include "cube_moves.h"
 #include "cube_player.h"

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 16:15:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 13:54:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,10 @@ void		render_player();
 */
 
 float		distance_calculation(t_vector starting_point, t_vector end_point);
+
+/*
+**  RAYCASTING
+*/
+
+void        raycasting();
 #endif
