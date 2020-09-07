@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/07 14:53:31 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/07 15:37:08 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,13 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_dir.c get_plane.c get_plane_x.c get_plane_y.c \
 				set_plane.c get_ray_dir.c get_ray_dir_x.c get_ray_dir_y.c \
 				set_ray_dir.c get_rcast_time.c get_old_time.c get_camera_x.c \
-				set_rcast_time.c set_old_time.c set_camera_x.c get_dir_value.c \
-				get_plane_value.c load_rcast_params.c \
+				set_rcast_time.c set_old_time.c set_camera_x.c \
+				get_map_pos.c get_map_pos_x.c get_map_pos_y.c set_map_pos.c \
+				get_step.c get_step_x.c get_step_y.c set_step.c \
+				get_side_dist.c get_side_dist_x.c get_side_dist_y.c set_side_dist.c \
+				get_delta_dist.c get_delta_dist_x.c get_delta_dist_y.c set_delta_dist.c \
+				get_hit.c set_hit.c get_side.c set_side.c \
+				get_dir_value.c get_plane_value.c load_rcast_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \
