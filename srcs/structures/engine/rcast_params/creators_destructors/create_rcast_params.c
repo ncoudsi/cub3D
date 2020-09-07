@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:05:40 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:07:44 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 13:14:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ t_rcast_params  create_rcast_params()
 {
     t_rcast_params  result;
 
-    result.pos = NULL;
     result.dir = NULL;
     result.plane = NULL;
     result.ray_dir = NULL;

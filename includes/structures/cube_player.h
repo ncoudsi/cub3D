@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 12:13:32 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ void		free_player(t_player *to_free);
 **	GETTERS & SETTERS
 */
 
-t_vector	*player_pos();
-float		player_pos_x();
-float		player_pos_y();
-void		set_player_pos(t_vector *value);
+t_vector	*pos();
+float		pos_x();
+float		pos_y();
+void		set_pos(t_vector *value);
 t_vector	*forward();
 float		forward_x();
 float		forward_y();

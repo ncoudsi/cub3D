@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 12:14:08 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	load_player()
 	t_vector	right_value;
 
 	spawn_pos = get_spawn_pos();
-	set_player_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
+	set_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
 	set_pitch(get_pitch_value());
 	forward_value = get_forward_value();
 	right_value	= get_right_value();

@@ -15,7 +15,6 @@
 
 typedef struct  s_rcast_params
 {
-    t_vector    *pos;
     t_vector    *dir;
     t_vector    *plane;
     t_vector    *ray_dir;
@@ -38,10 +37,6 @@ void            free_rcast_params(t_rcast_params *to_free);
 **  GETTERS & SETTERS
 */
 
-t_vector    *rcast_pos();
-float       rcast_pos_x();
-float       rcast_pos_y();
-void        set_rcast_pos(t_vector *value);
 t_vector    *dir();
 float       dir_x();
 float       dir_y();

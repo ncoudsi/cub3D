@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 12:14:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static void    move_forward()
     t_vector    *new_pos;
     t_vector    tmp_pos;
 
-    new_pos = player_pos();
-    tmp_pos = create_vector(player_pos_x() + forward_x(), player_pos_y() + forward_y());
+    new_pos = pos();
+    tmp_pos = create_vector(pos_x() + forward_x(), pos_y() + forward_y());
     if (tmp_pos.x < 0)
         tmp_pos.x = 0;
     else if (tmp_pos.x > map_size_x())
@@ -35,8 +35,8 @@ static void    move_backward()
     t_vector    *new_pos;
     t_vector    tmp_pos;
 
-    new_pos = player_pos();
-    tmp_pos = create_vector(player_pos_x() - forward_x(), player_pos_y() - forward_y());
+    new_pos = pos();
+    tmp_pos = create_vector(pos_x() - forward_x(), pos_y() - forward_y());
     if (tmp_pos.x < 0)
         tmp_pos.x = 0;
     else if (tmp_pos.x > map_size_x())
@@ -53,8 +53,8 @@ static void    move_right()
     t_vector    *new_pos;
     t_vector    tmp_pos;
 
-    new_pos = player_pos();
-    tmp_pos = create_vector(player_pos_x() + right_x(), player_pos_y() + right_y());
+    new_pos = pos();
+    tmp_pos = create_vector(pos_x() + right_x(), pos_y() + right_y());
     if (tmp_pos.x < 0)
         tmp_pos.x = 0;
     else if (tmp_pos.x > map_size_x())
@@ -71,8 +71,8 @@ static void    move_left()
     t_vector    *new_pos;
     t_vector    tmp_pos;
 
-    new_pos = player_pos();
-    tmp_pos = create_vector(player_pos_x() - right_x(), player_pos_y() - right_y());
+    new_pos = pos();
+    tmp_pos = create_vector(pos_x() - right_x(), pos_y() - right_y());
     if (tmp_pos.x < 0)
         tmp_pos.x = 0;
     else if (tmp_pos.x > map_size_x())
