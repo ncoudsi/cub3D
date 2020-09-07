@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 12:00:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 13:34:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 15:44:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,11 @@ void    load_rcast_params()
     set_rcast_time(0);
     set_old_time(0);
     set_camera_x(0);
+	set_map_pos(malloc_int_vector((int)pos_x(), (int)pos_y()));
+	set_step(malloc_int_vector(0, 0));
+	set_side_dist(malloc_vector(0, 0));
+	set_delta_dist(malloc_vector(0, 0));
+	set_pos_to_wall_dist(0);
+	set_hit(0);
+	set_side(0);
 }

@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/07 15:37:08 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/07 16:10:40 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_ray_dir.c get_rcast_time.c get_old_time.c get_camera_x.c \
 				set_rcast_time.c set_old_time.c set_camera_x.c \
 				get_map_pos.c get_map_pos_x.c get_map_pos_y.c set_map_pos.c \
-				get_step.c get_step_x.c get_step_y.c set_step.c \
+				get_pos_to_wall_dist.c set_pos_to_wall_dist.c \
+				get_step.c get_step_x.c get_step_y.c set_step.c set_step_x.c set_step_y.c \
 				get_side_dist.c get_side_dist_x.c get_side_dist_y.c set_side_dist.c \
+				set_side_dist_x.c set_side_dist_y.c \
 				get_delta_dist.c get_delta_dist_x.c get_delta_dist_y.c set_delta_dist.c \
 				get_hit.c set_hit.c get_side.c set_side.c \
 				get_dir_value.c get_plane_value.c load_rcast_params.c \
