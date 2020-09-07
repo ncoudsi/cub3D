@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:03:37 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 01:16:58 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/07 12:03:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ t_engine	create_engine()
 	result.map_params = malloc_map_params();
 	result.mlx_params = malloc_mlx_params();
 	result.player = malloc_player();
+	result.rcast_params = malloc_rcast_params();
 	return (result);
 }

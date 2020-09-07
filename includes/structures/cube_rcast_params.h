@@ -24,6 +24,7 @@ typedef struct  s_rcast_params
     float       camera_x;
 }               t_rcast_params;
 
+void            load_rcast_params();
 /*
 **  CREATORS & DESTRUCTORS
 */
@@ -41,19 +42,22 @@ t_vector    *rcast_pos();
 float       rcast_pos_x();
 float       rcast_pos_y();
 void        set_rcast_pos(t_vector *value);
-t_vector    *rcast_dir();
-float       rcast_dir_x();
-float       rcast_dir_y();
-void        set_rcast_dir(t_vector *value);
-t_vector    *rcast_plane();
-float       rcast_plane_x();
-float       rcast_plane_y();
-void        set_rcast_plane(t_vector *value);
-t_vector    *rcast_ray_dir();
-float       rcast_ray_dir_x();
-float       rcast_ray_dir_y();
-void        set_rcast_ray_dir(t_vector *value);
+t_vector    *dir();
+float       dir_x();
+float       dir_y();
+void        set_dir(t_vector *value);
+t_vector    *plane();
+float       plane_x();
+float       plane_y();
+void        set_plane(t_vector *value);
+t_vector    *ray_dir();
+float       ray_dir_x();
+float       ray_dir_y();
+void        set_ray_dir(t_vector *value);
 float       rcast_time();
-float       rcast_old_time();
-float       rcast_camera_x();
+void        set_rcast_time(float value);
+float       old_time();
+void        set_old_time(float value);
+float       camera_x();
+void        set_camera_x(float value);
 #endif

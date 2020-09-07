@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_pos_x.c                                        :+:      :+:    :+:   */
+/*   set_rcast_pos.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 13:16:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 09:57:31 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/07 11:24:49 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/07 11:26:06 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	pos_x()
+void    set_rcast_pos(t_vector *value)
 {
-	return (g_engine->player->pos->x);
+    g_engine->rcast_params->pos = value;
 }

@@ -70,7 +70,7 @@ char	*mlx_get_data_addr(void *img_ptr, int *bits_per_pixel,
 			   int *size_line, int *endian);
 /*
 **  endian : 0 = sever X is little endian, 1 = big endian
-**  for mlx_new_image2, 2nd arg of mlx_get_data_addr is number_of_planes
+**  for mlx_new_image2, 2nd arg of mlx_get_data_addr is number_ofplanes
 */
 int	mlx_put_image_to_window(void *mlx_ptr, void *win_ptr, void *img_ptr,
 				int x, int y);

@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/07 11:17:25 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/07 12:28:27 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
-				get_pos.c set_pos.c get_pos_x.c get_pos_y.c get_right.c \
+				get_player_pos.c set_player_pos.c get_player_pos_x.c get_player_pos_y.c get_right.c \
 				set_right.c get_right_x.c get_right_y.c set_moves.c unset_moves.c \
 				load_player.c update_player.c get_move_speed.c set_move_speed.c get_rotation_speed.c \
 				set_rotation_speed.c get_pitch.c set_pitch.c get_pitch_value.c \
@@ -63,7 +63,12 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_map_size_x.c get_map_size_y.c set_map_size.c \
 				\
 				create_rcast_params.c malloc_rcast_params.c destroy_rcast_params.c \
-				free_rcast_params.c \
+				free_rcast_params.c get_rcast_pos.c get_rcast_pos_x.c get_rcast_pos_y.c \
+				set_rcast_pos.c get_dir.c get_dir_x.c get_dir_y.c \
+				set_dir.c get_plane.c get_plane_x.c get_plane_y.c \
+				set_plane.c get_ray_dir.c get_ray_dir_x.c get_ray_dir_y.c \
+				set_ray_dir.c get_rcast_time.c get_old_time.c get_camera_x.c \
+				set_rcast_time.c set_old_time.c set_camera_x.c load_rcast_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \

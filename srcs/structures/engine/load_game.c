@@ -16,4 +16,5 @@ void            load_game(int fd)
 {
 	load_map_params(fd);
 	load_player();
+	load_rcast_params();
 }

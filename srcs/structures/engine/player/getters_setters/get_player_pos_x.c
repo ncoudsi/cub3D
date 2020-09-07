@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_pos.c                                          :+:      :+:    :+:   */
+/*   get_pos_x.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 13:17:33 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 13:17:59 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/14 13:16:35 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/07 12:06:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	set_pos(t_vector *value)
+float	player_pos_x()
 {
-	g_engine->player->pos = value;
+	return (g_engine->player->pos->x);
 }
