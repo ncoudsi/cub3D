@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/07 13:30:32 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_dir.c get_plane.c get_plane_x.c get_plane_y.c \
 				set_plane.c get_ray_dir.c get_ray_dir_x.c get_ray_dir_y.c \
 				set_ray_dir.c get_rcast_time.c get_old_time.c get_camera_x.c \
-				set_rcast_time.c set_old_time.c set_camera_x.c load_rcast_params.c \
+				set_rcast_time.c set_old_time.c set_camera_x.c get_dir_value.c \
+				get_plane_value.c load_rcast_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \

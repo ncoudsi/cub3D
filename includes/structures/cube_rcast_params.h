@@ -24,6 +24,7 @@ typedef struct  s_rcast_params
 }               t_rcast_params;
 
 void            load_rcast_params();
+
 /*
 **  CREATORS & DESTRUCTORS
 */
@@ -55,4 +56,11 @@ float       old_time();
 void        set_old_time(float value);
 float       camera_x();
 void        set_camera_x(float value);
+
+/*
+**  UTILS
+*/
+
+t_vector    get_dir_value();
+t_vector    get_plane_value();
 #endif
