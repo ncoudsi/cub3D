@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_step_x.c                                       :+:      :+:    :+:   */
+/*   set_map_pos_y.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 15:16:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/08 14:28:09 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/08 13:54:59 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/08 13:55:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	step_x()
+void	set_map_pos_y(int value)
 {
-	return (g_engine->rcast_params->step->x);
+	g_engine->rcast_params->map_pos->y = value;
 }

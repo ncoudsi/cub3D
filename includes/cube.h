@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 13:54:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/08 12:24:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ int			cube_file_fd();
 int			key_press(int key);
 int			key_release(int key);
 t_bool		is_movement_key(int key);
-t_bool      is_rotation_key(int key);
+t_bool		is_rotation_key(int key);
 
 /*
 **	RENDERING
 */
 
 void		run_game();
-int         update_game();
+int			update_game();
 int			get_pixel_index(t_vector pos);
 void		put_pixel(t_vector pos, t_color color);
 void		draw_rectangle(t_vector pos, t_vector dimension, t_color color);
@@ -39,7 +39,7 @@ t_vector	get_minimap_tiles_nbr();
 t_vector	get_tile_size(t_vector minimap_size);
 t_vector	map_pos_to_pixel_pos(t_vector map_pos);
 void		render_map();
-void        update_map();
+void		update_map();
 void		render_wall(t_vector map_index);
 void		render_tile(t_vector map_index);
 void		render_player();
@@ -54,5 +54,8 @@ float		distance_calculation(t_vector starting_point, t_vector end_point);
 **  RAYCASTING
 */
 
-void        raycasting();
+void		raycasting();
+void		get_ray_dir_value();
+void		get_delta_dist_value();
+void		get_step_and_side_dist_values();
 #endif

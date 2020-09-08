@@ -68,6 +68,8 @@ t_int_vector	*map_pos();
 int				map_pos_x();
 int				map_pos_y();
 void			set_map_pos(t_int_vector *value);
+void			set_map_pos_x(int value);
+void			set_map_pos_y(int value);
 t_int_vector	*step();
 int				step_x();
 int				step_y();
