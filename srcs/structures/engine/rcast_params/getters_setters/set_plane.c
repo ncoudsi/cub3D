@@ -14,5 +14,6 @@
 
 void    set_plane(t_vector *value)
 {
-    g_engine->rcast_params->plane = value;
+    g_engine->rcast_params->plane->x = value->x;
+    g_engine->rcast_params->plane->y = value->y;
 }

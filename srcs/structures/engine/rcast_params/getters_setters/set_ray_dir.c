@@ -14,5 +14,6 @@
 
 void    set_ray_dir(t_vector *value)
 {
-    g_engine->rcast_params->ray_dir = value;
+    g_engine->rcast_params->ray_dir->x = value->x;
+    g_engine->rcast_params->ray_dir->y = value->y;
 }

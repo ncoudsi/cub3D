@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 12:23:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/08 12:24:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 16:10:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	get_step_and_side_dist_values()
+void	update_step_and_side_dist_values()
 {
 	if (ray_dir_x() < 0)
 		{

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/08 16:19:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 16:12:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void    raycasting()
 	while (index < resolution_x())
 	{
 		set_camera_x(2 * index / resolution_x() - 1);
-		get_ray_dir_value();
-		get_delta_dist_value();
-		get_step_and_side_dist_values();
+		update_ray_dir_value();
+		update_delta_dist_value();
+		update_step_and_side_dist_values();
 		set_hit(false);
 		set_map_pos_x(pos_x());
 		set_map_pos_y(pos_y());
@@ -47,6 +47,7 @@ void    raycasting()
 			set_pos_to_wall_dist((map_pos_x() - pos_x() + (1 - step_x()) / 2) / ray_dir_x());
 		else
 			set_pos_to_wall_dist((map_pos_y() - pos_y() + (1 - step_y()) / 2) / ray_dir_y());
+		printf("DIST : %f\n", pos_to_wall_dist());
 		index++;
 	}
 }

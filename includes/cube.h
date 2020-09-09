@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/08 12:24:30 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 16:11:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ float		distance_calculation(t_vector starting_point, t_vector end_point);
 */
 
 void		raycasting();
-void		get_ray_dir_value();
-void		get_delta_dist_value();
-void		get_step_and_side_dist_values();
+void		update_ray_dir_value();
+void		update_delta_dist_value();
+void		update_step_and_side_dist_values();
 #endif

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:22:58 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:23:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 16:01:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	set_side_dist(t_vector *value)
 {
-	g_engine->rcast_params->side_dist = value;
+	g_engine->rcast_params->side_dist->x = value->x;
+	g_engine->rcast_params->side_dist->y = value->y;
 }
