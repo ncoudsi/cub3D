@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-t_vector    *plane()
+t_vector const	*plane()
 {
-    return (g_engine->rcast_params->plane);
+	return (g_engine->rcast_params->plane);
 }

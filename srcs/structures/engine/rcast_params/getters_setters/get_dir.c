@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-t_vector    *dir()
+t_vector const	*dir()
 {
     return (g_engine->rcast_params->dir);
 }

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:11:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:11:46 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 16:29:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_int_vector	*map_pos()
+t_int_vector const	*map_pos()
 {
 	return (g_engine->rcast_params->map_pos);
 }
