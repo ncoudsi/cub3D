@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-t_vector	*pos()
+t_vector const	*pos()
 {
 	return (g_engine->player->pos);
 }

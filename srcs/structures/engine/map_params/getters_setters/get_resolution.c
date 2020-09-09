@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 12:41:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:42:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 10:25:55 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector	*resolution()
+t_vector const	*resolution()
 {
 	return (g_engine->map_params->resolution);
 }

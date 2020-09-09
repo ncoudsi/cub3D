@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 15:27:48 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 13:44:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,26 +43,26 @@ void			free_map_params(t_map_params *to_free);
 **	GETTERS & SETTERS
 */
 
-t_vector		*resolution();
+t_vector const	*resolution();
 int				resolution_x();
 int				resolution_y();
 void			set_resolution(t_vector *value);
-char			*no_textures();
+char const		*no_textures();
 void			set_no_textures(char *value);
-char			*so_textures();
+char const		*so_textures();
 void			set_so_textures(char *value);
-char			*we_textures();
+char const		*we_textures();
 void			set_we_textures(char *value);
-char			*ea_textures();
+char const		*ea_textures();
 void			set_ea_textures(char *value);
-char			*sprite_textures();
+char const		*sprite_textures();
 void			set_sprite_textures(char *value);
-t_color			*ceiling_colors();
+t_color const	*ceiling_colors();
 void			set_ceiling_color(t_color *value);
-t_color			*floor_colors();
+t_color const	*floor_colors();
 void			set_floor_color(t_color *value);
-char			**map();
-t_vector		*map_size();
+char const		**map();
+t_vector const	*map_size();
 float			map_size_x();
 float			map_size_y();
 void			set_map_size(t_vector *value);

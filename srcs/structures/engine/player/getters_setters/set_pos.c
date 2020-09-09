@@ -14,5 +14,6 @@
 
 void	set_pos(t_vector *value)
 {
-	g_engine->player->pos = value;
+	g_engine->player->pos->x = value->x;
+	g_engine->player->pos->y = value->y;
 }

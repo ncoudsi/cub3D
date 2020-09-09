@@ -38,12 +38,14 @@ static t_bool	is_double_param(char *param_line)
 
 static void		fill_resolution(char **splitted_line)
 {
-        int resolution_x;
-        int resolution_y;
+		t_vector	res;
 
-        resolution_x = ft_atoi(splitted_line[1]);
-        resolution_y = ft_atoi(splitted_line[2]);
-        set_resolution(malloc_vector(resolution_x, resolution_y));
+        res.x = ft_atoi(splitted_line[1]);
+        res.y = ft_atoi(splitted_line[2]);
+        g_engine->map_params->resolution = (t_vector *)malloc(sizeof(t_vector));
+		if (resolution() == NULL)
+			error_exit(MALLOC_ERROR);
+		set_resolution(&res);
         ft_free_tab((void **)splitted_line);
 }
 
@@ -79,42 +81,44 @@ static void		fill_textures(char ** splitted_line)
 static void		fill_ceilling_color(char **splitted_line)
 {
     int index;
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
+	t_color	color;
 
     index = 0;
-    r = (unsigned char)ft_atoi(splitted_line[1]);
+    color.r = (unsigned char)ft_atoi(splitted_line[1]);
     while (ft_is_digit(splitted_line[1][index]) == true)
         index++;
     index++;
-    g = (unsigned char)ft_atoi(splitted_line[1] + index);
+    color.g = (unsigned char)ft_atoi(splitted_line[1] + index);
     while (ft_is_digit(splitted_line[1][index]) == true)
         index++;
     index++;
-    b = (unsigned char)ft_atoi(splitted_line[1] + index);
-    set_ceiling_color(malloc_color(r, g, b));
+    color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
+	g_engine->map_params->ceiling_colors = (t_color *)malloc(sizeof(t_color));
+	if (ceiling_colors() == NULL)
+		error_exit(MALLOC_ERROR);
+	set_ceiling_color(&color);
     ft_free_tab((void **)splitted_line);
 }
 
 static void		fill_floor_color(char **splitted_line)
 {
     int index;
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
+	t_color	color;
 
     index = 0;
-    r = (unsigned char)ft_atoi(splitted_line[1]);
+    color.r = (unsigned char)ft_atoi(splitted_line[1]);
     while (ft_is_digit(splitted_line[1][index]) == true)
         index++;
     index++;
-    g = (unsigned char)ft_atoi(splitted_line[1] + index);
+    color.g = (unsigned char)ft_atoi(splitted_line[1] + index);
     while (ft_is_digit(splitted_line[1][index]) == true)
         index++;
     index++;
-    b = (unsigned char)ft_atoi(splitted_line[1] + index);
-    set_floor_color(malloc_color(r, g, b));
+    color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
+	g_engine->map_params->floor_colors = (t_color *)malloc(sizeof(t_color));
+	if (ceiling_colors() == NULL)
+		error_exit(MALLOC_ERROR);
+	set_floor_color(&color);
     ft_free_tab((void **)splitted_line);
 }
 

@@ -17,7 +17,7 @@
 **	BASIC ERRORS
 */
 
-# define ERRORS_NBR 8
+# define ERRORS_NBR 9
 # define MAP_ENTRY 0
 # define RES_ERROR 1
 # define TEX_ERROR 2
@@ -26,6 +26,7 @@
 # define FILE_ERROR 5
 # define MISS_PARAM_ERROR 6
 # define DOUBLE_PARAM_ERROR 7
+# define MALLOC_ERROR 8
 
 void	error_exit(int error_code);
 

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 10:32:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static t_vector	get_spawn_pos()
 {
 	t_vector	result;
 	t_vector	index;
-	char		**file_map;
+	char const	**file_map;
 
 	result = create_vector(0, 0);
 	index = create_vector(0, 0);
@@ -36,17 +36,26 @@ static t_vector	get_spawn_pos()
 	return (result);
 }
 
+static void	attributes_allocation()
+{
+	g_engine->player->pos = malloc_vector(0, 0);
+	g_engine->player->forward = malloc_vector(0, 0);
+	g_engine->player->right = malloc_vector(0, 0);
+	g_engine->player->moves = malloc_moves();
+}
+
 void	load_player()
 {
 	t_vector	spawn_pos;
 	t_vector	forward_value;
 	t_vector	right_value;
 
+	attributes_allocation();
 	spawn_pos = get_spawn_pos();
-	set_pos(malloc_vector(spawn_pos.x, spawn_pos.y));
+	set_pos(&spawn_pos);
 	set_pitch(get_pitch_value());
 	forward_value = get_forward_value();
 	right_value	= get_right_value();
-	set_forward(malloc_vector(forward_value.x, forward_value.y));
-	set_right(malloc_vector(right_value.x, right_value.y));
+	set_forward(&forward_value);
+	set_right(&right_value);
 }

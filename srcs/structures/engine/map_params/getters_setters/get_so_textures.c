@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 12:01:51 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 12:02:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 10:26:04 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*so_textures()
+char const	*so_textures()
 {
 	return (g_engine->map_params->so_textures);
 }

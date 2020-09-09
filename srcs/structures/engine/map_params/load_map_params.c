@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 15:44:23 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 14:22:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	fill_cardinal_point()
 {
 	t_vector	index;
-	char		**file_map;
+	char const	**file_map;
 
 	index = create_vector(0, 0);
 	file_map = map();
@@ -34,30 +34,27 @@ static void	fill_cardinal_point()
 
 static void fill_map_size()
 {
-    t_vector    *map_size;
+    t_vector    size;
     t_vector    index;
 
-    map_size = (t_vector *)malloc(sizeof(t_vector));
-    if (map_size == NULL)
-    {
-        set_map_size(NULL);
-        return;
-    }
-    index = create_vector(0, 0);
+    g_engine->map_params->map_size = (t_vector *)malloc(sizeof(t_vector));
+	if (map_size() == NULL)
+		error_exit(MALLOC_ERROR);
+	index = create_vector(0, 0);
     while (g_engine->map_params->map[(int)index.y] != NULL)
     {
         index.x = 0;
         while (g_engine->map_params->map[(int)index.y][(int)index.x] != '\0')
         {
             index.x++;
-            if (index.x > map_size->x)
-                map_size->x = index.x;
+            if (index.x > size.x)
+                size.x = index.x;
         }
         index.y++;
     }
-    map_size->y = index.y - 1;
-    map_size-> x--;
-    set_map_size(map_size);
+    size.y = index.y - 1;
+    size. x--;
+    set_map_size(&size);
 }
 
 static t_bool   is_map_line(char *line)

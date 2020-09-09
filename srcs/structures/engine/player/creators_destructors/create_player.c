@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:10:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 14:11:13 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 10:10:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_player	create_player()
 	result.pos = NULL;
 	result.forward = NULL;
 	result.right = NULL;
-	result.moves = malloc_moves();
+	result.moves = NULL;
 	result.move_speed = MOVE_SPEED;
 	result.rotation_speed = ROTATION_SPEED;
 	result.pitch = 0;

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 14:53:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 14:26:44 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,40 +24,40 @@ typedef struct s_player
 	float		pitch;
 }				t_player;
 
-void		load_player();
-void		update_player();
+void			load_player();
+void			update_player();
 
 /*
 **	CREATORS & DESTRUCTORS
 */
 
-t_player	create_player();
-t_player	*malloc_player();
-void		destroy_player(t_player to_destroy);
-void		free_player(t_player *to_free);
+t_player		create_player();
+t_player		*malloc_player();
+void			destroy_player(t_player to_destroy);
+void			free_player(t_player *to_free);
 
 /*
 **	GETTERS & SETTERS
 */
 
-t_vector	*pos();
-float		pos_x();
-float		pos_y();
-void		set_pos(t_vector *value);
-t_vector	*forward();
-float		forward_x();
-float		forward_y();
-void		set_forward(t_vector *value);
-t_vector	*right();
-float		right_x();
-float		right_y();
-void		set_right(t_vector *value);
-float		move_speed();
-void		set_move_speed(int value);
-float		rotation_speed();
-void		set_rotation_speed(int value);
-float		pitch();
-void		set_pitch(float value);
+t_vector const	*pos();
+float			pos_x();
+float			pos_y();
+void			set_pos(t_vector *value);
+t_vector const	*forward();
+float			forward_x();
+float			forward_y();
+void			set_forward(t_vector *value);
+t_vector const	*right();
+float			right_x();
+float			right_y();
+void			set_right(t_vector *value);
+float			move_speed();
+void			set_move_speed(int value);
+float			rotation_speed();
+void			set_rotation_speed(int value);
+float			pitch();
+void			set_pitch(float value);
 
 /*
 **	UTILS

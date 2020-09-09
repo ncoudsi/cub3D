@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_img_ptr.c                                      :+:      :+:    :+:   */
+/*   get_rcast_params.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 11:45:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:05:15 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/09 14:59:46 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/09 15:00:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	*img_ptr()
+t_rcast_params const	*rcast_params()
 {
-	return (g_engine->mlx_params->img_ptr);
+	return (g_engine->rcast_params);
 }

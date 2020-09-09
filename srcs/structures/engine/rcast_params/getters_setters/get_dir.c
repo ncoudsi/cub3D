@@ -14,5 +14,5 @@
 
 t_vector    *dir()
 {
-    return (g_engine->rcast_params->ray_dir);
+    return (g_engine->rcast_params->dir);
 }

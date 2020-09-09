@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 09:29:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 15:38:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/09 13:45:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	render_map()
 {
 	t_vector	index;
-	char		**file_map;
+	char const	**file_map;
 
 	index = create_vector(0, 0);
 	file_map = map();
