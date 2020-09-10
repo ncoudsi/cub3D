@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/09 16:11:30 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/10 10:09:52 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,6 +94,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				distance_calculation.c \
 				\
 				raycasting.c update_ray_dir_value.c update_delta_dist_value.c update_step_and_side_dist_values.c \
+				hitpoint_detection.c \
 				\
 				error_exit.c error_exit_vector.c \
 

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:24:55 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 11:59:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@
 */
 
 #define DIR_LENGTH 1.0f
-#define PLANE_LENGTH 0.66f
+#define PLANE_LENGTH 1.66f
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 16:11:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 10:09:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ void		raycasting();
 void		update_ray_dir_value();
 void		update_delta_dist_value();
 void		update_step_and_side_dist_values();
+void		hitpoint_detection();
 #endif
