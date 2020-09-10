@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 14:34:39 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 16:14:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void    raycasting()
 		update_ray_dir_value();
 		update_delta_dist_value();
 		update_step_and_side_dist_values();
-		set_hit(false);
 		hitpoint_detection();
 	if (side() == 0)
 		set_perpendicular_wall_dist((map_pos_x() - pos_x() + (1.0f - step_x()) / 2.0f) / ray_dir_x());
