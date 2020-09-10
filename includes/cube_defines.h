@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 11:59:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 12:10:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@
 */
 
 #define MOVE_SPEED 0.2f
-#define ROTATION_SPEED M_PI / 16
+#define ROTATION_SPEED M_PI / 16.0f
 
 /*
 **  RAYCASTING
 */
 
 #define DIR_LENGTH 1.0f
-#define PLANE_LENGTH 1.66f
+#define PLANE_LENGTH 1.0f
 
 #endif

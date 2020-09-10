@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 16:00:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:22:14 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 14:51:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int update_game()
 {
     update_player();
-    update_map();
     raycasting();
+	rendering();
     return (0);
 }

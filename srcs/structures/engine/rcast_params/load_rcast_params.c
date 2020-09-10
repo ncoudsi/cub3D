@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 12:00:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 16:02:45 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 14:24:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,19 @@ static void	attributes_allocation()
 	g_engine->rcast_params->step = (t_int_vector *)malloc(sizeof(t_int_vector));
 	g_engine->rcast_params->side_dist = (t_vector *)malloc(sizeof(t_vector));
 	g_engine->rcast_params->delta_dist = (t_vector *)malloc(sizeof(t_vector));
+	g_engine->rcast_params->perp_wall_dist_tab = (float *)malloc(sizeof(float) * resolution_x());
+}
+
+static void	fill_perp_wall_dist_tab(float value)
+{
+	int	index;
+
+	index = 0;
+	while (index < resolution_x())
+	{
+		g_engine->rcast_params->perp_wall_dist_tab[index] = value;
+		index++;
+	}
 }
 
 void		load_rcast_params()
@@ -45,7 +58,8 @@ void		load_rcast_params()
 	set_step((t_int_vector *)&null_values);
 	set_side_dist(&null_values);
 	set_delta_dist(&null_values);
-	set_pos_to_wall_dist(0);
+	set_perpendicular_wall_dist(0);
+	fill_perp_wall_dist_tab(0);
 	set_hit(0);
 	set_side(0);
 }

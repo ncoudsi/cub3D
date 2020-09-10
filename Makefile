@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/10 10:09:52 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/10 14:50:12 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_rcast_time.c set_old_time.c set_camera_x.c \
 				get_map_pos.c get_map_pos_x.c get_map_pos_y.c set_map_pos.c \
 				set_map_pos_x.c set_map_pos_y.c \
-				get_pos_to_wall_dist.c set_pos_to_wall_dist.c \
+				get_perpendicular_wall_dist.c set_perpendicular_wall_dist.c \
+				get_perp_wall_dist_tab.c set_perp_wall_dist_tab.c \
 				get_step.c get_step_x.c get_step_y.c set_step.c set_step_x.c set_step_y.c \
 				get_side_dist.c get_side_dist_x.c get_side_dist_y.c set_side_dist.c \
 				set_side_dist_x.c set_side_dist_y.c \
@@ -85,9 +86,9 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_mlx_params.c get_player.c get_rcast_params.c \
 				\
 				run_game.c update_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
-				draw_circle.c get_minimap_tiles_nbr.c get_tile_size.c render_map.c \
-				render_wall.c render_tile.c map_pos_to_pixel_pos.c render_player.c \
-				update_map.c \
+				draw_circle.c get_minimap_tiles_nbr.c get_minimap_tile_size.c render_minimap.c \
+				render_minimap_wall.c render_minimap_tile.c map_pos_to_pixel_pos.c render_minimap_player.c \
+				rendering.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\

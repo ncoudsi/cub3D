@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_tile_size.c                                    :+:      :+:    :+:   */
+/*   render_minimap_player.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 09:42:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 10:09:53 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/14 14:19:14 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/07 13:15:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector	get_tile_size(t_vector minimap_tiles_nbr)
+void	render_minimap_player()
 {
-	t_vector	result;
+	t_vector	center;
 
-	result.x = resolution_x() / minimap_tiles_nbr.x;
-	result.y = resolution_y() / minimap_tiles_nbr.y;
-	return (result);
+	center = map_pos_to_pixel_pos(create_vector(pos_x(), pos_y()));
+	draw_circle(center, PLAYER_SIZE, create_color(PLAYER_COLOR));
 }

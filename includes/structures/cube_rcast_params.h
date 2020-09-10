@@ -25,10 +25,10 @@ typedef struct		s_rcast_params
 	t_int_vector	*step;
 	t_vector		*side_dist;
 	t_vector		*delta_dist;
-	float			pos_to_wall_dist;
+	float			perpendicular_wall_dist;
+	float			*perp_wall_dist_tab;
 	t_bool			hit;
 	int				side;
-
 }					t_rcast_params;
 
 void				load_rcast_params();
@@ -86,8 +86,10 @@ t_vector const		*delta_dist();
 float				delta_dist_x();
 float				delta_dist_y();
 void				set_delta_dist(t_vector *value);
-float				pos_to_wall_dist();
-void				set_pos_to_wall_dist(float value);
+float				perpendicular_wall_dist();
+void				set_perpendicular_wall_dist(float value);
+float				*perp_wall_dist_tab();
+void				set_perp_wall_dist_tab(int index, float value);
 t_bool				hit();
 void				set_hit(int value);
 int					side();

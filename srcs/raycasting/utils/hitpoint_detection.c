@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 10:08:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 12:01:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/10 12:13:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ void	hitpoint_detection()
 		}
 		if (g_engine->map_params->map[map_pos_y()][map_pos_x()] == '1')
 			set_hit(true);
-		// printf("%i\n", map_pos_y());
 	}
 }

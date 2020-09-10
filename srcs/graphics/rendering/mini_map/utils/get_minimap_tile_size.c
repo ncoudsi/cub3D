@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update_map.c                                       :+:      :+:    :+:   */
+/*   get_minimap_tile_size.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/31 15:57:37 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 13:51:50 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/10 09:42:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/10 14:50:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    update_map()
+t_vector	get_minimap_tile_size(t_vector minimap_tiles_nbr)
 {
-    mlx_destroy_image(mlx_ptr(), img_ptr());
-    set_img_ptr(mlx_new_image(mlx_ptr(), resolution_x(), resolution_y()));
-	set_pixels(mlx_get_data_addr(img_ptr(), &g_engine->mlx_params->bits_per_pixel, &g_engine->mlx_params->size_line, &g_engine->mlx_params->endian));
-    render_map();
-	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
+	t_vector	result;
+
+	result.x = resolution_x() / minimap_tiles_nbr.x;
+	result.y = resolution_y() / minimap_tiles_nbr.y;
+	return (result);
 }
