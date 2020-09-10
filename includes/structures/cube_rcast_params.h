@@ -89,6 +89,7 @@ void				set_delta_dist(t_vector *value);
 float				perpendicular_wall_dist();
 void				set_perpendicular_wall_dist(float value);
 float				*perp_wall_dist_tab();
+float				perp_wall_dist_tab_index(int index_value);
 void				set_perp_wall_dist_tab(int index, float value);
 t_bool				hit();
 void				set_hit(int value);

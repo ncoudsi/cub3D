@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rendering.c                                        :+:      :+:    :+:   */
+/*   put_pixel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 15:24:56 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/07/09 12:23:30 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/10 15:25:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	rendering()
+void	put_pixel(t_vector pos, t_color color)
 {
-	mlx_destroy_image(mlx_ptr(), img_ptr());
-    set_img_ptr(mlx_new_image(mlx_ptr(), resolution_x(), resolution_y()));
-	set_pixels(mlx_get_data_addr(img_ptr(), &g_engine->mlx_params->bits_per_pixel, &g_engine->mlx_params->size_line, &g_engine->mlx_params->endian));
-	render_wall();
-	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
+	int	pixel_index;
+
+	pixel_index = get_pixel_index(pos);
+	g_engine->mlx_params->pixels[pixel_index + RED_INDEX] = color.r;
+	g_engine->mlx_params->pixels[pixel_index + GREEN_INDEX] = color.g;
+	g_engine->mlx_params->pixels[pixel_index + BLUE_INDEX] = color.b;
 }
