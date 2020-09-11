@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rendering.c                                        :+:      :+:    :+:   */
+/*   set_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/11 10:41:25 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/11 10:55:25 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/11 10:55:56 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	rendering()
+void	set_map(char ** value)
 {
-	set_pixels(mlx_get_data_addr(img_ptr(), &g_engine->mlx_params->bits_per_pixel, &g_engine->mlx_params->size_line, &g_engine->mlx_params->endian));
-	render_ceiling();
-	render_floor();
-	render_wall();
-	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
+	g_engine->map_params->map = value;
 }

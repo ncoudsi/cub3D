@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 13:44:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 10:58:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct	s_map_params
 }				t_map_params;
 
 void		load_map_params(int fd);
-
+void		resize_map();
 /*
 **  CREATORS & DESTRUCTORS
 */
@@ -62,6 +62,7 @@ void			set_ceiling_color(t_color *value);
 t_color const	*floor_colors();
 void			set_floor_color(t_color *value);
 char const		**map();
+void			set_map(char **value);
 t_vector const	*map_size();
 float			map_size_x();
 float			map_size_y();

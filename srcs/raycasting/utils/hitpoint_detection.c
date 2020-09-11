@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 10:08:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 16:27:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 11:18:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static t_bool	is_map_border(t_int_vector const *map_pos)
 {
-	if (map_pos->x < 0 || map_pos->x > map_size_x() ||
-		map_pos->y < 0 || map_pos->y > map_size_y())
+	if (map_pos->x < 0 || map_pos->x >= map_size_x() ||
+		map_pos->y < 0 || map_pos->y >= map_size_y())
 		return (true);
 	return (false);
 }

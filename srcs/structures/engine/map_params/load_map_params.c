@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 16:46:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 11:17:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void fill_map_size()
     t_vector    size;
     t_vector    index;
 
-    g_engine->map_params->map_size = (t_vector *)malloc(sizeof(t_vector));
+    g_engine->map_params->map_size = malloc_vector(0, 0);
 	if (map_size() == NULL)
 		error_exit(MALLOC_ERROR);
 	index = create_vector(0, 0);
@@ -52,8 +52,7 @@ static void fill_map_size()
         }
         index.y++;
     }
-    size.y = index.y - 1;
-    size. x--;
+    size.y = index.y;
     set_map_size(&size);
 }
 
@@ -119,7 +118,7 @@ void		load_map_params(int fd)
     }
 	fill_cardinal_point();
     fill_map_size();
-    // resize_map();
+    resize_map();
 	ft_free_tab((void **)map_file);
     if (is_all_map_params() == false)
         error_exit(MISS_PARAM_ERROR);
