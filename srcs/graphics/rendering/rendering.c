@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/11 14:07:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 14:36:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ void	rendering()
 		render_floor(&camera_index);
 		camera_index.x++;
 	}
+	render_minimap();
 	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
 }
