@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:56:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 16:12:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 09:51:44 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	render_wall()
 		height_index = wall_top;
 		while (height_index < wall_bottom)
 		{
-			put_pixel(create_vector(camera_index, height_index), create_color(255, 0, 0));
+			put_pixel(create_vector(camera_index, height_index), create_color(180, 180, 180));
 			height_index++;
 		}
 		camera_index++;
