@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/11 10:59:41 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/11 13:35:49 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				run_game.c update_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_minimap_tile_size.c render_minimap.c \
 				render_minimap_wall.c render_minimap_tile.c map_pos_to_pixel_pos.c render_minimap_player.c \
-				rendering.c render_wall.c render_ceiling.c render_floor.c \
+				rendering.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:45:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:56:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/11 13:32:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static	void	fill_vector_error_tab(char **vector_error_tab)
 {
-	vector_error_tab[PIXEL_POS_ERROR] = ft_strdup("Pixel index out of resolution range.");
+	vector_error_tab[PIXEL_POS_ERROR] =
+	ft_strdup("ERROR\n[Pixel index out of resolution range.]");
 }
 
 static	char	**malloc_vector_error_tab()
