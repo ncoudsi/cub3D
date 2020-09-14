@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/14 15:20:10 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/14 15:50:03 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_int_vector.c malloc_int_vector.c free_int_vector.c \
 				\
 				create_texture.c destroy_texture.c malloc_texture.c free_texture.c \
+				load_textures.c load_no_texture.c load_so_texture.c load_ea_texture.c \
+				load_we_texture.c load_sprite_texture.c \
 				\
 				create_color.c malloc_color.c free_color.c \
 				\

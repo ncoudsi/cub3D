@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:05:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 14:37:08 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/14 15:39:18 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,16 @@ typedef struct	s_texture
 	t_int_vector	*dimension;
 	char			*texels;
 	int				size_line;
-	int				chars_per_texel;
+	int				bits_per_texel;
+	int				endian;
 }				t_texture;
 
 void		load_textures();
+void		load_no_texture();
+void		load_so_texture();
+void		load_ea_texture();
+void		load_we_texture();
+void		load_sprite_texture();
 
 /*
 **	CREATORS & DESTRUCTORS
