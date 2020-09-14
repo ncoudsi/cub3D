@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/11 13:35:49 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/14 15:20:10 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_int_vector.c malloc_int_vector.c free_int_vector.c \
 				\
+				create_texture.c destroy_texture.c malloc_texture.c free_texture.c \
+				\
 				create_color.c malloc_color.c free_color.c \
 				\
 				create_moves.c malloc_moves.c free_moves.c \
@@ -48,10 +50,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c load_map_params.c get_map_file.c \
 				get_resolution.c get_resolution_x.c get_resolution_y.c set_resolution.c \
-				get_no_textures.c set_no_textures.c get_so_textures.c set_so_textures.c \
-				get_we_textures.c set_we_textures.c get_ea_textures.c set_ea_textures.c \
-				get_sprite_textures.c set_sprite_textures.c get_ceiling_colors.c set_ceiling_colors.c \
-				get_floor_colors.c set_floor_colors.c get_map.c set_map.c get_map_adr.c \
+				get_no_texture.c set_no_texture.c get_so_texture.c set_so_texture.c \
+				get_we_texture.c set_we_texture.c get_ea_texture.c set_ea_texture.c \
+				get_sprite_texture.c set_sprite_texture.c get_ceiling_color.c set_ceiling_color.c \
+				get_floor_color.c set_floor_color.c get_map.c set_map.c get_map_adr.c \
 				get_cardinal_point.c set_cardinal_point.c cube_file_parsing.c \
 				resolution_parsing.c colors_parsing.c map_parsing.c is_cardinal_point.c \
 				textures_parsing.c fill_params.c fill_map.c is_walled.c is_tile.c is_valid_map_entry.c \

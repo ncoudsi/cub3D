@@ -16,22 +16,22 @@ static t_bool	is_double_param(char *param_line)
 {
     if (param_line[0] == 'R' && resolution() != NULL)
         return (true);
-    if (param_line[0] == 'N' && no_textures() != NULL)
+    if (param_line[0] == 'N' && no_texture() != NULL)
         return (true);
     if (param_line[0] == 'S')
     {
-        if (param_line[1] == 'O' && so_textures() != NULL)
+        if (param_line[1] == 'O' && so_texture() != NULL)
             return (true);
-        else if (sprite_textures() != NULL)
+        else if (sprite_texture() != NULL)
             return (true);
     }
-    if (param_line[0] == 'W' && we_textures() != NULL)
+    if (param_line[0] == 'W' && we_texture() != NULL)
         return (true);
-    if (param_line[0] == 'E' && ea_textures() != NULL)
+    if (param_line[0] == 'E' && ea_texture() != NULL)
         return (true);
-    if (param_line[0] == 'C' && ceiling_colors() != NULL)
+    if (param_line[0] == 'C' && ceiling_color() != NULL)
         return (true);
-    if (param_line[0] == 'F' && floor_colors() != NULL)
+    if (param_line[0] == 'F' && floor_color() != NULL)
         return (true);
     return (false);
 }
@@ -53,27 +53,27 @@ static void		fill_textures(char ** splitted_line)
 {
     if (splitted_line[0][0] == 'N')
     {
-        set_no_textures(ft_strdup(splitted_line[1]));
+        set_no_texture(malloc_texture(splitted_line[1]));
         ft_free_tab((void **)splitted_line);
     }
     else if (splitted_line[0][0] == 'S' && ft_strlen(splitted_line[0]) == 1)
     {
-        set_sprite_textures(ft_strdup(splitted_line[1]));
+        set_sprite_texture(malloc_texture(splitted_line[1]));
         ft_free_tab((void **)splitted_line);
     }
     else if (splitted_line[0][0] == 'S' && ft_strlen(splitted_line[0]) == 2)
     {
-        set_so_textures(ft_strdup(splitted_line[1]));
+        set_so_texture(malloc_texture(splitted_line[1]));
         ft_free_tab((void **)splitted_line);
     }
     else if (splitted_line[0][0] == 'W')
     {
-        set_we_textures(ft_strdup(splitted_line[1]));
+        set_we_texture(malloc_texture(splitted_line[1]));
         ft_free_tab((void **)splitted_line);
     }
     else if (splitted_line[0][0] == 'E')
     {
-        set_ea_textures(ft_strdup(splitted_line[1]));
+        set_ea_texture(malloc_texture(splitted_line[1]));
         ft_free_tab((void **)splitted_line);
     }
 }
@@ -93,8 +93,8 @@ static void		fill_ceilling_color(char **splitted_line)
         index++;
     index++;
     color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
-	g_engine->map_params->ceiling_colors = (t_color *)malloc(sizeof(t_color));
-	if (ceiling_colors() == NULL)
+	g_engine->map_params->ceiling_color = (t_color *)malloc(sizeof(t_color));
+	if (ceiling_color() == NULL)
 		error_exit(MALLOC_ERROR);
 	set_ceiling_color(&color);
     ft_free_tab((void **)splitted_line);
@@ -115,8 +115,8 @@ static void		fill_floor_color(char **splitted_line)
         index++;
     index++;
     color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
-	g_engine->map_params->floor_colors = (t_color *)malloc(sizeof(t_color));
-	if (ceiling_colors() == NULL)
+	g_engine->map_params->floor_color = (t_color *)malloc(sizeof(t_color));
+	if (ceiling_color() == NULL)
 		error_exit(MALLOC_ERROR);
 	set_floor_color(&color);
     ft_free_tab((void **)splitted_line);

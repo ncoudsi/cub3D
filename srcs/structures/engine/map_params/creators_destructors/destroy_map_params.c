@@ -15,13 +15,13 @@
 void    destroy_map_params(t_map_params to_destroy)
 {
     free_vector(to_destroy.resolution);
-    free(to_destroy.no_textures);
-    free(to_destroy.so_textures);
-    free(to_destroy.we_textures);
-    free(to_destroy.ea_textures);
-    free(to_destroy.sprite_textures);
-    free_color(to_destroy.ceiling_colors);
-    free_color(to_destroy.floor_colors);
+    free(to_destroy.no_texture);
+    free(to_destroy.so_texture);
+    free(to_destroy.we_texture);
+    free(to_destroy.ea_texture);
+    free(to_destroy.sprite_texture);
+    free_color(to_destroy.ceiling_color);
+    free_color(to_destroy.floor_color);
     ft_free_tab((void **)to_destroy.map);
     free_vector(to_destroy.map_size);
 }

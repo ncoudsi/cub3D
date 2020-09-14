@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/11 10:58:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/14 15:20:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 typedef struct	s_map_params
 {
 	t_vector	*resolution;
-	char		*no_textures;
-	char		*so_textures;
-	char		*we_textures;
-	char		*ea_textures;
-	char		*sprite_textures;
-	t_color		*ceiling_colors;
-	t_color		*floor_colors;
+	t_texture	*no_texture;
+	t_texture	*so_texture;
+	t_texture	*we_texture;
+	t_texture	*ea_texture;
+	t_texture	*sprite_texture;
+	t_color		*ceiling_color;
+	t_color		*floor_color;
 	char		**map;
 	t_vector	*map_size;
 	char		cardinal_point;
@@ -47,19 +47,19 @@ t_vector const	*resolution();
 int				resolution_x();
 int				resolution_y();
 void			set_resolution(t_vector *value);
-char const		*no_textures();
-void			set_no_textures(char *value);
-char const		*so_textures();
-void			set_so_textures(char *value);
-char const		*we_textures();
-void			set_we_textures(char *value);
-char const		*ea_textures();
-void			set_ea_textures(char *value);
-char const		*sprite_textures();
-void			set_sprite_textures(char *value);
-t_color const	*ceiling_colors();
+t_texture const	*no_texture();
+void			set_no_texture(t_texture *value);
+t_texture const	*so_texture();
+void			set_so_texture(t_texture *value);
+t_texture const	*we_texture();
+void			set_we_texture(t_texture *value);
+t_texture const	*ea_texture();
+void			set_ea_texture(t_texture *value);
+t_texture const	*sprite_texture();
+void			set_sprite_texture(t_texture *value);
+t_color const	*ceiling_color();
 void			set_ceiling_color(t_color *value);
-t_color const	*floor_colors();
+t_color const	*floor_color();
 void			set_floor_color(t_color *value);
 char const		**map();
 void			set_map(char **value);

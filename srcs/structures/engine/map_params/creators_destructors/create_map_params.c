@@ -17,13 +17,13 @@ t_map_params    create_map_params()
     t_map_params    result;
 
     result.resolution = NULL;
-    result.no_textures = NULL;
-    result.so_textures = NULL;
-    result.we_textures = NULL;
-    result.ea_textures = NULL;
-    result.sprite_textures = NULL;
-    result.ceiling_colors = NULL;
-    result.floor_colors = NULL;
+    result.no_texture = NULL;
+    result.so_texture = NULL;
+    result.we_texture = NULL;
+    result.ea_texture = NULL;
+    result.sprite_texture = NULL;
+    result.ceiling_color = NULL;
+    result.floor_color = NULL;
     result.map = NULL;
     result.map_size = NULL;
 	result.cardinal_point = '\0';

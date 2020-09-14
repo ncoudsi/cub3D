@@ -17,4 +17,7 @@ void            load_game(int fd)
 	load_map_params(fd);
 	load_player();
 	load_rcast_params();
+	set_mlx_ptr(mlx_init());
+	set_win_ptr(mlx_new_window(mlx_ptr(), resolution_x(), resolution_y(), "Cube3D"));
+	// load_textures();
 }
