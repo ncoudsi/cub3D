@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:05:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 15:39:18 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/14 16:03:05 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,15 @@ t_texture	create_texture(char *path);
 void		destroy_texture(t_texture to_destroy);
 t_texture	*malloc_texture(char *path);
 void		free_texture(t_texture *to_free);
+
+/*
+**	GETTERS & SETTERS
+*/
+
+char		*no_texture_path();
+char		*so_texture_path();
+char		*ea_texture_path();
+char		*we_texture_path();
+char		*sprite_texture_path();
 
 #endif
