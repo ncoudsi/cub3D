@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_render_params.c                             :+:      :+:    :+:   */
+/*   calculate_wall_hitpoint_x.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 12:03:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 16:30:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 14:26:57 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 14:55:23 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_render_params	create_render_params()
+void	calculate_wall_hitpoint_x()
 {
-	t_render_params	result;
-
-	result.wall_height = 0;
-	result.wall_bottom = 0;
-	result.wall_top = 0;
-	result.wall_hitpoint_x = 0;
-	result.texture_x = 0;
-	result.texture_step = 0;
-	return  (result);
+		if (side() == 0)
+			set_wall_hitpoint_x(pos_y() + perpendicular_wall_dist() * ray_dir_y());
+		else
+			set_wall_hitpoint_x(pos_x() + perpendicular_wall_dist() * ray_dir_x());
+	set_wall_hitpoint_x(wall_hitpoint_x() - floor(wall_hitpoint_x()));
 }

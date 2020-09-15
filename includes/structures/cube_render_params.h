@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 13:54:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/15 16:28:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct	s_render_params
 	int				wall_top;
 	float			wall_hitpoint_x;
 	int				texture_x;
+	float			texture_step;
 }				t_render_params;
 
 /*
@@ -45,5 +46,7 @@ float				wall_hitpoint_x();
 void				set_wall_hitpoint_x(float value);
 int					texture_x();
 void				set_texture_x(int value);
+float				texture_step();
+void				set_texture_step(float value);
 
 #endif

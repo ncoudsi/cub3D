@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_render_params.c                             :+:      :+:    :+:   */
+/*   set_texture_step.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 12:03:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 16:30:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 16:29:30 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 16:29:55 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_render_params	create_render_params()
+void	set_texture_step(float value)
 {
-	t_render_params	result;
-
-	result.wall_height = 0;
-	result.wall_bottom = 0;
-	result.wall_top = 0;
-	result.wall_hitpoint_x = 0;
-	result.texture_x = 0;
-	result.texture_step = 0;
-	return  (result);
+	g_engine->render_params->texture_step = value;
 }

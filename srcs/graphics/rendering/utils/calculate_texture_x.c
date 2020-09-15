@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_render_params.c                             :+:      :+:    :+:   */
+/*   calculate_texture_x.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 12:03:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 16:30:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 14:26:22 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 14:26:44 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_render_params	create_render_params()
+void	calculate_texture_x()
 {
-	t_render_params	result;
+	int	texture_width;
 
-	result.wall_height = 0;
-	result.wall_bottom = 0;
-	result.wall_top = 0;
-	result.wall_hitpoint_x = 0;
-	result.texture_x = 0;
-	result.texture_step = 0;
-	return  (result);
+	texture_width = g_engine->map_params->no_texture->dimension->x;
+	set_texture_x(wall_hitpoint_x() * texture_width);
+	if (side() == 0 && ray_dir_x() > 0)
+		set_texture_x(texture_width - texture_x() - 1);
+	else if (side() == 1 && ray_dir_y() < 0)
+		set_texture_x(texture_width - texture_x() - 1);
 }
