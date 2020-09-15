@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hit.c                                          :+:      :+:    :+:   */
+/*   set_texture_x.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 15:34:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:23:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 14:00:13 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 14:00:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_bool	hit()
+void	set_texture_x(int value)
 {
-	return (g_engine->rcast_params->hit);
+	g_engine->render_params->texture_x = value;
 }

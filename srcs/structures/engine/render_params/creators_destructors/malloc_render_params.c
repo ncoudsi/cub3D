@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hit.c                                          :+:      :+:    :+:   */
+/*   malloc_render_params.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 15:34:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:23:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 12:07:18 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 12:08:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_bool	hit()
+t_render_params	*malloc_render_params()
 {
-	return (g_engine->rcast_params->hit);
+	t_render_params	*result;
+
+	result = (t_render_params *)malloc(sizeof(t_render_params));
+	if (result == NULL)
+		return (NULL);
+	*result = create_render_params();
+	return (result);
 }

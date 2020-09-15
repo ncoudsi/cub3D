@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 13:09:23 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/15 12:10:43 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 #include "cube_map_params.h"
 #include "cube_mlx_params.h"
 #include "cube_rcast_params.h"
+#include "cube_render_params.h"
 #include "cube_engine.h"
 #include "cube_errors.h"
 

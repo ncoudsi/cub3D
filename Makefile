@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/14 16:03:56 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/15 14:02:01 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,6 +85,11 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_delta_dist.c get_delta_dist_x.c get_delta_dist_y.c set_delta_dist.c \
 				get_hit.c set_hit.c get_side.c set_side.c \
 				get_dir_value.c get_plane_value.c load_rcast_params.c \
+				\
+				create_render_params.c destroy_render_params.c malloc_render_params.c free_render_params.c \
+				get_texture_x.c set_texture_x.c get_wall_bottom.c set_wall_bottom.c \
+				get_wall_height.c set_wall_height.c get_wall_hitpoint_x.c set_wall_hitpoint_x.c \
+				get_wall_top.c set_wall_top.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \

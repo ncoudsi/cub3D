@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hit.c                                          :+:      :+:    :+:   */
+/*   destroy_render_params.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 15:34:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:23:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 12:05:48 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 14:02:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_bool	hit()
+void	destroy_render_params(t_render_params to_destroy)
 {
-	return (g_engine->rcast_params->hit);
+	(void)to_destroy;
 }

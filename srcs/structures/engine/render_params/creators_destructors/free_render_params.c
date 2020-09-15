@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hit.c                                          :+:      :+:    :+:   */
+/*   free_render_params.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 15:34:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:23:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 12:08:51 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/15 12:10:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_bool	hit()
+void	free_render_params(t_render_params *to_free)
 {
-	return (g_engine->rcast_params->hit);
+	destroy_render_params(*to_free);
+	free(to_free);
 }
