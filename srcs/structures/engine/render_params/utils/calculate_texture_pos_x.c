@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_press.c                                      :+:      :+:    :+:   */
+/*   calculate_texture_pos_x.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 13:05:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/05 12:47:39 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 14:26:22 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/16 09:38:33 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int key_press(int key)
+int	calculate_texture_pos_x()
 {
-	if (key == ESC_KEY)
-		exit(0);
-	if (is_movement_key(key) == true || is_rotation_key(key) == true)
-		set_moves(key);
-  return (key);
+	int	result;
+	int	texture_width;
+
+	texture_width = g_engine->map_params->no_texture->dimension->x;
+	result = wall_hitpoint_x() * texture_width;
+	if (side() == 0 && ray_dir_x() > 0)
+		result = texture_width - texture_pos_x() - 1;
+	else if (side() == 1 && ray_dir_y() < 0)
+		result = texture_width - texture_pos_x() - 1;
+	return (result);
 }

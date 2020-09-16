@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_texture_x.c                              :+:      :+:    :+:   */
+/*   get_texture_pos_x_tab.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:26:22 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 14:26:44 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 10:35:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/16 10:35:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	calculate_texture_x()
+int const	*texture_pos_x_tab()
 {
-	int	texture_width;
-
-	texture_width = g_engine->map_params->no_texture->dimension->x;
-	set_texture_x(wall_hitpoint_x() * texture_width);
-	if (side() == 0 && ray_dir_x() > 0)
-		set_texture_x(texture_width - texture_x() - 1);
-	else if (side() == 1 && ray_dir_y() < 0)
-		set_texture_x(texture_width - texture_x() - 1);
+	return (g_engine->render_params->texture_pos_x_tab);
 }

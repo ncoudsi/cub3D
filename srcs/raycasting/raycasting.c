@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:30:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/16 15:04:59 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ void    raycasting()
 	else
 		set_perpendicular_wall_dist((map_pos_y() - pos_y() + (1.0f - step_y()) / 2.0f) / ray_dir_y());
 		set_perp_wall_dist_tab(index, perpendicular_wall_dist());
+		set_wall_hitpoint_x(calculate_wall_hitpoint_x());
+		set_texture_pos_x(calculate_texture_pos_x());
+		set_texture_pos_x_tab(index, texture_pos_x());
 		index++;
 	}
 }

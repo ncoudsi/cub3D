@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_press.c                                      :+:      :+:    :+:   */
+/*   set_texture_pos_x_tab.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 13:05:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/05 12:47:39 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 10:35:49 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/16 10:36:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int key_press(int key)
+void	set_texture_pos_x_tab(int index, int value)
 {
-	if (key == ESC_KEY)
-		exit(0);
-	if (is_movement_key(key) == true || is_rotation_key(key) == true)
-		set_moves(key);
-  return (key);
+	g_engine->render_params->texture_pos_x_tab[index] = value;
 }

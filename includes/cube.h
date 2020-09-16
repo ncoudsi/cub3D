@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 14:27:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/16 09:39:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ void		render_minimap();
 void		render_minimap_wall(t_vector map_index);
 void		render_minimap_tile(t_vector map_index);
 void		render_minimap_player();
-void		calculate_wall_hitpoint_x();
-void		calculate_texture_x();
 
 /*
 **	MATHS

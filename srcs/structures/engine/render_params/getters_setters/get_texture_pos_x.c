@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_press.c                                      :+:      :+:    :+:   */
+/*   get_texture_pos_x.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 13:05:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/05 12:47:39 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 09:26:52 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/16 09:27:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int key_press(int key)
+int	texture_pos_x()
 {
-	if (key == ESC_KEY)
-		exit(0);
-	if (is_movement_key(key) == true || is_rotation_key(key) == true)
-		set_moves(key);
-  return (key);
+	return(g_engine->render_params->texture_pos->x);
 }
