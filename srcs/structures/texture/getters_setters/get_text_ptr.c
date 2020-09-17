@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_so_texture_path.c                              :+:      :+:    :+:   */
+/*   get_text_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/14 16:06:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:06:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/17 13:44:45 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/17 14:12:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*so_texture_path()
+void const	*text_ptr(t_texture const *object)
 {
-	return (g_engine->map_params->so_texture->path);
+	return (object->text_ptr);
 }

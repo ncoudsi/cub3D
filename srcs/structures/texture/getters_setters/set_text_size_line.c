@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_no_texture_path.c                              :+:      :+:    :+:   */
+/*   set_text_size_line.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/14 16:04:50 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:05:41 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/17 13:58:09 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/17 13:58:39 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*no_texture_path()
+void	set_text_size_line(int value, t_texture *object)
 {
-	return (g_engine->map_params->no_texture->path);
+	object->text_size_line = value;
 }

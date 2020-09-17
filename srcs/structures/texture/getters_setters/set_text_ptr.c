@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_sprite_texture_path.c                          :+:      :+:    :+:   */
+/*   set_text_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/14 16:07:04 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:07:13 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/17 13:45:32 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/17 13:46:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*sprite_texture_path()
+void	set_text_ptr(void *value, t_texture *object)
 {
-	return (g_engine->map_params->sprite_texture->path);
+	object->text_ptr = value;
 }

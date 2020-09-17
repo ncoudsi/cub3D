@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:10:20 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 15:39:31 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 14:02:53 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ t_texture	create_texture(char	*path)
 {
 	t_texture	result;
 
+	result.text_ptr = NULL;
 	result.path = ft_strdup(path);
 	result.dimension = malloc_int_vector(0, 0);
 	result.texels = NULL;
-	result.size_line = 0;
+	result.text_size_line = 0;
 	result.bits_per_texel = 0;
-	result.endian = 0;
+	result.text_endian = 0;
 	return (result);
 }

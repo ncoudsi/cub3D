@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:41:38 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:05:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:49:00 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void			set_bits_per_pixel(int value);
 int				size_line();
 void			set_size_line(int value);
 int				endian();
-void			set_size_line(int value);
+void			set_endian(int value);
 
 #endif

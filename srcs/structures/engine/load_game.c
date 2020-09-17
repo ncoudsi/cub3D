@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-void            load_game(int fd)
+void	load_game(int fd)
 {
 	load_map_params(fd);
 	load_player();

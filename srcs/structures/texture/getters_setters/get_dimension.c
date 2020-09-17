@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_we_texture_path.c                              :+:      :+:    :+:   */
+/*   get_dimension.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/14 16:06:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:06:51 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/17 13:47:36 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/17 14:11:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*we_texture_path()
+t_int_vector const	*dimension(t_texture const *object)
 {
-	return (g_engine->map_params->we_texture->path);
+	return (object->dimension);
 }

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:21:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 15:10:14 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:02:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	get_pixel_index(t_vector pos)
+int	get_pixel_index(t_int_vector pos)
 {
 	int	pixel_index;
 

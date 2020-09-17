@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 15:20:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:36:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,14 @@ typedef struct	s_map_params
 }				t_map_params;
 
 void		load_map_params(int fd);
+void		load_textures();
+void		load_no_texture();
+void		load_so_texture();
+void		load_ea_texture();
+void		load_we_texture();
+void		load_sprite_texture();
 void		resize_map();
+
 /*
 **  CREATORS & DESTRUCTORS
 */

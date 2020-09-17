@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:05:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:03:05 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 14:23:34 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,45 @@
 
 typedef struct	s_texture
 {
+	void			*text_ptr;
 	char			*path;
 	t_int_vector	*dimension;
 	char			*texels;
-	int				size_line;
+	int				text_size_line;
 	int				bits_per_texel;
-	int				endian;
+	int				text_endian;
 }				t_texture;
-
-void		load_textures();
-void		load_no_texture();
-void		load_so_texture();
-void		load_ea_texture();
-void		load_we_texture();
-void		load_sprite_texture();
 
 /*
 **	CREATORS & DESTRUCTORS
 */
 
-t_texture	create_texture(char *path);
-void		destroy_texture(t_texture to_destroy);
-t_texture	*malloc_texture(char *path);
-void		free_texture(t_texture *to_free);
+t_texture			create_texture(char *path);
+void				destroy_texture(t_texture to_destroy);
+t_texture			*malloc_texture(char *path);
+void				free_texture(t_texture *to_free);
 
 /*
 **	GETTERS & SETTERS
 */
 
-char		*no_texture_path();
-char		*so_texture_path();
-char		*ea_texture_path();
-char		*we_texture_path();
-char		*sprite_texture_path();
+void const			*text_ptr(t_texture const *object);
+void				set_text_ptr(void *value, t_texture *object);
+char const			*path(t_texture const *object);
+void				set_path(char *value, t_texture *object);
+t_int_vector const	*dimension(t_texture const *object);
+int					dimension_x(t_texture const *object);
+int					dimension_y(t_texture const *object);
+void				set_dimension(t_int_vector *value, t_texture *object);
+void				set_dimension_x(int value, t_texture *object);
+void				set_dimension_y(int value, t_texture *object);
+char const			*texels(t_texture const *object);
+void				set_texels(char *value, t_texture *object);
+int					text_size_line(t_texture const *object);
+void				set_text_size_line(int value, t_texture *object);
+int					bits_per_texel(t_texture const *object);
+void				set_bits_per_texel(int value, t_texture *object);
+int					text_endian(t_texture const *object);
+void				set_text_endian(int value, t_texture *object);
 
 #endif

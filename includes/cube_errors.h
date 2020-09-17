@@ -37,5 +37,5 @@ void	error_exit(int error_code);
 # define VECTOR_ERRORS_NBR 1
 # define PIXEL_POS_ERROR 0
 
-void	error_exit_vector(t_vector pos, int error_code);
+void	error_exit_vector(t_int_vector pos, int error_code);
 #endif

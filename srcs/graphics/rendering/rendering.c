@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/16 13:22:51 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:11:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static void	render_ceiling(t_vector *camera_index)
+static void	render_ceiling(t_int_vector *camera_index)
 {
 	while (camera_index->y < wall_top())
 	{
@@ -21,19 +21,20 @@ static void	render_ceiling(t_vector *camera_index)
 	}
 }
 
-static void	render_wall(t_vector *camera_index)
+static void	render_wall(t_int_vector *camera_index)
 {
 	t_color	texture_color;
 
 	while (camera_index->y < wall_bottom())
 	{
+		// texture_color = create_color(0, 155, 0);
 		texture_color = calculate_texture_color(camera_index);
 		put_pixel(*camera_index, texture_color);
 		camera_index->y++;
 	}
 }
 
-static void	render_floor(t_vector *camera_index)
+static void	render_floor(t_int_vector *camera_index)
 {
 	while (camera_index->y < resolution_y())
 	{
@@ -44,9 +45,9 @@ static void	render_floor(t_vector *camera_index)
 
 void	rendering()
 {
-	t_vector	camera_index;
+	t_int_vector	camera_index;
 
-	camera_index = create_vector(0, 0);
+	camera_index = create_int_vector(0, 0);
 	while (camera_index.x < resolution_x())
 	{
 		camera_index.y = 0;

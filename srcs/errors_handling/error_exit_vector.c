@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:45:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/11 13:32:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:03:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	char	**malloc_vector_error_tab()
 	return (result);
 }
 
-void	error_exit_vector(t_vector pos, int error_code)
+void	error_exit_vector(t_int_vector pos, int error_code)
 {
 	char	**vector_error_tab;
 

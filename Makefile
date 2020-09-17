@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/16 14:50:19 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/17 14:06:41 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,11 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_int_vector.c malloc_int_vector.c free_int_vector.c \
 				\
 				create_texture.c destroy_texture.c malloc_texture.c free_texture.c \
-				load_textures.c load_no_texture.c load_so_texture.c load_ea_texture.c \
-				load_we_texture.c load_sprite_texture.c get_no_texture_path.c get_so_texture_path.c \
-				get_ea_texture_path.c get_we_texture_path.c get_sprite_texture_path.c \
+				load_textures.c get_bits_per_texel.c set_bits_per_texel.c \
+				get_dimension.c set_dimension.c get_dimension_x.c set_dimension_x.c \
+				get_dimension_y.c set_dimension_y.c get_path.c set_path.c get_texels.c \
+				set_texels.c get_text_endian.c set_text_endian.c get_text_ptr.c set_text_ptr.c \
+				get_text_size_line.c set_text_size_line.c \
 				\
 				create_color.c malloc_color.c free_color.c \
 				\
@@ -52,6 +54,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c load_map_params.c get_map_file.c \
+				load_we_texture.c load_sprite_texture.c load_no_texture.c load_so_texture.c load_ea_texture.c \
 				get_resolution.c get_resolution_x.c get_resolution_y.c set_resolution.c \
 				get_no_texture.c set_no_texture.c get_so_texture.c set_so_texture.c \
 				get_we_texture.c set_we_texture.c get_ea_texture.c set_ea_texture.c \

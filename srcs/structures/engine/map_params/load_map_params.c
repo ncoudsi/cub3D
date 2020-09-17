@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:09:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 14:09:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,15 +74,15 @@ static t_bool   is_all_map_params()
 {
     if (resolution() == NULL)
         return (false);
-    else if (no_texture_path() == NULL)
+    else if (path(no_texture()) == NULL)
         return (false);
-    else if (so_texture_path() == NULL)
+    else if (path(so_texture()) == NULL)
         return (false);
-    else if (we_texture_path() == NULL)
+    else if (path(we_texture()) == NULL)
         return (false);
-    else if (ea_texture_path() == NULL)
+    else if (path(ea_texture()) == NULL)
         return (false);
-    else if (sprite_texture_path() == NULL)
+    else if (path(sprite_texture()) == NULL)
         return (false);
     else if (ceiling_color() == NULL)
         return (false);

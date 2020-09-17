@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/16 09:39:31 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 12:02:51 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ t_bool		is_rotation_key(int key);
 */
 
 void		rendering();
-int			get_pixel_index(t_vector pos);
-void		put_pixel(t_vector pos, t_color color);
+int			get_pixel_index(t_int_vector pos);
+void		put_pixel(t_int_vector pos, t_color color);
 void		draw_rectangle(t_vector pos, t_vector dimension, t_color color);
 void		draw_circle(t_vector center, int radius, t_color color);
 t_vector	get_minimap_tiles_nbr();
