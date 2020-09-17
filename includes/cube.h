@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 12:02:51 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 15:19:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ void		render_minimap();
 void		render_minimap_wall(t_vector map_index);
 void		render_minimap_tile(t_vector map_index);
 void		render_minimap_player();
+t_color		calculate_texture_color(t_int_vector *camera_index);
+t_color		no_texture_color();
+t_color		so_texture_color();
+t_color		we_texture_color();
+t_color		ea_texture_color();
+t_color		spirte_texture_color();
 
 /*
 **	MATHS
@@ -60,4 +66,6 @@ void		update_ray_dir_value();
 void		update_delta_dist_value();
 void		update_step_and_side_dist_values();
 void		hitpoint_detection();
+void		side_detection();
+
 #endif

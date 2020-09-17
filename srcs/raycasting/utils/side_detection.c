@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calculate_wall_hitpoint_x.c                        :+:      :+:    :+:   */
+/*   side_detection.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:26:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 15:24:31 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/17 15:19:02 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/17 16:06:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	calculate_wall_hitpoint_x()
+void	side_detection()
 {
-	float	result;
-
-	result = 0;
-		if (side() == 0 || side() == 2)
-			result = pos_y() + perpendicular_wall_dist() * ray_dir_y();
-		else if (side() == 1 || side() == 3)
-			result = pos_x() + perpendicular_wall_dist() * ray_dir_x();
-	result = result - floor(result);
-	return(result);
+	if (side() == 0 && ray_dir_x() > 0)
+		set_side(0);
+	else if (side() == 0 && ray_dir_x() < 0)
+		set_side(2);
+	else if (side() == 1 && ray_dir_y() > 0)
+		set_side(1);
+	else if (side() == 1 && ray_dir_y() < 0)
+		set_side(3);
 }

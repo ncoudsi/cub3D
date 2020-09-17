@@ -1,9 +1,9 @@
 R 800 600
 
                          NO ./ressources/bluestone.xpm
-SO               ./ressources/bluestone.xpm
-         WE                     ./ressources/bluestone.xpm
-EA ./ressources/bluestone.xpm
+SO               ./ressources/brick_wall.xpm
+         WE                     ./ressources/wall_2.xpm
+EA ./ressources/purplestone.xpm
 S ./ressources/bluestone.xpm
 
 C 70,100,225
@@ -23,7 +23,7 @@ F 200,150,20
      1111011111011 1111111000100100011111111111111
      1100000101011 1000000000010001111
      1000200000001110110000000000021
-     10000000000011001000N0000001111
+     10000000000011001000E0000001111
      1000000111001110101110101100111
      11000111111011001011100011111
      1110111 1 1001101111110111

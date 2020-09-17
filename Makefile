@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/17 14:06:41 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/17 15:20:00 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_delta_dist.c get_delta_dist_x.c get_delta_dist_y.c set_delta_dist.c \
 				get_hit.c set_hit.c get_side.c set_side.c \
 				get_dir_value.c get_plane_value.c load_rcast_params.c \
+				get_side_tab.c get_side_tab_index.c set_side_tab.c \
 				\
 				create_render_params.c destroy_render_params.c malloc_render_params.c free_render_params.c \
 				get_wall_bottom.c set_wall_bottom.c get_wall_height.c set_wall_height.c get_wall_hitpoint_x.c \
@@ -105,14 +106,15 @@ SRCS		=	cube.c cube_file_fd.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_minimap_tile_size.c render_minimap.c \
 				render_minimap_wall.c render_minimap_tile.c map_pos_to_pixel_pos.c render_minimap_player.c \
 				rendering.c calculate_texture_pos_x.c calculate_wall_hitpoint_x.c \
-				calculate_texture_color.c \
+				calculate_texture_color.c no_texture_color.c so_texture_color.c we_texture_color.c ea_texture_color.c \
+				sprite_texture_color.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\
 				distance_calculation.c \
 				\
 				raycasting.c update_ray_dir_value.c update_delta_dist_value.c update_step_and_side_dist_values.c \
-				hitpoint_detection.c \
+				hitpoint_detection.c side_detection.c \
 				\
 				error_exit.c error_exit_vector.c \
 

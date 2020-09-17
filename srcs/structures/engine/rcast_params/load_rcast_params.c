@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 12:00:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 14:24:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 15:05:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ static void	attributes_allocation()
 	g_engine->rcast_params->side_dist = (t_vector *)malloc(sizeof(t_vector));
 	g_engine->rcast_params->delta_dist = (t_vector *)malloc(sizeof(t_vector));
 	g_engine->rcast_params->perp_wall_dist_tab = (float *)malloc(sizeof(float) * resolution_x());
+	g_engine->rcast_params->side_tab = (int *)malloc(sizeof(int) * resolution_x());
 }
 
 static void	fill_perp_wall_dist_tab(float value)

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:09:21 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/10 14:21:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 15:04:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void    destroy_rcast_params(t_rcast_params to_destroy)
 	free_vector(to_destroy.side_dist);
 	free_vector(to_destroy.delta_dist);
 	free(to_destroy.perp_wall_dist_tab);
+	free(to_destroy.side_tab);
 }

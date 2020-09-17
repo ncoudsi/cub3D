@@ -29,6 +29,7 @@ typedef struct		s_rcast_params
 	float			*perp_wall_dist_tab;
 	t_bool			hit;
 	int				side;
+	int				*side_tab;
 }					t_rcast_params;
 
 void				load_rcast_params();
@@ -95,6 +96,9 @@ t_bool				hit();
 void				set_hit(int value);
 int					side();
 void				set_side(int value);
+int const			*side_tab();
+int					side_tab_index(int index_value);
+void				set_side_tab(int index, int value);
 
 /*
 **  UTILS

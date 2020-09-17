@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 12:04:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 14:53:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void				set_texture_step(float value);
 
 float				calculate_wall_hitpoint_x();
 int					calculate_texture_pos_x();
-t_color				calculate_texture_color(t_int_vector *camera_index);
+
 #endif

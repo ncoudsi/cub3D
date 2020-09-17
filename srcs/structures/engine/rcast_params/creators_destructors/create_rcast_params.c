@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:05:40 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 16:28:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/17 15:04:32 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ t_rcast_params  create_rcast_params()
 	result.perp_wall_dist_tab = NULL;
 	result.hit = false;
 	result.side = 0;
+	result.side_tab = NULL;
     return (result);
 }
