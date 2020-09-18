@@ -1,10 +1,10 @@
 R 800 600
 
-                         NO ./ressources/bluestone.xpm
+                         NO ./ressources/white_brick_wall.xpm
 SO               ./ressources/brick_wall.xpm
-         WE                     ./ressources/wall_2.xpm
-EA ./ressources/purplestone.xpm
-S ./ressources/bluestone.xpm
+         WE                     ./ressources/brick_wall2.xpm
+EA ./ressources/black_brick_wall.xpm
+S ./ressources/brick_wall.xpm
 
 C 70,100,225
 
