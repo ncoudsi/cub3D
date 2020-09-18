@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 15:39:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/18 11:19:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static void	render_wall(t_int_vector *camera_index)
 
 	while (camera_index->y < wall_bottom())
 	{
-		// texture_color = create_color(0, 155, 0);
 		texture_color = calculate_texture_color(camera_index);
 		put_pixel(*camera_index, texture_color);
 		camera_index->y++;
@@ -58,7 +57,6 @@ void	rendering()
 		set_wall_top(-wall_height() / 2 + resolution_y() / 2);
 		if (wall_top() < 0)
 			set_wall_top(0);
-		set_texture_step(1.0 * g_engine->map_params->no_texture->dimension->y / wall_height());
 		render_ceiling(&camera_index);
 		render_wall(&camera_index);
 		render_floor(&camera_index);

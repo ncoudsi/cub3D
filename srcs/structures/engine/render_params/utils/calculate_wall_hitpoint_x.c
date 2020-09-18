@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:26:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 15:24:31 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/18 10:21:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ float	calculate_wall_hitpoint_x()
 			result = pos_y() + perpendicular_wall_dist() * ray_dir_y();
 		else if (side() == 1 || side() == 3)
 			result = pos_x() + perpendicular_wall_dist() * ray_dir_x();
-	result = result - floor(result);
+	result -= floor(result);
 	return(result);
 }
