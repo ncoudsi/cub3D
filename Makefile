@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/18 14:04:48 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/21 16:48:02 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,16 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_text_size_line.c set_text_size_line.c \
 				\
 				create_color.c malloc_color.c free_color.c \
+				\
+				create_sprite.c malloc_sprite.c destroy_sprite.c free_sprite.c \
+				get_sprite_bottom.c set_sprite_bottom.c get_sprite_height.c set_sprite_height.c \
+				get_sprite_top.c set_sprite_top.c get_sprite_hitpoint_x.c set_sprite_hitpoint_x.c \
+				get_sprite_pos.c get_sprite_pos_x.c get_sprite_pos_y.c set_sprite_pos.c set_sprite_pos_x.c \
+				set_sprite_pos_y.c get_sprite_step.c set_sprite_step.c \
+				\
+				create_sprite_tab.c malloc_sprite_tab.c destroy_sprite_tab.c free_sprite_tab.c \
+				get_sprite_pos_x_tab.c set_sprite_pos_x_tab_index.c get_sprites_on_screen.c \
+				set_sprites_on_screen.c get_sprites.c get_tab_size.c set_tab_size.c \
 				\
 				create_moves.c malloc_moves.c free_moves.c \
 				\
@@ -95,7 +105,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_wall_hitpoint_x.c get_wall_top.c set_wall_top.c get_texture_step.c set_texture_step.c \
 				get_texture_pos.c set_texture_pos.c get_texture_pos_x.c set_texture_pos_x.c get_texture_pos_y.c \
 				set_texture_pos_y.c get_texture_pos_x_tab.c set_texture_pos_x_tab.c \
-				load_render_params.c \
+				load_render_params.c load_sprite_tab.c \
 				get_texture_pos_x_tab_index.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \

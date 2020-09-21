@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 12:03:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/16 14:50:53 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/21 15:05:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_render_params	create_render_params()
 	result.wall_hitpoint_x = 0;
 	result.texture_pos = malloc_int_vector(0, 0);
 	result.texture_pos_x_tab = NULL;
-	result.texture_step = 0;
+	result.texture_step = 0.0f;
+	result.sprite_tab = NULL;
 	return  (result);
 }
