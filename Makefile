@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/21 16:48:02 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/23 15:22:36 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,7 +131,7 @@ SRCS		=	cube.c cube_file_fd.c \
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
 #Compilation flag
-CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS		=	-Wall -Wextra -Werror
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir)) -I libs/mlx
 

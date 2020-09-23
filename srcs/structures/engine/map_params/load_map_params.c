@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/23 12:30:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 15:26:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,8 @@ void		load_map_params(int fd)
         }
         index++;
     }
+	if (map() == NULL)
+		error_exit(MISS_PARAM_ERROR);
 	fill_cardinal_point();
     fill_map_size();
     resize_map();
