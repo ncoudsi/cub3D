@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:50:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:54:01 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 15:31:43 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ typedef struct  s_color
     unsigned char   r;
     unsigned char   g;
     unsigned char   b;
+	unsigned int	int_color;
 }               t_color;
 
 /*

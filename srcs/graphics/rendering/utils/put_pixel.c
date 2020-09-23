@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:23:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 12:14:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 15:41:54 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	put_pixel(t_int_vector pos, t_color color)
 {
-	int	pixel_index;
+	int		pixel_index;
+	char	*tmp;
 
 	pixel_index = get_pixel_index(pos);
-	g_engine->mlx_params->pixels[pixel_index + RED_INDEX] = color.r;
-	g_engine->mlx_params->pixels[pixel_index + GREEN_INDEX] = color.g;
-	g_engine->mlx_params->pixels[pixel_index + BLUE_INDEX] = color.b;
+	tmp = pixels() + pixel_index;
+	*(unsigned int *)tmp = color.int_color;
 }
