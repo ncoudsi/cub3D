@@ -12,13 +12,13 @@
 
 #include "cube.h"
 
-static t_bool   is_up_walled(char ** map, t_vector index)
+static t_bool   is_up_walled(char ** map, t_int_vector index)
 {
     while (index.y >= 0)
     {
-        if (is_tile(map[(int)index.y][(int)index.x]) == false)
+        if (is_tile(map[index.y][index.x]) == false)
         {
-            if (map[(int)index.y][(int)index.x] == '1')
+            if (map[index.y][index.x] == '1')
                 return (true);
             else
                 return (false);
@@ -28,13 +28,13 @@ static t_bool   is_up_walled(char ** map, t_vector index)
     return (false);
 }
 
-static t_bool   is_down_walled(char ** map, t_vector index)
+static t_bool   is_down_walled(char ** map, t_int_vector index)
 {
     while (index.y < ft_tab_len((void **)map))
     {
-        if (is_tile(map[(int)index.y][(int)index.x]) == false)
+        if (is_tile(map[index.y][index.x]) == false)
         {
-            if (map[(int)index.y][(int)index.x] == '1')
+            if (map[index.y][index.x] == '1')
                 return (true);
             else
                 return (false);
@@ -44,13 +44,16 @@ static t_bool   is_down_walled(char ** map, t_vector index)
     return (false);
 }
 
-static t_bool   is_right_walled(char **map, t_vector index)
+static t_bool   is_right_walled(char **map, t_int_vector index)
 {
-    while (index.x < (int)(ft_strlen(map[(int)index.y])))
+	int	len;
+
+	len = ft_strlen(map[index.y]);
+    while (index.x < len)
     {
-        if (is_tile(map[(int)index.y][(int)index.x]) == false)
+        if (is_tile(map[index.y][index.x]) == false)
         {
-            if (map[(int)index.y][(int)index.x] == '1')
+            if (map[index.y][index.x] == '1')
                 return (true);
             else
                 return (false);
@@ -60,13 +63,13 @@ static t_bool   is_right_walled(char **map, t_vector index)
     return (false);
 }
 
-static t_bool   is_left_walled(char **map, t_vector index)
+static t_bool   is_left_walled(char **map, t_int_vector index)
 {
     while (index.x >= 0)
     {
-        if (is_tile(map[(int)index.y][(int)index.x]) == false)
+        if (is_tile(map[index.y][index.x]) == false)
         {
-            if (map[(int)index.y][(int)index.x] == '1')
+            if (map[index.y][index.x] == '1')
                 return (true);
             else
                 return (false);
@@ -76,7 +79,7 @@ static t_bool   is_left_walled(char **map, t_vector index)
     return (false);
 }
 
-t_bool          is_walled(char **map, t_vector index)
+t_bool			is_walled(char **map, t_int_vector index)
 {
     if (is_valid_line_len(map, index.y) == false)
         return (false);

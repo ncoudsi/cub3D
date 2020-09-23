@@ -14,19 +14,19 @@
 
 void	render_minimap()
 {
-	t_vector	index;
-	char const	**file_map;
+	t_int_vector	index;
+	char const		**file_map;
 
-	index = create_vector(0, 0);
+	index = create_int_vector(0, 0);
 	file_map = map();
-	while (file_map[(int)index.y] != NULL)
+	while (file_map[index.y] != NULL)
 	{
 		index.x = 0;
-		while (file_map[(int)index.y][(int)index.x] != '\0')
+		while (file_map[index.y][index.x] != '\0')
 		{
-			if (file_map[(int)index.y][(int)index.x] == '1')
+			if (file_map[index.y][index.x] == '1')
 				render_minimap_wall(index);
-			else if (is_tile(file_map[(int)index.y][(int)index.x]) == true)
+			else if (is_tile(file_map[index.y][index.x]) == true)
 				render_minimap_tile(index);
 			index.x++;
 		}

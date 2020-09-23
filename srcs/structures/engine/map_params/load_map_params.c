@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 14:09:40 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 12:30:04 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 static void	fill_cardinal_point()
 {
-	t_vector	index;
-	char const	**file_map;
+	t_int_vector	index;
+	char const		**file_map;
 
-	index = create_vector(0, 0);
+	index = create_int_vector(0, 0);
 	file_map = map();
-	while (file_map[(int)index.y] != NULL)
+	while (file_map[index.y] != NULL)
 	{
 		index.x = 0;
-		while (file_map[(int)index.y][(int)index.x] != '\0')
+		while (file_map[index.y][index.x] != '\0')
 		{
-			if (is_cardinal_point(file_map[(int)index.y][(int)index.x]) == true)
-				set_cardinal_point(file_map[(int)index.y][(int)index.x]);
+			if (is_cardinal_point(file_map[index.y][index.x]) == true)
+				set_cardinal_point(file_map[index.y][index.x]);
 			index.x++;
 		}
 		index.y++;
@@ -34,17 +34,17 @@ static void	fill_cardinal_point()
 
 static void fill_map_size()
 {
-    t_vector    size;
-    t_vector    index;
+	t_int_vector	size;
+	t_int_vector	index;
 
-    g_engine->map_params->map_size = malloc_vector(0, 0);
+	g_engine->map_params->map_size = malloc_int_vector(0, 0);
 	if (map_size() == NULL)
 		error_exit(MALLOC_ERROR);
-	index = create_vector(0, 0);
-    while (g_engine->map_params->map[(int)index.y] != NULL)
+	index = create_int_vector(0, 0);
+    while (g_engine->map_params->map[index.y] != NULL)
     {
         index.x = 0;
-        while (g_engine->map_params->map[(int)index.y][(int)index.x] != '\0')
+        while (g_engine->map_params->map[index.y][index.x] != '\0')
         {
             index.x++;
             if (index.x > size.x)

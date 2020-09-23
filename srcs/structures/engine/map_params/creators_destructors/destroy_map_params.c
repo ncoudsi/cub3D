@@ -23,5 +23,5 @@ void    destroy_map_params(t_map_params to_destroy)
     free_color(to_destroy.ceiling_color);
     free_color(to_destroy.floor_color);
     ft_free_tab((void **)to_destroy.map);
-    free_vector(to_destroy.map_size);
+    free_int_vector(to_destroy.map_size);
 }

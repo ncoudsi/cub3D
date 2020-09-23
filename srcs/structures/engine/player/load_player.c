@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 10:32:24 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 12:13:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 static t_vector	get_spawn_pos()
 {
-	t_vector	result;
-	t_vector	index;
-	char const	**file_map;
+	t_vector		result;
+	t_int_vector	index;
+	char const		**file_map;
 
 	result = create_vector(0, 0);
-	index = create_vector(0, 0);
+	index = create_int_vector(0, 0);
 	file_map = map();
 	while (result.x == 0 && result.y == 0)
 	{
 		index.x = 0;
-		while (file_map[(int)index.y][(int)index.x] != '\0' &&
-		(result.x == 0 && result.y == 0))
+		// printf("X%d\nY%d\n", index.x, index.y);
+		while (file_map[index.y][index.x] != '\0' && (result.x == 0 && result.y == 0))
 		{
-			if (is_cardinal_point(file_map[(int)index.y][(int)index.x]) == true)
+			if (is_cardinal_point(file_map[index.y][index.x]) == true)
 				result = create_vector(index.x, index.y);
 			index.x++;
 		}

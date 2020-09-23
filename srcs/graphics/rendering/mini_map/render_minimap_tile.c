@@ -12,7 +12,7 @@
 
 #include "cube.h"
 
-void	render_minimap_tile(t_vector map_index)
+void	render_minimap_tile(t_int_vector map_index)
 {
 	t_vector	size;
 	t_vector	pos;

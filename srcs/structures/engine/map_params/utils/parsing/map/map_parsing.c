@@ -14,15 +14,15 @@
 
 static t_bool   is_only_map_entries(char **map)
 {
-    t_vector    index;
+    t_int_vector	index;
 
-    index = create_vector(0, 0);
-    while (map[(int)index.y] != NULL)
+    index = create_int_vector(0, 0);
+    while (map[index.y] != NULL)
     {
         index.x = 0;
-        while (map[(int)index.y][(int)index.x] != '\0')
+        while (map[index.y][index.x] != '\0')
         {
-            if (is_valid_map_entry(map[(int)index.y][(int)index.x]) == false)
+            if (is_valid_map_entry(map[index.y][index.x]) == false)
                 return (false);
             index.x++;
         }
@@ -33,17 +33,17 @@ static t_bool   is_only_map_entries(char **map)
 
 static t_bool   is_valid_spawn_point(char **map)
 {
-    t_vector    index;
-    int         flag;
+    t_int_vector	index;
+    int				flag;
 
-    index = create_vector(0, 0);
+    index = create_int_vector(0, 0);
     flag = 0;
-    while (map[(int)index.y] != NULL)
+    while (map[index.y] != NULL)
     {
         index.x = 0;
-        while (map[(int)index.y][(int)index.x] != '\0')
+        while (map[index.y][index.x] != '\0')
         {
-            if (is_cardinal_point(map[(int)index.y][(int)index.x]) == true)
+            if (is_cardinal_point(map[index.y][index.x]) == true)
             {
                 if (flag == 0)
                     flag = 1;
@@ -61,17 +61,17 @@ static t_bool   is_valid_spawn_point(char **map)
 
 static t_bool   is_valid_map(char **map)
 {
-    t_vector    index;
+    t_int_vector    index;
 
-    index = create_vector(0, 0);
+    index = create_int_vector(0, 0);
     if (is_only_map_entries(map) == false)
         return (false);
-    while (map[(int)index.y] != NULL)
+    while (map[index.y] != NULL)
     {
         index.x = 0;
-        while (map[(int)index.y][(int)index.x] != '\0')
+        while (map[index.y][index.x] != '\0')
         {
-            if (is_tile(map[(int)index.y][(int)index.x]) == true && is_walled(map, index) == false)
+            if (is_tile(map[index.y][index.x]) == true && is_walled(map, index) == false)
                 return (false);
             index.x++;
         }

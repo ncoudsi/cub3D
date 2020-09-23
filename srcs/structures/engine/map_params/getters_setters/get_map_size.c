@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/02 15:19:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 10:24:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/23 12:32:23 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector const	*map_size()
+t_int_vector const	*map_size()
 {
 	return (g_engine->map_params->map_size);
 }

@@ -1,4 +1,4 @@
-R 800 600
+R 1920 1080
 
                          NO ./ressources/mossy.xpm
 SO               ./ressources/bluestone.xpm
@@ -9,6 +9,14 @@ S ./ressources/barrel.xpm
 C 70,100,225
 
 F 200,150,20
+
+
+
+
+
+
+
+
 
 
 
