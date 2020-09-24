@@ -6,19 +6,20 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 14:55:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/23 16:13:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/24 10:01:56 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_color	we_texture_color()
+void	we_texture_color(t_int_vector *camera_index)
 {
-	t_color	result;
+	char	*tmp_pixels;
+	char	*tmp_texels;
 
-	result.r = texels(we_texture())[texture_pos_x() * (bits_per_texel(we_texture()) / 8) + texture_pos_y() * text_size_line(we_texture()) + RED_INDEX];
-	result.g = texels(we_texture())[texture_pos_x() * (bits_per_texel(we_texture()) / 8) + texture_pos_y() * text_size_line(we_texture()) + GREEN_INDEX];
-	result.b = texels(we_texture())[texture_pos_x() * (bits_per_texel(we_texture()) / 8) + texture_pos_y() * text_size_line(we_texture()) + BLUE_INDEX];
-	result.int_color = (result.r << 16) + (result.g << 8) + result.b;
-	return (result);
+	tmp_pixels = (char *)pixels();
+	tmp_texels = (char *)texels(we_texture());
+	*((unsigned int *)tmp_pixels + camera_index->x + camera_index->y *
+	size_line() / 4) = *((unsigned int *)tmp_texels + texture_pos_x() +
+	texture_pos_y() * text_size_line(we_texture()) / 4);
 }

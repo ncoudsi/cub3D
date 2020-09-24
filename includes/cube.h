@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/23 16:54:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/24 10:13:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,10 @@ void		render_minimap();
 void		render_minimap_wall(t_int_vector map_index);
 void		render_minimap_tile(t_int_vector map_index);
 void		render_minimap_player();
-t_color		calculate_texture_color(t_int_vector *camera_index);
-t_color		no_texture_color();
-t_color		so_texture_color();
-t_color		we_texture_color();
-t_color		ea_texture_color();
+void		no_texture_color(t_int_vector *camera_index);
+void		so_texture_color(t_int_vector *camera_index);
+void		we_texture_color(t_int_vector *camera_index);
+void		ea_texture_color(t_int_vector *camera_index);
 t_color		spirte_texture_color();
 
 /*

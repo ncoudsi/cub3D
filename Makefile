@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/23 15:22:36 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/24 10:13:58 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,7 +116,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				draw_circle.c get_minimap_tiles_nbr.c get_minimap_tile_size.c render_minimap.c \
 				render_minimap_wall.c render_minimap_tile.c map_pos_to_pixel_pos.c render_minimap_player.c \
 				rendering.c calculate_texture_pos_x.c calculate_wall_hitpoint_x.c \
-				calculate_texture_color.c no_texture_color.c so_texture_color.c we_texture_color.c ea_texture_color.c \
+				no_texture_color.c so_texture_color.c we_texture_color.c ea_texture_color.c \
 				sprite_texture_color.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
