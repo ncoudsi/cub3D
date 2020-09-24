@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/24 10:13:41 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/24 11:05:26 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ void		update_step_and_side_dist_values();
 void		hitpoint_detection();
 void		side_detection();
 t_bool		is_map_border();
+void		update_perpendicular_wall_dist();
 
 #endif

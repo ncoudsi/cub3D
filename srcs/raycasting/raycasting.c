@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/21 14:47:03 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/24 11:34:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,7 @@ void    raycasting()
 		hitpoint_detection();
 		side_detection();
 		set_side_tab(camera_index, side());
-		if (is_map_border() == true)
-			set_perpendicular_wall_dist(10000000.0f);
-		else if (side() == 0 || side() == 2)
-			set_perpendicular_wall_dist((map_pos_x() - pos_x() + (1.0f - step_x()) / 2.0f) / ray_dir_x());
-		else if (side() == 1 || side() == 3)
-			set_perpendicular_wall_dist((map_pos_y() - pos_y() + (1.0f - step_y()) / 2.0f) / ray_dir_y());
+		update_perpendicular_wall_dist();
 		set_perp_wall_dist_tab(camera_index, perpendicular_wall_dist());
 		set_wall_hitpoint_x(calculate_wall_hitpoint_x());
 		set_texture_pos_x(calculate_texture_pos_x());
