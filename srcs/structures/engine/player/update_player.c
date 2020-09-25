@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/24 10:18:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/25 11:21:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ static void    move_forward()
         new_pos.y = 0;
     else if (new_pos.y > map_size_y())
         new_pos.y = map_size_y();
+	if (new_pos.x == map_size_x() && new_pos.y == map_size_y())
+		new_pos = create_vector(map_size_x() - 0.01f, map_size_y() - 0.01f);
     set_pos(&new_pos);
 }
 
@@ -41,6 +43,8 @@ static void    move_backward()
         new_pos.y = 0;
     else if (new_pos.y > map_size_y())
         new_pos.y = map_size_y();
+	if (new_pos.x == map_size_x() && new_pos.y == map_size_y())
+		new_pos = create_vector(map_size_x() - 0.01f, map_size_y() - 0.01f);
 	set_pos(&new_pos);
 }
 
@@ -57,7 +61,9 @@ static void    move_right()
         new_pos.y = 0;
     else if (new_pos.y > map_size_y())
         new_pos.y = map_size_y();
-    set_pos(&new_pos);
+    if (new_pos.x == map_size_x() && new_pos.y == map_size_y())
+		new_pos = create_vector(map_size_x() - 0.01f, map_size_y() - 0.01f);
+	set_pos(&new_pos);
 }
 
 static void    move_left()
@@ -73,7 +79,9 @@ static void    move_left()
         new_pos.y = 0;
     else if (new_pos.y > map_size_y())
         new_pos.y = map_size_y();
-    set_pos(&new_pos);
+    if (new_pos.x == map_size_x() && new_pos.y == map_size_y())
+		new_pos = create_vector(map_size_x() - 0.01f, map_size_y() - 0.01f);
+	set_pos(&new_pos);
 }
 
 void    update_player()

@@ -15,7 +15,7 @@
 int key_press(int key)
 {
 	if (key == ESC_KEY)
-		exit(0);
+		exit(EXIT_SUCCESS);
 	if (is_movement_key(key) == true || is_rotation_key(key) == true)
 		set_moves(key);
   return (key);
