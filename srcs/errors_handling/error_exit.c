@@ -14,15 +14,15 @@
 
 static	void	fill_error_tab(char **error_tab)
 {
-	error_tab[MAP_ENTRY] = ft_strdup("ERROR\n[Invalid entry in .cub file.]\n");
-	error_tab[RES_ERROR] = ft_strdup("ERROR\n[Invalid resolution settings. MIN : 400x300, MAX : 1920x1080]\n");
-	error_tab[TEX_ERROR] = ft_strdup("ERROR\n[Invalid textures.]\n");
-	error_tab[COL_ERROR] = ft_strdup("ERROR\n[Invalid colors.]\n");
-	error_tab[MAP_ERROR] = ft_strdup("ERROR\n[Invalid map.]\n");
-	error_tab[FILE_ERROR] = ft_strdup("ERROR\n[Invalid map file.]\n");
-	error_tab[MISS_PARAM_ERROR] = ft_strdup("ERROR\n[Map file is missing parameter.]\n");
-	error_tab[DOUBLE_PARAM_ERROR] = ft_strdup("ERROR\n[A parameter is set multiple times.]\n");
-	error_tab[MALLOC_ERROR] = ft_strdup("ERROR\n[A malloc has failed.]\n");
+	error_tab[MAP_ENTRY] = ft_strdup("Error\n[Invalid entry in .cub file.]\n");
+	error_tab[RES_ERROR] = ft_strdup("Error\n[Invalid resolution settings. MIN : 300x300]\n");
+	error_tab[TEX_ERROR] = ft_strdup("Error\n[Invalid textures.]\n");
+	error_tab[COL_ERROR] = ft_strdup("Error\n[Invalid colors.]\n");
+	error_tab[MAP_ERROR] = ft_strdup("Error\n[Invalid map.]\n");
+	error_tab[FILE_ERROR] = ft_strdup("Error\n[Invalid map file.]\n");
+	error_tab[MISS_PARAM_ERROR] = ft_strdup("Error\n[Map file is missing parameter.]\n");
+	error_tab[DOUBLE_PARAM_ERROR] = ft_strdup("Error\n[A parameter is set multiple times.]\n");
+	error_tab[MALLOC_ERROR] = ft_strdup("Error\n[A malloc has failed.]\n");
 }
 
 static	char	**malloc_error_tab()

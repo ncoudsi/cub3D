@@ -14,7 +14,7 @@
 
 void    destroy_map_params(t_map_params to_destroy)
 {
-    free_vector(to_destroy.resolution);
+    free_int_vector(to_destroy.resolution);
     free(to_destroy.no_texture);
     free(to_destroy.so_texture);
     free(to_destroy.we_texture);

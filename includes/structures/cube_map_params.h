@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/23 12:33:56 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/25 14:21:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 typedef struct	s_map_params
 {
-	t_vector		*resolution;
+	t_int_vector	*resolution;
 	t_texture		*no_texture;
 	t_texture		*so_texture;
 	t_texture		*we_texture;
@@ -50,10 +50,10 @@ void				free_map_params(t_map_params *to_free);
 **	GETTERS & SETTERS
 */
 
-t_vector const		*resolution();
+t_int_vector const	*resolution();
 int					resolution_x();
 int					resolution_y();
-void				set_resolution(t_vector *value);
+void				set_resolution(t_int_vector *value);
 t_texture const		*no_texture();
 void				set_no_texture(t_texture *value);
 t_texture const		*so_texture();
@@ -85,6 +85,7 @@ void				set_cardinal_point(char value);
 char				**get_map_file(int fd);
 void				fill_params(char *param_line);
 void				fill_map(char *map_line);
+void				resize_resolution();
 
 /*
 **  PARSING
