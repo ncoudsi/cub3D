@@ -23,6 +23,7 @@ static	void	fill_error_tab(char **error_tab)
 	error_tab[MISS_PARAM_ERROR] = ft_strdup("Error\n[Map file is missing parameter.]\n");
 	error_tab[DOUBLE_PARAM_ERROR] = ft_strdup("Error\n[A parameter is set multiple times.]\n");
 	error_tab[MALLOC_ERROR] = ft_strdup("Error\n[A malloc has failed.]\n");
+	error_tab[OVERFLOW_ERROR] = ft_strdup("Error\n[Risk of overflow.]\n");
 }
 
 static	char	**malloc_error_tab()

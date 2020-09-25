@@ -6,12 +6,19 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/18 11:33:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/25 14:50:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_DEFINES_H
 # define CUBE_DEFINES_H
+
+/*
+**	RESOLUTION
+*/
+
+#define MIN_RES_X 300
+#define MIN_RES_Y 300
 
 /*
 **	COLOR SORTING
