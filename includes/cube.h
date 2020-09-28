@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 13:35:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 16:06:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void		so_texture_color(t_int_vector *camera_index);
 void		we_texture_color(t_int_vector *camera_index);
 void		ea_texture_color(t_int_vector *camera_index);
 t_color		spirte_texture_color();
+void		calculate_texture_step(t_int_vector *camera_index);
+void		set_texture_params(int camera_x);
 
 /*
 **	MATHS

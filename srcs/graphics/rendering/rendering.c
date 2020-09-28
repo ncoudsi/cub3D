@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 11:40:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 16:36:06 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,6 @@ static void	render_ceiling(t_int_vector *camera_index)
 		put_pixel(*camera_index, ceiling_color);
 		camera_index->y++;
 	}
-}
-
-static void calculate_texture_step(t_int_vector *camera_index)
-{
-	if (side_tab_index(camera_index->x) == 0)
-		set_texture_step(1.0f * g_engine->map_params->we_texture->dimension->y / (float)wall_height());
-	else if (side_tab_index(camera_index->x) == 1)
-		set_texture_step(1.0f * g_engine->map_params->no_texture->dimension->y / (float)wall_height());
-	else if (side_tab_index(camera_index->x) == 2)
-		set_texture_step(1.0f * g_engine->map_params->ea_texture->dimension->y / (float)wall_height());
-	else if (side_tab_index(camera_index->x) == 3)
-		set_texture_step(1.0f * g_engine->map_params->so_texture->dimension->y / (float)wall_height());
 }
 
 static void	render_wall(t_int_vector *camera_index)
@@ -71,6 +59,75 @@ static void	render_floor(t_int_vector *camera_index)
 	}
 }
 
+static void	render_sprites()
+{
+	int			sprite_index;
+	t_vector	*pos;
+	t_vector	relative_pos;
+	float		inverted_matrix;
+	t_vector	transformed_pos;
+	int			sprite_screen_x;
+	int			sprite_height;
+	int			sprite_top;
+	int			sprite_bottom;
+	int			sprite_width;
+	int			sprite_left;
+	int			sprite_right;
+	int			stripe;
+
+	sprite_index = 0;
+	while (sprite_index < sprite_nbr())
+	{
+		pos = (t_vector *)sprite_pos(g_engine->render_params->sprite_tab[sprite_index]);
+		relative_pos = create_vector(pos->x - pos_x(), pos->y - pos_y());
+		inverted_matrix = 1.0f / (plane_x() * dir_y() - dir_x() *plane_y());
+		transformed_pos.x = inverted_matrix * (dir_y() * relative_pos.x - dir_x() * relative_pos.y);
+		transformed_pos.y = inverted_matrix * (-plane_y() * relative_pos.x + plane_x() * relative_pos.y);
+		sprite_screen_x = (int)((resolution_x() / 2) * (1 + transformed_pos.x / transformed_pos.y));
+		sprite_height = (int)(resolution_y() / transformed_pos.y);
+		if (sprite_height < 0)
+			sprite_height *= -1;
+		sprite_top = -sprite_height / 2 + resolution_y() / 2;
+		if (sprite_top < 0)
+			sprite_top = 0;
+		sprite_bottom = sprite_height / 2 + resolution_y() / 2;
+		if (sprite_bottom >= resolution_y())
+			sprite_bottom = resolution_y() - 1;
+		sprite_width = (int)(resolution_y() / transformed_pos.y);
+		if (sprite_width < 0)
+			sprite_width *= -1;
+		sprite_left = -sprite_width / 2 + sprite_screen_x;
+		if (sprite_left < 0)
+			sprite_left = 0;
+		sprite_right = sprite_width / 2 + sprite_screen_x;
+		if (sprite_right >= resolution_x())
+			sprite_right = resolution_x() - 1;
+		stripe = sprite_left;
+		while (stripe < sprite_right)
+		{
+			stripe++;
+		}
+		sprite_index++;
+	}
+}
+
+// //loop through every vertical stripe of the sprite on screen
+//       for(int stripe = drawStartX; stripe < drawEndX; stripe++)
+//       {
+//         int texX = int(256 * (stripe - (-spriteWidth / 2 + spriteScreenX)) * texWidth / spriteWidth) / 256;
+//         //the conditions in the if are:
+//         //1) it's in front of camera plane so you don't see things behind you
+//         //2) it's on the screen (left)
+//         //3) it's on the screen (right)
+//         //4) ZBuffer, with perpendicular distance
+//         if(transformY > 0 && stripe > 0 && stripe < w && transformY < ZBuffer[stripe])
+//         for(int y = drawStartY; y < drawEndY; y++) //for every pixel of the current stripe
+//         {
+//           int d = (y) * 256 - h * 128 + spriteHeight * 128; //256 and 128 factors to avoid floats
+//           int texY = ((d * texHeight) / spriteHeight) / 256;
+//           Uint32 color = texture[sprite[spriteOrder[i]].texture][texWidth * texY + texX]; //get current color from the texture
+//           if((color & 0x00FFFFFF) != 0) buffer[y][stripe] = color; //paint pixel if it isn't black, black is the invisible color
+
 void	rendering()
 {
 	t_int_vector	camera_index;
@@ -80,19 +137,14 @@ void	rendering()
 	while (camera_index.x < resolution_x())
 	{
 		camera_index.y = 0;
-		set_wall_height((int)(resolution_y() / perp_wall_dist_tab_index(camera_index.x)));
-		set_wall_bottom(wall_height() / 2 + resolution_y() / 2);
-		if (wall_bottom() > resolution_y())
-			set_wall_bottom(resolution_y());
-		set_wall_top(-wall_height() / 2 + resolution_y() / 2);
-		if (wall_top() < 0)
-			set_wall_top(0);
+		set_texture_params(camera_index.x);
 		render_ceiling(&camera_index);
 		render_wall(&camera_index);
 		render_floor(&camera_index);
 		camera_index.x++;
 	}
 	// render_minimap();
-	// render_sprites();
+	// set_sprite_params();
+	render_sprites();
 	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
 }
