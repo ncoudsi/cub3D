@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/24 11:34:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 14:45:59 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,6 @@ void    raycasting()
 		set_texture_pos_x_tab(camera_index, texture_pos_x());
 		camera_index++;
 	}
+	set_sprite_tab_dist();
+	sort_sprite_tab();
 }

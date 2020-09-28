@@ -1,0 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_sprite.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/28 10:42:44 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/28 11:06:27 by ncoudsi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "cube.h"
+
+t_sprite	create_sprite()
+{
+	t_sprite	result;
+
+	result.sprite_pos = malloc_vector(0, 0);
+	result.sprite_dist = 0.0f;
+	return (result);
+}

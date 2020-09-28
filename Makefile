@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/28 10:00:53 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/28 14:31:59 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_color.c malloc_color.c free_color.c \
 				\
 				create_moves.c malloc_moves.c free_moves.c \
+				\
+				create_sprite.c destroy_sprite.c malloc_sprite.c free_sprite.c free_sprite_tab.c \
+				get_sprite_pos.c get_sprite_pos_x.c get_sprite_pos_y.c set_sprite_pos.c set_sprite_pos_x.c \
+				set_sprite_pos_y.c get_sprite_dist.c set_sprite_dist.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
@@ -96,8 +100,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				set_wall_hitpoint_x.c get_wall_top.c set_wall_top.c get_texture_step.c set_texture_step.c \
 				get_texture_pos.c set_texture_pos.c get_texture_pos_x.c set_texture_pos_x.c get_texture_pos_y.c \
 				set_texture_pos_y.c get_texture_pos_x_tab.c set_texture_pos_x_tab.c \
-				load_render_params.c \
-				get_texture_pos_x_tab_index.c \
+				get_texture_pos_x_tab_index.c get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c \
+				set_sprite_tab_index.c load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \
@@ -122,7 +126,7 @@ SRCS		=	cube.c cube_file_fd.c \
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
 #Compilation flag
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir)) -I libs/mlx
 
