@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/23 12:13:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 10:00:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static t_vector	get_spawn_pos()
 	while (result.x == 0 && result.y == 0)
 	{
 		index.x = 0;
-		// printf("X%d\nY%d\n", index.x, index.y);
 		while (file_map[index.y][index.x] != '\0' && (result.x == 0 && result.y == 0))
 		{
 			if (is_cardinal_point(file_map[index.y][index.x]) == true)

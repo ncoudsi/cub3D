@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/21 16:50:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 09:30:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ typedef struct	s_render_params
 	t_int_vector	*texture_pos;
 	int				*texture_pos_x_tab;
 	float			texture_step;
-	t_sprite_tab	*sprite_tab;
 }				t_render_params;
 
 void	load_render_params();
-void	load_sprite_tab();
 
 /*
 **	CREATORS & DESTRUCTORS
@@ -60,8 +58,6 @@ int					texture_pos_x_tab_index(int index);
 void				set_texture_pos_x_tab(int index, int value);
 float				texture_step();
 void				set_texture_step(float value);
-t_sprite_tab const	*sprite_tab();
-void				set_sprite_tab(t_sprite_tab *value);
 
 /*
 **	UTILS

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 14:16:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/25 14:57:41 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/28 10:00:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	resize_to_max()
 
 void	resize_resolution()
 {
-	printf("X%i\nY%i\n", resolution_x(), resolution_y());
 	if (resolution_x() < MIN_RES_X || resolution_y() < MIN_RES_Y)
 		resize_to_min();
 	else
