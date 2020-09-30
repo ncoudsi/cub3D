@@ -6,14 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 12:18:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:25:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_MAP_PARAMS_H
 # define CUBE_MAP_PARAMS_H
 
-typedef struct	s_map_params
+typedef struct		s_map_params
 {
 	t_int_vector	*resolution;
 	t_texture		*no_texture;
@@ -26,7 +26,7 @@ typedef struct	s_map_params
 	char			**map;
 	t_int_vector	*map_size;
 	char			cardinal_point;
-}				t_map_params;
+}					t_map_params;
 
 void				load_map_params(int fd);
 void				load_textures();
@@ -91,7 +91,7 @@ void				resize_resolution();
 **  PARSING
 */
 
-void				textures_parsing(char   **textures_parsing);
+void				textures_parsing(char **textures_parsing);
 void				cube_file_parsing(char **map_file);
 void				resolution_parsing(char **resolution_line);
 void				colors_parsing(char **colors_line);

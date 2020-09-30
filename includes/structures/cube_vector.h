@@ -6,25 +6,25 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:53 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:28:53 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:31:04 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_VECTOR_H
 # define CUBE_VECTOR_H
 
-typedef struct s_vector
+typedef struct	s_vector
 {
-    float x;
-    float y;
-}               t_vector;
+	float x;
+	float y;
+}				t_vector;
 
 /*
 **  CREATORS & DESTRUCTORS
 */
 
-t_vector    create_vector(float x, float y);
-t_vector    *malloc_vector(float x, float y);
-void        free_vector(t_vector *to_free);
+t_vector		create_vector(float x, float y);
+t_vector		*malloc_vector(float x, float y);
+void			free_vector(t_vector *to_free);
 
 #endif

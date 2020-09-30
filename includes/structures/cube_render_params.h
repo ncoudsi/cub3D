@@ -6,14 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 14:03:13 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:29:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_RENDER_PARAMS_H
 # define CUBE_RENDER_PARAMS_H
 
-typedef struct	s_render_params
+typedef struct		s_render_params
 {
 	int				wall_height;
 	int				wall_bottom;
@@ -24,9 +24,9 @@ typedef struct	s_render_params
 	float			texture_step;
 	int				sprite_nbr;
 	t_sprite		**sprite_tab;
-}				t_render_params;
+}					t_render_params;
 
-void	load_render_params();
+void				load_render_params();
 
 /*
 **	CREATORS & DESTRUCTORS

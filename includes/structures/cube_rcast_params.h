@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rcast_params.h                                   :+:      :+:    :+:   */
+/*   cube_rcast_params.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 10:44:20 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 10:53:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/29 14:29:07 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/29 14:29:14 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ void				set_side_tab(int index, int value);
 **  UTILS
 */
 
-t_vector    get_dir_value();
-t_vector    get_plane_value();
+t_vector			get_dir_value();
+t_vector			get_plane_value();
+
 #endif

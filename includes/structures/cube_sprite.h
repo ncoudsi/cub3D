@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cube_spirte.h                                      :+:      :+:    :+:   */
+/*   cube_sprite.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 10:34:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 13:36:51 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:27:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ typedef struct	s_sprite
 **	CREATORS & DESTRUCTORS
 */
 
-t_sprite	create_sprite();
-void		destroy_sprite(t_sprite to_destroy);
-t_sprite	*malloc_sprite();
-void		free_sprite(t_sprite *to_free);
-void		free_sprite_tab(t_sprite **to_free, int tab_size);
+t_sprite		create_sprite();
+void			destroy_sprite(t_sprite to_destroy);
+t_sprite		*malloc_sprite();
+void			free_sprite(t_sprite *to_free);
+void			free_sprite_tab(t_sprite **to_free, int tab_size);
 
 /*
 **	GETTERS & SETTERS

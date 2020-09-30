@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:10:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/08/31 14:21:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:52:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int key_release(int key)
+int	key_release(int key)
 {
 	unset_moves(key);
 	return (key);

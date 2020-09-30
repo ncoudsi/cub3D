@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 10:08:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 09:31:56 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:54:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	hitpoint_detection()
+void	hitpoint_detection(void)
 {
 	set_hit(false);
 	while (hit() == false)

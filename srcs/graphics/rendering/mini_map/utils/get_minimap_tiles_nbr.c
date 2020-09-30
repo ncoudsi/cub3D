@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_minimap_size.c                                 :+:      :+:    :+:   */
+/*   get_minimap_tiles_nbr.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 09:30:39 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/10 09:48:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:46:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector	get_minimap_tiles_nbr()
+t_vector	get_minimap_tiles_nbr(void)
 {
 	t_vector	result;
 	int			index;

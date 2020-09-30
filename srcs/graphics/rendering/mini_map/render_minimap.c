@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_minimap.c                                       :+:      :+:    :+:   */
+/*   render_minimap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 09:29:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 13:45:22 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/29 14:47:31 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/29 14:47:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	render_minimap()
+void	render_minimap(void)
 {
 	t_int_vector	index;
 	char const		**file_map;

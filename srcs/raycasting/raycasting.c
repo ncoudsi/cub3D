@@ -6,15 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 14:45:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:53:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    raycasting()
+void	raycasting(void)
 {
-	int	camera_index;
+	int				camera_index;
 	t_int_vector	map_pos_value;
 
 	camera_index = 0;

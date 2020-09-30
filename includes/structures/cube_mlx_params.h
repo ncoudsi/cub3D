@@ -6,14 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:41:38 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 12:49:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:25:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE_MLX_PARAMS
-# define CUBE_MLX_PARAMS
+#ifndef CUBE_MLX_PARAMS_H
+# define CUBE_MLX_PARAMS_H
 
-typedef struct s_mlx_params
+typedef struct	s_mlx_params
 {
 	void	*mlx_ptr;
 	void	*win_ptr;

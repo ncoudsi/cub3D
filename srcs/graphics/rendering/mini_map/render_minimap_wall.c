@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   render_minimap_wall.c                                      :+:      :+:    :+:   */
+/*   render_minimap_wall.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 10:00:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/14 14:46:26 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/29 14:47:04 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/29 14:47:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	render_minimap_wall(t_int_vector map_index)
 
 	size = get_minimap_tile_size(get_minimap_tiles_nbr());
 	pos = create_vector(map_index.x * size.x, map_index.y * size.y);
-	color = create_color(WALL_COLOR);
+	color = create_color(165, 47, 12);
 	draw_rectangle(pos, size, color);
 }

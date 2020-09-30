@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 13:08:09 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 12:07:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:51:35 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	draw_circle(t_vector center, int radius, t_color color)
 		index.x = center.x - radius;
 		while (index.x < center.x + radius)
 		{
-			if (distance_calculation(center, create_vector(index.x, index.y)) <= radius)
+			if (distance_calculation(center,
+			create_vector(index.x, index.y)) <= radius)
 				put_pixel(create_int_vector(index.x, index.y), color);
 			index.x++;
 		}

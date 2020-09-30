@@ -6,14 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 14:26:44 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:26:33 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_PLAYER_H
 # define CUBE_PLAYER_H
 
-typedef struct s_player
+typedef struct	s_player
 {
 	t_vector	*pos;
 	t_vector	*forward;
@@ -63,11 +63,11 @@ void			set_pitch(float value);
 **	UTILS
 */
 
-float		get_pitch_value();
-t_vector	get_forward_value();
-t_vector	get_right_value();
-void    	update_direction(float new_pitch_value);
-void		set_moves(int key);
-void		unset_moves(int key);
+float			get_pitch_value();
+t_vector		get_forward_value();
+t_vector		get_right_value();
+void			update_direction(float new_pitch_value);
+void			set_moves(int key);
+void			unset_moves(int key);
 
 #endif

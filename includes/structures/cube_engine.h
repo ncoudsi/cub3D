@@ -6,21 +6,21 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 10:37:07 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:22:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_ENGINE_H
 # define CUBE_ENGINE_H
 
-typedef struct s_engine
+typedef struct			s_engine
 {
 	t_map_params		*map_params;
 	t_mlx_params		*mlx_params;
 	t_player			*player;
 	t_rcast_params		*rcast_params;
 	t_render_params		*render_params;
-}				t_engine;
+}						t_engine;
 
 t_engine *g_engine;
 

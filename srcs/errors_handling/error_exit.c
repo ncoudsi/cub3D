@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_exit.c                                       :+:      :+:    :+:   */
+/*   lol.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/25 15:19:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:41:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	fill_error_tab(char **error_tab)
 	error_tab[OVERFLOW_ERROR] = ft_strdup("Error\n[Risk of overflow.]\n");
 }
 
-static	char	**malloc_error_tab()
+static char	**malloc_error_tab(void)
 {
 	char	**result;
 
@@ -38,7 +38,7 @@ static	char	**malloc_error_tab()
 	return (result);
 }
 
-void			error_exit(int error_code)
+void		error_exit(int error_code)
 {
 	char	**error_tab;
 

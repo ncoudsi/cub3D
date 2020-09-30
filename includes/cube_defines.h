@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:42:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 13:35:55 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 13:42:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,58 +17,54 @@
 **	RESOLUTION
 */
 
-#define MIN_RES_X 300
-#define MIN_RES_Y 300
+# define MIN_RES_X 300
+# define MIN_RES_Y 300
 
 /*
 **	COLOR SORTING
 */
 
-#define	RED_INDEX 2
-#define GREEN_INDEX 1
-#define BLUE_INDEX 0
-#define ALPHA_INDEX 3
+# define RED_INDEX 2
+# define GREEN_INDEX 1
+# define BLUE_INDEX 0
+# define ALPHA_INDEX 3
 
 /*
 **	MLX KEY CODES
 */
 
-#define ESC_KEY 65307
-#define W_KEY 119
-#define S_KEY 115
-#define A_KEY 97
-#define D_KEY 100
-#define RIGHT_ARROW 65363
-#define LEFT_ARROW 65361
+# define ESC_KEY 65307
+# define W_KEY 119
+# define S_KEY 115
+# define A_KEY 97
+# define D_KEY 100
+# define RIGHT_ARROW 65363
+# define LEFT_ARROW 65361
 
 /*
 **	MLX EVENT CODES
 */
 
-#define KEY_PRESS 2
-#define KEY_RELEASE 3
+# define KEY_PRESS 2
+# define KEY_RELEASE 3
 
 /*
 **	MINIMAP
 */
 
-#define TILE_COLOR 53, 35, 30
-#define WALL_COLOR 165, 47, 12
-#define PLAYER_COLOR 47, 216, 60
-#define PLAYER_SIZE 3
+# define PLAYER_SIZE 3
 
 /*
 **	PLAYER
 */
 
-#define MOVE_SPEED 0.2f
-#define ROTATION_SPEED M_PI / 16.0f
+# define MOVE_SPEED 0.2f
 
 /*
 **  RAYCASTING
 */
 
-#define DIR_LENGTH 1.0f
-#define PLANE_LENGTH 1.0f
+# define DIR_LENGTH 1.0f
+# define PLANE_LENGTH 1.0f
 
 #endif

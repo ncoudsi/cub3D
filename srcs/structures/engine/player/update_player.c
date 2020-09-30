@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/25 11:46:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 13:43:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ static void	move_left()
 void	update_player()
 {
 	if (g_engine->player->moves->rotation_right == true)
-		update_direction(pitch() - ROTATION_SPEED);
+		update_direction(pitch() - M_PI / 16.0f);
 	if (g_engine->player->moves->rotation_left == true)
-		update_direction(pitch() + ROTATION_SPEED);
+		update_direction(pitch() + M_PI / 16.0f);
 	if (g_engine->player->moves->forward == true)
 		move_forward();
 	if (g_engine->player->moves->backward == true)

@@ -6,15 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:05:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/25 10:09:01 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/29 14:24:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_TEXTURE_H
 # define CUBE_TEXTURE_H
 
-
-typedef struct	s_texture
+typedef struct		s_texture
 {
 	void			*text_ptr;
 	char			*path;
@@ -23,7 +22,7 @@ typedef struct	s_texture
 	int				text_size_line;
 	int				bits_per_texel;
 	int				text_endian;
-}				t_texture;
+}					t_texture;
 
 /*
 **	CREATORS & DESTRUCTORS
