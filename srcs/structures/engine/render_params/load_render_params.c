@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 10:42:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 13:42:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 09:56:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,40 +55,10 @@ static void	load_sprite_tab()
 	}
 }
 
-static void	load_sprite_pos()
-{
-	int				sprite_index;
-	char			**tmp_map;
-	t_int_vector	map_index;
-	t_vector		pos;
-
-	sprite_index = 0;
-	tmp_map = (char **)map();
-	map_index = create_int_vector(0, 0);
-	pos = create_vector(0, 0);
-	while (map_index.y < map_size_y())
-	{
-		map_index.x = 0;
-		while (map_index.x < map_size_x())
-		{
-			if (tmp_map[map_index.y][map_index.x] == '2')
-			{
-				pos = create_vector(map_index.y + 0.5f, map_index.x + 0.5f);
-				set_sprite_pos(g_engine->render_params->
-				sprite_tab[sprite_index], &pos);
-				sprite_index++;
-			}
-			map_index.x++;
-		}
-		map_index.y++;
-	}
-}
-
 void		load_render_params()
 {
 	g_engine->render_params->texture_pos_x_tab =
 	(int *)malloc(sizeof(int) * resolution_x());
 	set_sprite_nbr(load_sprite_nbr());
 	load_sprite_tab();
-	load_sprite_pos();
 }

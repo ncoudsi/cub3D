@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 13:43:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 09:48:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,6 @@ void	update_player()
 		move_right();
 	if (g_engine->player->moves->left == true)
 		move_left();
+	set_sprite_tab_dist();
+	sort_sprite_tab();
 }

@@ -22,5 +22,5 @@ void	load_game(int fd)
 	load_rcast_params();
 	load_render_params();
 	load_textures();
-	// load_sprites();
+	load_sprites();
 }

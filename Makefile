@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/28 16:06:11 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/30 09:54:08 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_sprite.c destroy_sprite.c malloc_sprite.c free_sprite.c free_sprite_tab.c \
 				get_sprite_pos.c get_sprite_pos_x.c get_sprite_pos_y.c set_sprite_pos.c set_sprite_pos_x.c \
-				set_sprite_pos_y.c get_sprite_dist.c set_sprite_dist.c \
+				set_sprite_pos_y.c get_sprite_dist.c set_sprite_dist.c load_sprites.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \

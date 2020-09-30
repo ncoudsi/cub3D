@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 10:34:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:27:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 09:53:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ typedef struct	s_sprite
 	t_vector	*sprite_pos;
 	float		sprite_dist;
 }				t_sprite;
+
+void	load_sprites(void);
 
 /*
 **	CREATORS & DESTRUCTORS
