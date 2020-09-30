@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_texture_step.c                                 :+:      :+:    :+:   */
+/*   get_wall_height.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 16:28:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 16:29:20 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 12:26:48 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:50:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	texture_step()
+int	wall_height()
 {
-	return (g_engine->render_params->texture_step);
+	return (g_engine->render_params->texture_params->wall_height);
 }

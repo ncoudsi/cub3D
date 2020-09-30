@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 13:30:08 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:54:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ void	rendering()
 	while (camera_index.x < resolution_x())
 	{
 		camera_index.y = 0;
-		set_texture_params(camera_index.x);
+		set_texture_params_values(camera_index.x);
 		render_ceiling(&camera_index);
 		render_wall(&camera_index);
 		render_floor(&camera_index);

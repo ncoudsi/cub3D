@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_wall_bottom.c                                  :+:      :+:    :+:   */
+/*   set_texture_params.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 13:55:37 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 13:56:08 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/30 14:40:51 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:41:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	set_wall_bottom(int value)
+void	set_texture_params(t_text_render *value)
 {
-	g_engine->render_params->wall_bottom = value;
+	g_engine->render_params->texture_params = value;
 }

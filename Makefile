@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/30 09:54:08 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/30 14:56:59 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,13 @@ SRCS		=	cube.c cube_file_fd.c \
 				create_sprite.c destroy_sprite.c malloc_sprite.c free_sprite.c free_sprite_tab.c \
 				get_sprite_pos.c get_sprite_pos_x.c get_sprite_pos_y.c set_sprite_pos.c set_sprite_pos_x.c \
 				set_sprite_pos_y.c get_sprite_dist.c set_sprite_dist.c load_sprites.c \
+				\
+				create_text_render.c destroy_text_render.c malloc_text_render.c free_text_render.c \
+				get_wall_bottom.c set_wall_bottom.c get_wall_height.c set_wall_height.c get_wall_hitpoint_x.c \
+				set_wall_hitpoint_x.c get_wall_top.c set_wall_top.c get_texture_step.c set_texture_step.c \
+				get_texture_pos.c set_texture_pos.c get_texture_pos_x.c set_texture_pos_x.c get_texture_pos_y.c \
+				set_texture_pos_y.c get_texture_pos_x_tab.c set_texture_pos_x_tab.c \
+				get_texture_pos_x_tab_index.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
@@ -96,12 +103,8 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_side_tab.c get_side_tab_index.c set_side_tab.c \
 				\
 				create_render_params.c destroy_render_params.c malloc_render_params.c free_render_params.c \
-				get_wall_bottom.c set_wall_bottom.c get_wall_height.c set_wall_height.c get_wall_hitpoint_x.c \
-				set_wall_hitpoint_x.c get_wall_top.c set_wall_top.c get_texture_step.c set_texture_step.c \
-				get_texture_pos.c set_texture_pos.c get_texture_pos_x.c set_texture_pos_x.c get_texture_pos_y.c \
-				set_texture_pos_y.c get_texture_pos_x_tab.c set_texture_pos_x_tab.c \
-				get_texture_pos_x_tab_index.c get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c \
-				set_sprite_tab_index.c load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c \
+				get_texture_params.c set_texture_params.c get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c \
+				set_sprite_tab_index.c load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c  \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \
@@ -112,7 +115,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				render_minimap_wall.c render_minimap_tile.c map_pos_to_pixel_pos.c render_minimap_player.c \
 				rendering.c calculate_texture_pos_x.c calculate_wall_hitpoint_x.c \
 				no_texture_color.c so_texture_color.c we_texture_color.c ea_texture_color.c \
-				sprite_texture_color.c calculate_texture_step.c set_texture_params.c \
+				sprite_texture_color.c calculate_texture_step.c set_texture_params_values.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_texture_pos_y.c                                :+:      :+:    :+:   */
+/*   get_wall_bottom.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/16 09:28:51 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/16 09:29:28 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/15 12:28:26 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:50:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	set_texture_pos_y(int value)
+int	wall_bottom()
 {
-	g_engine->render_params->texture_pos->y = value;
+	return (g_engine->render_params->texture_params->wall_bottom);
 }

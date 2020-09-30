@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 10:42:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 09:56:16 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:52:02 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	load_sprite_tab()
 
 void		load_render_params()
 {
-	g_engine->render_params->texture_pos_x_tab =
+	g_engine->render_params->texture_params->texture_pos_x_tab =
 	(int *)malloc(sizeof(int) * resolution_x());
 	set_sprite_nbr(load_sprite_nbr());
 	load_sprite_tab();

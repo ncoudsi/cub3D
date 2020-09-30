@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_texture_pos_x_tab_index.c                      :+:      :+:    :+:   */
+/*   set_texture_pos_x.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/16 10:50:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/16 10:51:04 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 09:27:30 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:50:43 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	texture_pos_x_tab_index(int index)
+void	set_texture_pos_x(int value)
 {
-	return (g_engine->render_params->texture_pos_x_tab[index]);
+	g_engine->render_params->texture_params->texture_pos->x = value;
 }

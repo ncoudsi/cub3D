@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_wall_bottom.c                                  :+:      :+:    :+:   */
+/*   set_texture_pos_x_tab.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 12:28:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 13:41:55 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 10:35:49 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:50:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	wall_bottom()
+void	set_texture_pos_x_tab(int index, int value)
 {
-	return (g_engine->render_params->wall_bottom);
+	g_engine->render_params->texture_params->texture_pos_x_tab[index] = value;
 }

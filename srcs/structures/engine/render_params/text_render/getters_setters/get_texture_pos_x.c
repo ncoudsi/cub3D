@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_texture_step.c                                 :+:      :+:    :+:   */
+/*   get_texture_pos_x.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 16:29:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 16:29:55 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/09/16 09:26:52 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/09/30 14:50:08 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	set_texture_step(float value)
+int	texture_pos_x()
 {
-	g_engine->render_params->texture_step = value;
+	return(g_engine->render_params->texture_params->texture_pos->x);
 }

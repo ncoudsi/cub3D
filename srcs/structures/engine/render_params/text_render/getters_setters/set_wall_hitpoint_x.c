@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 13:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 13:59:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:51:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	set_wall_hitpoint_x(float value)
 {
-	g_engine->render_params->wall_hitpoint_x = value;
+	g_engine->render_params->texture_params->wall_hitpoint_x = value;
 }

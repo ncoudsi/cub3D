@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:29:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:57:39 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,7 @@
 
 typedef struct		s_render_params
 {
-	int				wall_height;
-	int				wall_bottom;
-	int				wall_top;
-	float			wall_hitpoint_x;
-	t_int_vector	*texture_pos;
-	int				*texture_pos_x_tab;
-	float			texture_step;
+	t_text_render	*texture_params;
 	int				sprite_nbr;
 	t_sprite		**sprite_tab;
 }					t_render_params;
@@ -41,25 +35,8 @@ void				free_render_params(t_render_params *to_free);
 **	GETTERS & SETTERS
 */
 
-int					wall_height();
-void				set_wall_height(int value);
-int					wall_bottom();
-void				set_wall_bottom(int value);
-int					wall_top();
-void				set_wall_top(int value);
-float				wall_hitpoint_x();
-void				set_wall_hitpoint_x(float value);
-t_int_vector const	*texture_pos();
-int					texture_pos_x();
-int					texture_pos_y();
-void				set_texture_pos(t_int_vector *value);
-void				set_texture_pos_x();
-void				set_texture_pos_y();
-int const			*texture_pos_x_tab();
-int					texture_pos_x_tab_index(int index);
-void				set_texture_pos_x_tab(int index, int value);
-float				texture_step();
-void				set_texture_step(float value);
+t_text_render const	*texture_params();
+void				set_texture_params(t_text_render *value);
 int					sprite_nbr();
 void				set_sprite_nbr(int value);
 t_sprite const		**sprite_tab();
