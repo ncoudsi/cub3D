@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 09:52:24 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 11:35:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:27:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	load_sprite_tab_pos(void)
 			if (tmp_map[map_index.y][map_index.x] == '2')
 			{
 				pos = create_vector(map_index.x + 0.5f, map_index.y + 0.5f);
-				set_sprite_pos(g_engine->render_params->
+				set_sprite_pos(g_engine->render_params->sprite_params->
 				sprite_tab[sprite_index], &pos);
 				sprite_index++;
 			}

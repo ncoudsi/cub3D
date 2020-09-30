@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 14:27:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:08:54 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include "cube_sprite.h"
 # include "cube_player.h"
 # include "cube_text_render.h"
+# include "cube_sprite_render.h"
 # include "cube_map_params.h"
 # include "cube_mlx_params.h"
 # include "cube_rcast_params.h"

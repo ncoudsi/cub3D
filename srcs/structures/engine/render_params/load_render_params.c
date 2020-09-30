@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 10:42:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 14:52:02 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:29:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	load_sprite_tab()
 
 	index = 0;
 	tab_size = sprite_nbr();
-	g_engine->render_params->sprite_tab =
+	g_engine->render_params->sprite_params->sprite_tab =
 	(t_sprite **)malloc(sizeof(t_sprite *) * tab_size);
 	if (sprite_tab() == NULL)
 		error_exit(MALLOC_ERROR);
@@ -61,4 +61,6 @@ void		load_render_params()
 	(int *)malloc(sizeof(int) * resolution_x());
 	set_sprite_nbr(load_sprite_nbr());
 	load_sprite_tab();
+	load_textures();
+	load_sprites();
 }

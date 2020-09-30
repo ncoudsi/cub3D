@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 14:54:57 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:30:00 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ static void	render_sprites()
 	tmp_pixels = (unsigned int *)pixels();
 	while (sprite_index < sprite_nbr())
 	{
-		absolute_sprite_pos = (t_vector *)sprite_pos(g_engine->render_params->sprite_tab[sprite_index]);
+		absolute_sprite_pos = (t_vector *)sprite_pos(g_engine->render_params->sprite_params->sprite_tab[sprite_index]);
 		relative_sprite_pos = create_vector(absolute_sprite_pos->x - pos_x(), absolute_sprite_pos->y - pos_y());
 		inverted_matrix = 1.0f / (plane_x() * dir_y() - dir_x() *plane_y());
 		transformed_pos.x = inverted_matrix * (dir_y() * relative_sprite_pos.x - dir_x() * relative_sprite_pos.y);
@@ -132,23 +132,6 @@ static void	render_sprites()
 		sprite_index++;
 	}
 }
-
-// //loop through every vertical stripe of the sprite on screen
-//       for(int stripe = drawStartX; stripe < drawEndX; stripe++)
-//       {
-//         int texX = int(256 * (stripe - (-spriteWidth / 2 + spriteScreenX)) * texWidth / spriteWidth) / 256;
-//         //the conditions in the if are:
-//         //1) it's in front of camera plane so you don't see things behind you
-//         //2) it's on the screen (left)
-//         //3) it's on the screen (right)
-//         //4) ZBuffer, with perpendicular distance
-//         if(transformY > 0 && stripe > 0 && stripe < w && transformY < ZBuffer[stripe])
-//         for(int y = drawStartY; y < drawEndY; y++) //for every pixel of the current stripe
-//         {
-//           int d = (y) * 256 - h * 128 + spriteHeight * 128; //256 and 128 factors to avoid floats
-//           int texY = ((d * texHeight) / spriteHeight) / 256;
-//           Uint32 color = texture[sprite[spriteOrder[i]].texture][texWidth * texY + texX]; //get current color from the texture
-//           if((color & 0x00FFFFFF) != 0) buffer[y][stripe] = color; //paint pixel if it isn't black, black is the invisible color
 
 void	rendering()
 {

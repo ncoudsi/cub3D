@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/30 14:56:59 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/09/30 15:26:59 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_texture_pos.c set_texture_pos.c get_texture_pos_x.c set_texture_pos_x.c get_texture_pos_y.c \
 				set_texture_pos_y.c get_texture_pos_x_tab.c set_texture_pos_x_tab.c \
 				get_texture_pos_x_tab_index.c \
+				\
+				create_sprite_render.c destroy_sprite_render.c malloc_sprite_render.c free_sprite_render.c \
+				get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c set_sprite_tab_index.c \
+				load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c  \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
@@ -103,8 +107,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_side_tab.c get_side_tab_index.c set_side_tab.c \
 				\
 				create_render_params.c destroy_render_params.c malloc_render_params.c free_render_params.c \
-				get_texture_params.c set_texture_params.c get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c \
-				set_sprite_tab_index.c load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c  \
+				get_texture_params.c set_texture_params.c get_sprite_params.c set_sprite_params.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \
