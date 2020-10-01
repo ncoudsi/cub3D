@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 15:30:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 11:29:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ static void	render_sprites()
 {
 	int				sprite_index;
 	t_vector		*absolute_sprite_pos;
-	t_vector		relative_sprite_pos;
+	t_vector		*relative_sprite_pos;
 	float			inverted_matrix;
-	t_vector		transformed_pos;
+	t_vector		*transformed_pos;
 	int				sprite_screen_x;
 	int				sprite_height;
 	int				sprite_top;
@@ -91,19 +91,18 @@ static void	render_sprites()
 	while (sprite_index < sprite_nbr())
 	{
 		absolute_sprite_pos = (t_vector *)sprite_pos(g_engine->render_params->sprite_params->sprite_tab[sprite_index]);
-		relative_sprite_pos = create_vector(absolute_sprite_pos->x - pos_x(), absolute_sprite_pos->y - pos_y());
+		relative_sprite_pos = malloc_vector(absolute_sprite_pos->x - pos_x(), absolute_sprite_pos->y - pos_y());
 		inverted_matrix = 1.0f / (plane_x() * dir_y() - dir_x() *plane_y());
-		transformed_pos.x = inverted_matrix * (dir_y() * relative_sprite_pos.x - dir_x() * relative_sprite_pos.y);
-		transformed_pos.y = inverted_matrix * (-plane_y() * relative_sprite_pos.x + plane_x() * relative_sprite_pos.y);
-		sprite_screen_x = (int)((resolution_x() / 2) * (1 + transformed_pos.x / transformed_pos.y));
-		sprite_height = abs((int)(resolution_y() / transformed_pos.y));
+		transformed_pos = malloc_vector(inverted_matrix * (dir_y() * relative_sprite_pos->x - dir_x() * relative_sprite_pos->y), inverted_matrix * (-plane_y() * relative_sprite_pos->x + plane_x() * relative_sprite_pos->y));
+		sprite_screen_x = (int)((resolution_x() / 2) * (1 + transformed_pos->x / transformed_pos->y));
+		sprite_height = abs((int)(resolution_y() / transformed_pos->y));
 		sprite_top = -sprite_height / 2 + resolution_y() / 2;
 		if (sprite_top < 0)
 			sprite_top = 0;
 		sprite_bottom = sprite_height / 2 + resolution_y() / 2;
 		if (sprite_bottom >= resolution_y())
 			sprite_bottom = resolution_y() - 1;
-		sprite_width = abs((int)(resolution_y() / transformed_pos.y));
+		sprite_width = abs((int)(resolution_y() / transformed_pos->y));
 		sprite_left = -sprite_width / 2 + sprite_screen_x;
 		if (sprite_left < 0)
 			sprite_left = 0;
@@ -114,7 +113,7 @@ static void	render_sprites()
 		while (stripe < sprite_right)
 		{
 			sprite_texture_x = (int)(256 * (stripe - (-sprite_width / 2 + sprite_screen_x)) * dimension_x(sprite_texture()) / sprite_width) / 256;
-			if (transformed_pos.y > 0 && stripe > 0 && stripe < resolution_x() && transformed_pos.y < perp_wall_dist_tab_index(stripe))
+			if (transformed_pos->y > 0 && stripe > 0 && stripe < resolution_x() && transformed_pos->y < perp_wall_dist_tab_index(stripe))
 			{
 				row = sprite_top;
 				while (row < sprite_bottom)
@@ -130,6 +129,8 @@ static void	render_sprites()
 			stripe++;
 		}
 		sprite_index++;
+		free_vector(relative_sprite_pos);
+		free_vector(transformed_pos);
 	}
 }
 

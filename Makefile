@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/09/30 15:26:59 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/01 11:00:46 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,14 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_sprite_render.c destroy_sprite_render.c malloc_sprite_render.c free_sprite_render.c \
 				get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c set_sprite_tab_index.c \
-				load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c  \
+				load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c get_absolute_sprite_pos.c \
+				set_absolute_sprite_pos.c get_relative_sprite_pos.c set_relative_sprite_pos.c \
+				get_inverted_matrix.c set_inverted_matrix.c get_transformed_pos.c set_transformed_pos.c \
+				get_sprite_screen_x.c set_sprite_screen_x.c get_sprite_height.c set_sprite_height.c \
+				get_sprite_top.c set_sprite_top.c get_sprite_bottom.c set_sprite_bottom.c \
+				get_sprite_width.c set_sprite_width.c get_sprite_left.c set_sprite_left.c \
+				get_sprite_right.c set_sprite_right.c get_sprite_texture_pos.c set_sprite_texture_pos.c \
+				get_sprite_texture_pos_x.c set_sprite_texture_pos_x.c get_sprite_texture_pos_y.c set_sprite_texture_pos_y.c \
 				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
@@ -132,7 +139,7 @@ SRCS		=	cube.c cube_file_fd.c \
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
 #Compilation flag
-CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS		=	-Wall -Wextra -Werror
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir)) -I libs/mlx
 
