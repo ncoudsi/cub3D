@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 15:04:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 10:47:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 13:17:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,25 @@ t_sprite const		**sprite_tab();
 void				set_sprite_tab_index(int index, t_sprite *value);
 void				set_sprite_tab_dist();
 t_vector const		*absolute_sprite_pos();
+float				absolute_sprite_pos_x();
+float				absolute_sprite_pos_y();
 void				set_absolute_sprite_pos(t_vector *value);
+void				set_absolute_sprite_pos_x(float value);
+void				set_absolute_sprite_pos_y(float value);
 t_vector const		*relative_sprite_pos();
+float				relative_sprite_pos_x();
+float				relative_sprite_pos_y();
 void				set_relative_sprite_pos(t_vector *value);
+void				set_relative_sprite_pos_x(float value);
+void				set_relative_sprite_pos_y(float value);
 float				inverted_matrix();
 void				set_inverted_matrix(float value);
 t_vector const		*transformed_pos();
+float				transformed_pos_x();
+float				transformed_pos_y();
 void				set_transformed_pos(t_vector *value);
+void				set_transformed_pos_x(float value);
+void				set_transformed_pos_y(float value);
 int					sprite_screen_x();
 void				set_sprite_screen_x(int value);
 int					sprite_height();
@@ -73,10 +85,10 @@ void				set_sprite_left(int value);
 int					sprite_right();
 void				set_sprite_right(int value);
 t_int_vector const	*sprite_texture_pos();
-void				set_sprite_texture_pos(t_int_vector *value);
 int					sprite_texture_pos_x();
-void				set_sprite_texture_pos_x(int value);
 int					sprite_texture_pos_y();
+void				set_sprite_texture_pos(t_int_vector *value);
+void				set_sprite_texture_pos_x(int value);
 void				set_sprite_texture_pos_y(int value);
 
 #endif

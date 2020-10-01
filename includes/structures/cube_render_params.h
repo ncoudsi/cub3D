@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 15:35:02 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 13:36:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ typedef struct			s_render_params
 }						t_render_params;
 
 void					load_render_params();
+void					load_texture_params(void);
+void					load_sprite_params(void);
+void					load_sprite_tab(void);
+int						get_sprite_nbr_value(void);
 
 /*
 **	CREATORS & DESTRUCTORS
