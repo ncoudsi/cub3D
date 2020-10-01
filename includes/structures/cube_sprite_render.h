@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 15:04:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 13:52:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 16:11:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ t_sprite const		**sprite_tab();
 t_sprite const		*sprite_tab_index(int index);
 void				set_sprite_tab_index(int index, t_sprite *value);
 void				set_sprite_tab_dist();
+void				set_sprite_tab_pos(void);
 t_vector const		*absolute_sprite_pos();
 float				absolute_sprite_pos_x();
 float				absolute_sprite_pos_y();

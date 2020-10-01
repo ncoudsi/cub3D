@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 14:20:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 16:41:00 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ static void	render_sprites()
 				{
 					encule = (row) * 256 - resolution_y() * 128 + sprite_height() * 128;
 					set_sprite_texture_pos_y(((encule * dimension_y(sprite_texture())) / sprite_height()) / 256);
-					color = tmp_sprite_pixels[dimension_x(sprite_texture()) * sprite_texture_pos_y() + sprite_texture_pos_x()];
+					color = tmp_sprite_pixels[sprite_texture_pos_x() + dimension_x(sprite_texture()) * sprite_texture_pos_y()];
 					if ((color & 0x00FFFFFF) != 0)
-						tmp_pixels[stripe + row * resolution_y()] = color;
+						tmp_pixels[stripe + row * resolution_x()] = color;
 					row++;
 				}
 			}
