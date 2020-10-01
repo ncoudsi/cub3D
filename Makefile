@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/01 13:41:10 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/01 14:22:12 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_texture_pos_x_tab_index.c \
 				\
 				create_sprite_render.c destroy_sprite_render.c malloc_sprite_render.c free_sprite_render.c \
-				get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c set_sprite_tab_index.c \
+				get_sprite_nbr.c set_sprite_nbr.c get_sprite_tab.c get_sprite_tab_index.c set_sprite_tab_index.c \
 				load_render_params.c set_sprite_tab_dist.c sort_sprite_tab.c get_absolute_sprite_pos.c \
 				set_absolute_sprite_pos.c get_relative_sprite_pos.c set_relative_sprite_pos.c \
 				get_inverted_matrix.c set_inverted_matrix.c get_transformed_pos.c set_transformed_pos.c \
@@ -130,6 +130,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				rendering.c calculate_texture_pos_x.c calculate_wall_hitpoint_x.c \
 				no_texture_color.c so_texture_color.c we_texture_color.c ea_texture_color.c \
 				sprite_texture_color.c calculate_texture_step.c set_texture_params_values.c \
+				set_sprite_params_values.c \
 				\
 				key_press.c key_release.c is_movement_key.c is_rotation_key.c \
 				\

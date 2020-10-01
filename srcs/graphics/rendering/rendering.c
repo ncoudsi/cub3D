@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 13:48:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/01 14:20:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,65 +62,32 @@ static void	render_floor(t_int_vector *camera_index)
 static void	render_sprites()
 {
 	int				sprite_index;
-	int				sprite_screen_x;
-	int				sprite_height;
-	int				sprite_top;
-	int				sprite_bottom;
-	int				sprite_width;
-	int				sprite_left;
-	int				sprite_right;
 	int				stripe;
-	int				sprite_texture_x;
-	int				sprite_texture_y;
 	int				encule;
 	int				row;
 	unsigned int	color;
 	unsigned int	*tmp_sprite_pixels;
 	unsigned int	*tmp_pixels;
-	t_vector		tmp_rel_sprite_pos;
-	t_vector		tmp_transformed_pos;
 
 	sprite_index = 0;
-	sprite_texture_x = 0;
-	sprite_texture_y = 0;
 	row = 0;
 	tmp_sprite_pixels = (unsigned int *)texels(sprite_texture());
 	tmp_pixels = (unsigned int *)pixels();
 	while (sprite_index < sprite_nbr())
 	{
-		set_absolute_sprite_pos((t_vector *)sprite_pos(g_engine->render_params->sprite_params->sprite_tab[sprite_index]));
-		tmp_rel_sprite_pos = create_vector(absolute_sprite_pos_x() - pos_x(), absolute_sprite_pos_y() - pos_y());
-		set_relative_sprite_pos(&tmp_rel_sprite_pos);
-		set_inverted_matrix(1.0f / (plane_x() * dir_y() - dir_x() *plane_y()));
-		tmp_transformed_pos = create_vector(inverted_matrix() * (dir_y() * relative_sprite_pos_x() - dir_x() * relative_sprite_pos_y()), inverted_matrix() * (-plane_y() * relative_sprite_pos_x() + plane_x() * relative_sprite_pos_y()));
-		set_transformed_pos(&tmp_transformed_pos);
-		sprite_screen_x = (int)((resolution_x() / 2) * (1 + transformed_pos_x() / transformed_pos_y()));
-		sprite_height = abs((int)(resolution_y() / transformed_pos_y()));
-		sprite_top = -sprite_height / 2 + resolution_y() / 2;
-		if (sprite_top < 0)
-			sprite_top = 0;
-		sprite_bottom = sprite_height / 2 + resolution_y() / 2;
-		if (sprite_bottom >= resolution_y())
-			sprite_bottom = resolution_y() - 1;
-		sprite_width = abs((int)(resolution_y() / transformed_pos_y()));
-		sprite_left = -sprite_width / 2 + sprite_screen_x;
-		if (sprite_left < 0)
-			sprite_left = 0;
-		sprite_right = sprite_width / 2 + sprite_screen_x;
-		if (sprite_right >= resolution_x())
-			sprite_right = resolution_x() - 1;
-		stripe = sprite_left;
-		while (stripe < sprite_right)
+		set_sprite_params_values(sprite_index);
+		stripe = sprite_left();
+		while (stripe < sprite_right())
 		{
-			sprite_texture_x = (int)(256 * (stripe - (-sprite_width / 2 + sprite_screen_x)) * dimension_x(sprite_texture()) / sprite_width) / 256;
+			set_sprite_texture_pos_x((int)(256 * (stripe - (-sprite_width() / 2 + sprite_screen_x())) * dimension_x(sprite_texture()) / sprite_width()) / 256);
 			if (transformed_pos_y() > 0 && stripe > 0 && stripe < resolution_x() && transformed_pos_y() < perp_wall_dist_tab_index(stripe))
 			{
-				row = sprite_top;
-				while (row < sprite_bottom)
+				row = sprite_top();
+				while (row < sprite_bottom())
 				{
-					encule = (row) * 256 - resolution_y() * 128 + sprite_height * 128;
-					sprite_texture_y = ((encule * dimension_y(sprite_texture())) / sprite_height) / 256;
-					color = tmp_sprite_pixels[dimension_x(sprite_texture()) * sprite_texture_y + sprite_texture_x];
+					encule = (row) * 256 - resolution_y() * 128 + sprite_height() * 128;
+					set_sprite_texture_pos_y(((encule * dimension_y(sprite_texture())) / sprite_height()) / 256);
+					color = tmp_sprite_pixels[dimension_x(sprite_texture()) * sprite_texture_pos_y() + sprite_texture_pos_x()];
 					if ((color & 0x00FFFFFF) != 0)
 						tmp_pixels[stripe + row * resolution_y()] = color;
 					row++;
