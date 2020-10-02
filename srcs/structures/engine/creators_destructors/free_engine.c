@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:07:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 11:16:32 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:59:03 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	free_engine()
+void	free_engine(void)
 {
 	destroy_engine(*g_engine);
 	free(g_engine);

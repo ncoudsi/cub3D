@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 14:36:29 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 14:25:02 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:51:04 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	load_textures()
+void	load_textures(void)
 {
 	load_no_texture();
 	load_so_texture();

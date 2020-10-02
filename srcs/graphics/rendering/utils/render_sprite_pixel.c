@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 08:44:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 08:47:15 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:39:26 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void	render_sprite_pixel(t_int_vector sprite_pixel_index)
 	color = tmp_sprite_pixels[sprite_texture_pos_x() +
 	dimension_x(sprite_texture()) * sprite_texture_pos_y()];
 	if ((color & 0x00FFFFFF) != 0)
-		tmp_pixels[sprite_pixel_index.x + sprite_pixel_index.y * resolution_x()] = color;
+		tmp_pixels[sprite_pixel_index.x + sprite_pixel_index.y *
+	resolution_x()] = color;
 }

@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:31:23 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:31:23 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/02 13:55:29 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/02 13:56:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    free_vector(t_vector *to_free)
+void	free_vector(t_vector *to_free)
 {
-    free(to_free);
+	free(to_free);
 }

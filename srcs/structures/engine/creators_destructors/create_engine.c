@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:03:37 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 12:12:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:59:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_engine	create_engine()
+t_engine	create_engine(void)
 {
 	t_engine	result;
 

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 14:49:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 14:50:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:47:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ t_int_vector	create_int_vector(int x, int y)
 
 	result.x = x;
 	result.y = y;
-	return(result);
+	return (result);
 }

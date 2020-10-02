@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:04:32 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 12:05:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:59:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_engine	*malloc_engine()
+t_engine	*malloc_engine(void)
 {
 	t_engine	*result;
 

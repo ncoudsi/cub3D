@@ -3,7 +3,7 @@ R 800 800
 SO               ./ressources/brick_wall2.xpm
          WE                     ./ressources/black_brick_wall.xpm
 EA ./ressources/white_brick_wall.xpm
-S ./ressources/test.xpm
+S ./ressources/test_2.xpm
 
 C 70,100,225
 

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:05:53 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 12:12:43 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:59:15 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	destroy_engine()
+void	destroy_engine(void)
 {
 	free_map_params(g_engine->map_params);
 	free_mlx_params(g_engine->mlx_params);

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:58:07 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/07 13:58:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:47:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    free_color(t_color *to_free)
+void	free_color(t_color *to_free)
 {
-    free(to_free);
+	free(to_free);
 }

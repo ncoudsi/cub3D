@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:07:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:37:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,37 +60,20 @@ static void	render_floor(t_int_vector *camera_index)
 	}
 }
 
-static void	render_sprites()
+static void	render_sprites(void)
 {
 	int				sprite_index;
-	t_int_vector	sprite_pixel_index;
 
 	sprite_index = 0;
-	sprite_pixel_index = create_int_vector(0, 0);
 	while (sprite_index < sprite_nbr())
 	{
 		set_sprite_params_values(sprite_index);
-		sprite_pixel_index.x = sprite_left();
-		while (sprite_pixel_index.x < sprite_right())
-		{
-			calculate_sprite_texture_pos_x(sprite_pixel_index);
-			if (is_drawable_sprite_pixel(sprite_pixel_index) == true)
-			{
-				sprite_pixel_index.y = sprite_top();
-				while (sprite_pixel_index.y < sprite_bottom())
-				{
-					calculate_sprite_texture_pos_y(sprite_pixel_index);
-					render_sprite_pixel(sprite_pixel_index);
-					sprite_pixel_index.y++;
-				}
-			}
-			sprite_pixel_index.x++;
-		}
+		render_sprite();
 		sprite_index++;
 	}
 }
 
-void	rendering()
+void		rendering(void)
 {
 	t_int_vector	camera_index;
 
@@ -105,7 +88,7 @@ void	rendering()
 		render_floor(&camera_index);
 		camera_index.x++;
 	}
-	// render_minimap();
+	render_minimap();
 	render_sprites();
 	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
 }

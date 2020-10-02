@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:10:20 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/17 14:02:53 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 13:49:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_texture	create_texture(char	*path)
+t_texture	create_texture(char *path)
 {
 	t_texture	result;
 
