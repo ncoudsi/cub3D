@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 14:21:40 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 09:26:39 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ t_color		spirte_texture_color();
 void		calculate_texture_step(t_int_vector *camera_index);
 void		set_texture_params_values(int camera_x);
 void		set_sprite_params_values(int sprite_index);
+void		render_sprite_pixel(t_int_vector sprite_pixel_index);
+void		calculate_sprite_texture_pos_x(t_int_vector sprite_pixel_index);
+void		calculate_sprite_texture_pos_y(t_int_vector sprite_pixel_index);
+t_bool		is_drawable_sprite_pixel(t_int_vector sprite_pixel_index);
+
 /*
 **	MATHS
 */
