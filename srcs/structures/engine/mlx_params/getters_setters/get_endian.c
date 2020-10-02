@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 11:59:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 11:59:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	endian()
+int	endian(void)
 {
 	return (g_engine->mlx_params->endian);
 }

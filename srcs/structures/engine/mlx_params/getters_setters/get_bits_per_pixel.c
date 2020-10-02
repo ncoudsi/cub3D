@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_bits_per_pixels.c                              :+:      :+:    :+:   */
+/*   get_bits_per_pixel.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 11:54:23 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 12:01:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	bits_per_pixel()
+int	bits_per_pixel(void)
 {
 	return (g_engine->mlx_params->bits_per_pixel);
 }

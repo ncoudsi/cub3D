@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 11:38:59 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:05:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:08 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	*win_ptr()
+void	*win_ptr(void)
 {
 	return (g_engine->mlx_params->win_ptr);
 }

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 11:57:51 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 11:58:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	size_line()
+int	size_line(void)
 {
 	return (g_engine->mlx_params->size_line);
 }

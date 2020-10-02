@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:45:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 20:55:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:04:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_mlx_params	create_mlx_params()
+t_mlx_params	create_mlx_params(void)
 {
 	t_mlx_params	result;
 

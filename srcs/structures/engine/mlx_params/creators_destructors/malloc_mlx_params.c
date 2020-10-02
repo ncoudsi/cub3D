@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:56:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/08 20:57:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:55 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_mlx_params	*malloc_mlx_params()
+t_mlx_params	*malloc_mlx_params(void)
 {
 	t_mlx_params	*result;
 

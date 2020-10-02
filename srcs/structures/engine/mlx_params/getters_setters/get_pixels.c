@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 11:51:58 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 15:05:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/02 14:03:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char	*pixels()
+char	*pixels(void)
 {
 	return (g_engine->mlx_params->pixels);
 }
