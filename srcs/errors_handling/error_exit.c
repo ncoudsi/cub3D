@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/06 13:49:15 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/06 13:55:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	fill_error_tab(char **error_tab)
 	error_tab[MALLOC_ERROR] = ft_strdup("Error\n[A malloc has failed.]\n");
 	error_tab[OVERFLOW_ERROR] = ft_strdup("Error\n[Risk of overflow.]\n");
 	error_tab[ARG_ERROR] =
-	ft_strdup("Error\n[Wrong number of arguments to run the program]\n");
+	ft_strdup("Error\n[Invalid arguments to run the program]\n");
 }
 
 static char	**malloc_error_tab(void)

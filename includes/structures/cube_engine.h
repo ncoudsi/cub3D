@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:22:16 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/06 14:16:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct			s_engine
 	t_player			*player;
 	t_rcast_params		*rcast_params;
 	t_render_params		*render_params;
+	t_bool				bmp_save;
 }						t_engine;
 
 t_engine *g_engine;
@@ -43,4 +44,6 @@ t_map_params const		*map_params();
 t_mlx_params const		*mlx_params();
 t_player const			*player();
 t_rcast_params const	*rcast_params();
+t_bool					bmp_save();
+void					set_bmp_save(t_bool value);
 #endif

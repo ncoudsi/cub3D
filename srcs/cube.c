@@ -6,17 +6,26 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/06 13:48:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/06 15:51:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	main(int ac, char **av)
+void	args_check(int ac, char **av)
 {
 	if (ac < 2 || ac > 3)
 		error_exit(ARG_ERROR);
+	if (ac == 3 && ft_strcmp(av[2], "--save") == false)
+		error_exit(ARG_ERROR);
+	else if (ac == 3)
+		set_bmp_save(true);
+}
+
+int	main(int ac, char **av)
+{
 	g_engine = malloc_engine();
+	args_check(ac, av);
 	load_game(cube_file_fd(av[1]));
 	run_game();
 	close_game();
