@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/02 13:35:49 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/06 13:49:52 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,7 +188,7 @@ norme:
 re:						fclean all
 
 exec:					all
-				@./$(NAME)
+				@./$(NAME) ressources/map.cub
 
 clean:
 				@echo "Deleting Objects Directory $(OBJS_DIR) ... \c"

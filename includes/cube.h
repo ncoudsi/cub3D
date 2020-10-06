@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:35:32 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/06 13:21:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "cube_includes.h"
 
-int			cube_file_fd();
+int			cube_file_fd(char *cub_file);
 void		run_game();
 int			update_game();
 
