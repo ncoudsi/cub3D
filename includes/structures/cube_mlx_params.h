@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:41:38 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:25:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 08:02:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,14 @@ typedef struct	s_mlx_params
 	int		endian;
 }				t_mlx_params;
 
+void			load_mlx_params(void);
+
 /*
 **	CREATORS & DESTRUCTORS
 */
 
-t_mlx_params	create_mlx_params();
-t_mlx_params	*malloc_mlx_params();
+t_mlx_params	create_mlx_params(void);
+t_mlx_params	*malloc_mlx_params(void);
 void			destroy_mlx_params(t_mlx_params to_destroy);
 void			free_mlx_params(t_mlx_params	*to_free);
 

@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_game.c                                        :+:      :+:    :+:   */
+/*   pre_render_bmp.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 14:00:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 14:47:39 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/07 10:33:08 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/07 14:00:44 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	load_game(int fd)
+void	pre_render_bmp(void)
 {
-	load_map_params(fd);
-	set_mlx_ptr(mlx_init());
-	resize_resolution();
-	load_textures();
-	load_player();
-	load_rcast_params();
-	load_render_params();
-	if (bmp_save() == true)
-		create_bmp();
-	load_mlx_params();
+	set_img_ptr(mlx_new_image(mlx_ptr(), resolution_x(), resolution_y()));
+	set_pixels(mlx_get_data_addr(img_ptr(),
+	&g_engine->mlx_params->bits_per_pixel, &g_engine->mlx_params->size_line,
+	&g_engine->mlx_params->endian));
+	raycasting();
+	bmp_rendering();
 }

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/06 13:55:16 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 09:43:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static void	fill_error_tab(char **error_tab)
 	error_tab[OVERFLOW_ERROR] = ft_strdup("Error\n[Risk of overflow.]\n");
 	error_tab[ARG_ERROR] =
 	ft_strdup("Error\n[Invalid arguments to run the program]\n");
+	error_tab[BMP_ERROR] =
+	ft_strdup("Error\n[Error while creating save file.]\n");
 }
 
 static char	**malloc_error_tab(void)

@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/06 15:50:06 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/07 14:22:34 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_img_ptr.c set_img_ptr.c get_pixels.c set_pixels.c \
 				get_bits_per_pixel.c set_bits_per_pixel.c get_size_line.c \
 				set_size_line.c get_endian.c set_endian.c get_map_size.c \
-				get_map_size_x.c get_map_size_y.c set_map_size.c \
+				get_map_size_x.c get_map_size_y.c set_map_size.c load_mlx_params.c \
 				\
 				create_rcast_params.c malloc_rcast_params.c destroy_rcast_params.c \
 				free_rcast_params.c get_dir.c get_dir_x.c get_dir_y.c \
@@ -143,6 +143,10 @@ SRCS		=	cube.c cube_file_fd.c \
 				hitpoint_detection.c side_detection.c is_map_border.c update_perpendicular_wall_dist.c \
 				\
 				error_exit.c error_exit_vector.c \
+				\
+				create_bmp.c pre_render_bmp.c set_int_in_bmp_buffer.c bmp_rendering.c \
+				\
+				create_bitmap.c destroy_bitmap.c malloc_bitmap.c free_bitmap.c \
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 

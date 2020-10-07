@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:11:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 15:08:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 13:49:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@
 # include "cube_render_params.h"
 # include "cube_engine.h"
 # include "cube_errors.h"
+# include "cube_bitmap.h"
 
 #endif
