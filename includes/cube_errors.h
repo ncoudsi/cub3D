@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:38:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 09:42:49 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 16:03:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **	BASIC ERRORS
 */
 
-# define ERRORS_NBR 12
+# define ERRORS_NBR 13
 # define MAP_ENTRY 0
 # define RES_ERROR 1
 # define TEX_ERROR 2
@@ -30,6 +30,7 @@
 # define OVERFLOW_ERROR 9
 # define ARG_ERROR 10
 # define BMP_ERROR 11
+# define XPM_ERROR 12
 
 void	error_exit(int error_code);
 

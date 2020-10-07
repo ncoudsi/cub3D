@@ -1,9 +1,9 @@
 R 801 601
-                         NO ./ressources/brick_wall.xpm
-SO               ./ressources/brick_wall2.xpm
-         WE                     ./ressources/black_brick_wall.xpm
-EA ./ressources/white_brick_wall.xpm
-S ./ressources/test_2.xpm
+                         NO ./ressources/lol.xpm
+SO               ./ressources/lol.xpm
+         WE                     ./ressources/lol.xpm
+EA ./ressources/lol.xpm
+S ./ressources/lol.xpm
 
 C 70,100,225
 
@@ -24,7 +24,7 @@ F 200,150,20
 10000000000000000000S0000000000000000000001
 1000000000000000000000000000000000000000001
 1000000000000000000000000000000000000000001
-1000000000000000020020000000000000000000001
+1000000000000000020020020000000000000000001
 1111111111111111111111111111111111111111111
 1000000000000000000000000000000000100000001
 1011111001111000110000001110000000102000001
