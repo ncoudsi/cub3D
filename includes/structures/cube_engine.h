@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/06 14:16:49 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 15:43:05 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct			s_engine
 t_engine *g_engine;
 
 void					load_game(int fd);
-void					close_game();
+
 /*
 **	CREATORS & DESTRUCTORS
 */

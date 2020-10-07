@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 11:28:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/07 15:43:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 int			cube_file_fd(char *cub_file);
 void		run_game();
 int			update_game();
+int			close_game();
 
 /*
 **  KEY_HANDLING
