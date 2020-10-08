@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 01:37:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/09 01:37:06 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 11:14:22 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 11:14:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,3 @@ t_bool	is_cardinal_point(char c)
 		return (true);
 	return (false);
 }
-
