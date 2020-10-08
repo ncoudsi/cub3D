@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:35:45 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:36:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:25:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	side()
+int	side(void)
 {
 	return (g_engine->rcast_params->side);
 }

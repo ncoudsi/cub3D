@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 12:27:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 12:27:58 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 12:24:25 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 12:24:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    set_camera_x(float value)
+void	set_camera_x(float value)
 {
-    g_engine->rcast_params->camera_x = value;
+	g_engine->rcast_params->camera_x = value;
 }

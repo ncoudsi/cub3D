@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:22:33 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:29:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	side_dist_y()
+float	side_dist_y(void)
 {
 	return (g_engine->rcast_params->side_dist->y);
 }

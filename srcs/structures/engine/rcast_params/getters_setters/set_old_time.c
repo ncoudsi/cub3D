@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 12:26:51 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 12:27:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:26:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void    set_old_time(float value)
+void	set_old_time(float value)
 {
-    g_engine->rcast_params->old_time = value;
+	g_engine->rcast_params->old_time = value;
 }

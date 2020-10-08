@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_ray_dir_x.c                              :+:      :+:    :+:   */
+/*   get_ray_dir_x.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 11:53:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:53:35 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 12:28:05 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 12:28:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float   ray_dir_x()
+float	ray_dir_x(void)
 {
-    return (g_engine->rcast_params->ray_dir->x);
+	return (g_engine->rcast_params->ray_dir->x);
 }
