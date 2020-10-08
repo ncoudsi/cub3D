@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_floor_color.c                                 :+:      :+:    :+:   */
+/*   get_floor_color.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 12:04:27 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 10:23:34 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 08:06:47 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 08:06:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_color const	*floor_color()
+t_color const	*floor_color(void)
 {
 	return (g_engine->map_params->floor_color);
 }

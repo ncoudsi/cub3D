@@ -6,14 +6,14 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:23:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 14:30:03 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 07:24:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_TEXT_RENDER_H
 # define CUBE_TEXT_RENDER_H
 
-typedef struct	s_text_render
+typedef struct		s_text_render
 {
 	int				wall_height;
 	int				wall_bottom;
@@ -22,7 +22,7 @@ typedef struct	s_text_render
 	t_int_vector	*texture_pos;
 	int				*texture_pos_x_tab;
 	float			texture_step;
-}				t_text_render;
+}					t_text_render;
 
 /*
 **	CREATORS & DESTRUCTORS
@@ -56,4 +56,5 @@ int					texture_pos_x_tab_index(int index);
 void				set_texture_pos_x_tab(int index, int value);
 float				texture_step();
 void				set_texture_step(float value);
+
 #endif

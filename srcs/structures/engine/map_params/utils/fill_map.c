@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:30:54 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:30:54 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 08:13:30 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 08:13:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void		fill_map(char *map_line)
+void	fill_map(char *map_line)
 {
-    char    *tmp;
+	char	*tmp;
 
-    tmp = ft_strdup(map_line);
+	tmp = ft_strdup(map_line);
 	ft_add_to_tab((void *)tmp, (void ***)map_adr());
 }

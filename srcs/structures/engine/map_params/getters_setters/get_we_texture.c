@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_we_texture.c                                  :+:      :+:    :+:   */
+/*   get_we_texture.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 12:02:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 14:32:36 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 08:07:14 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 08:07:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_texture const	*we_texture()
+t_texture const	*we_texture(void)
 {
 	return (g_engine->map_params->we_texture);
 }

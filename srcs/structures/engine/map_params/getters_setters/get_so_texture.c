@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_so_texture.c                                  :+:      :+:    :+:   */
+/*   get_so_texture.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 12:01:51 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/14 14:32:23 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 08:09:37 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 08:09:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_texture const	*so_texture()
+t_texture const	*so_texture(void)
 {
 	return (g_engine->map_params->so_texture);
 }

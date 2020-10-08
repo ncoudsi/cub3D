@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 14:16:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 10:00:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:13:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	resize_to_min()
+void	resize_to_min(void)
 {
 	t_int_vector	tmp;
 
@@ -32,7 +32,7 @@ void	resize_to_min()
 	set_resolution(&tmp);
 }
 
-void	resize_to_max()
+void	resize_to_max(void)
 {
 	t_int_vector	screen_size;
 	t_int_vector	tmp;
@@ -55,7 +55,7 @@ void	resize_to_max()
 	set_resolution(&tmp);
 }
 
-void	resize_resolution()
+void	resize_resolution(void)
 {
 	if (resolution_x() < MIN_RES_X || resolution_y() < MIN_RES_Y)
 		resize_to_min();

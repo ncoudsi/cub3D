@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 08:37:09 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 15:28:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 07:40:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,19 @@ static void		fill_bmp_header(t_bitmap *bmp)
 	bmp->image_size = resolution_x() * resolution_y() * (bits_per_pixel() / 8);
 }
 
-void				create_bmp(void)
+static void		write_bmp_header(int fd, t_bitmap *bmp)
 {
-	int				fd;
-	t_bitmap		*bmp;
+	write(fd, "BM", 2);
+	write(fd, bmp, sizeof(t_bitmap));
+}
+
+static void		write_bmp_image_data(int fd)
+{
 	int				index;
 	unsigned int	*line;
 	unsigned int	*tmp_pixels;
 
-	fd = open("./save.bmp", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd == -1)
-		error_exit(BMP_ERROR);
-	bmp = malloc_bitmap();
 	index = 0;
-	pre_render_bmp();
-	fill_bmp_header(bmp);
-	write(fd, "BM", 2);
-	write(fd, bmp, sizeof(t_bitmap));
 	tmp_pixels = (unsigned int *)pixels();
 	while (index < resolution_y())
 	{
@@ -53,7 +49,21 @@ void				create_bmp(void)
 		write(fd, line, size_line());
 		index++;
 	}
-	free_bitmap(bmp);
+}
+
+void			create_bmp(void)
+{
+	int				fd;
+	t_bitmap		*bmp;
+
+	fd = open("./save.bmp", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd == -1)
+		error_exit(BMP_ERROR);
+	bmp = malloc_bitmap();
+	pre_render_bmp();
+	fill_bmp_header(bmp);
+	write_bmp_header(fd, bmp);
+	write_bmp_image_data(fd);
 	close(fd);
 	exit(0);
 }

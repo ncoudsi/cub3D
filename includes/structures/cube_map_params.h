@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:25:48 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:22:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char				**get_map_file(int fd);
 void				fill_params(char *param_line);
 void				fill_map(char *map_line);
 void				resize_resolution();
-
+t_bool				is_double_param(char *param_line);
 /*
 **  PARSING
 */

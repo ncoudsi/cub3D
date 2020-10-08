@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 13:49:44 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 14:02:33 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 07:24:35 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ typedef struct	s_bitmap
 **	CREATORS & DESTRUCTORS
 */
 
-t_bitmap	create_bitmap();
-void		destroy_bitmap(t_bitmap to_destroy);
-t_bitmap	*malloc_bitmap();
-void		free_bitmap(t_bitmap *to_free);
+t_bitmap		create_bitmap();
+void			destroy_bitmap(t_bitmap to_destroy);
+t_bitmap		*malloc_bitmap();
+void			free_bitmap(t_bitmap *to_free);
 
 #endif

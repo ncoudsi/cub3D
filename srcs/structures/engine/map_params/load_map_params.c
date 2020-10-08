@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 13:29:41 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 07:51:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static void	fill_cardinal_point()
+static void	fill_cardinal_point(void)
 {
 	t_int_vector	index;
 	char const		**file_map;
@@ -32,7 +32,7 @@ static void	fill_cardinal_point()
 	}
 }
 
-static void fill_map_size()
+static void fill_map_size(void)
 {
 	t_int_vector	size;
 	t_int_vector	index;
@@ -41,19 +41,19 @@ static void fill_map_size()
 	if (map_size() == NULL)
 		error_exit(MALLOC_ERROR);
 	index = create_int_vector(0, 0);
-    while (g_engine->map_params->map[index.y] != NULL)
-    {
-        index.x = 0;
-        while (g_engine->map_params->map[index.y][index.x] != '\0')
-        {
-            index.x++;
-            if (index.x > size.x)
-                size.x = index.x;
-        }
-        index.y++;
-    }
-    size.y = index.y;
-    set_map_size(&size);
+	while (g_engine->map_params->map[index.y] != NULL)
+	{
+		index.x = 0;
+		while (g_engine->map_params->map[index.y][index.x] != '\0')
+		{
+			index.x++;
+			if (index.x > size.x)
+				size.x = index.x;
+		}
+		index.y++;
+	}
+	size.y = index.y;
+	set_map_size(&size);
 }
 
 static t_bool   is_map_line(char *line)

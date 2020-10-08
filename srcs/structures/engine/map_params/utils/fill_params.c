@@ -5,51 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 13:30:58 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/06 13:30:58 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 08:20:10 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 08:22:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static t_bool	is_double_param(char *param_line)
-{
-	if (param_line[0] == 'R' && resolution() != NULL)
-		return (true);
-	if (param_line[0] == 'N' && no_texture() != NULL)
-		return (true);
-	if (param_line[0] == 'S')
-	{
-		if (param_line[1] == 'O' && so_texture() != NULL)
-			return (true);
-		else if (sprite_texture() != NULL)
-			return (true);
-	}
-	if (param_line[0] == 'W' && we_texture() != NULL)
-		return (true);
-	if (param_line[0] == 'E' && ea_texture() != NULL)
-		return (true);
-	if (param_line[0] == 'C' && ceiling_color() != NULL)
-		return (true);
-	if (param_line[0] == 'F' && floor_color() != NULL)
-		return (true);
-	return (false);
-}
-
 static void		fill_resolution(char **splitted_line)
 {
-		t_int_vector	res;
+	t_int_vector	res;
 
-		res.x = ft_atoi(splitted_line[1]);
-		res.y = ft_atoi(splitted_line[2]);
-		g_engine->map_params->resolution = malloc_int_vector(0, 0);
-		if (resolution() == NULL)
-			error_exit(MALLOC_ERROR);
-		set_resolution(&res);
-		ft_free_tab((void **)splitted_line);
+	res.x = ft_atoi(splitted_line[1]);
+	res.y = ft_atoi(splitted_line[2]);
+	g_engine->map_params->resolution = malloc_int_vector(0, 0);
+	if (resolution() == NULL)
+		error_exit(MALLOC_ERROR);
+	set_resolution(&res);
+	ft_free_tab((void **)splitted_line);
 }
 
-static void		fill_textures(char ** splitted_line)
+static void		fill_textures(char **splitted_line)
 {
 	if (splitted_line[0][0] == 'N')
 	{
@@ -80,7 +56,7 @@ static void		fill_textures(char ** splitted_line)
 
 static void		fill_ceilling_color(char **splitted_line)
 {
-	int index;
+	int		index;
 	t_color	color;
 
 	index = 0;
@@ -102,7 +78,7 @@ static void		fill_ceilling_color(char **splitted_line)
 
 static void		fill_floor_color(char **splitted_line)
 {
-	int index;
+	int		index;
 	t_color	color;
 
 	index = 0;
@@ -124,7 +100,7 @@ static void		fill_floor_color(char **splitted_line)
 
 void			fill_params(char *param_line)
 {
-	char    **splitted_line;
+	char	**splitted_line;
 
 	if (is_double_param(param_line) == true)
 		error_exit(DOUBLE_PARAM_ERROR);

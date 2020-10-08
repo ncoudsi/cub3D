@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/07 15:58:33 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/08 08:23:36 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_bits_per_pixel.c set_bits_per_pixel.c get_size_line.c \
 				set_size_line.c get_endian.c set_endian.c get_map_size.c \
 				get_map_size_x.c get_map_size_y.c set_map_size.c load_mlx_params.c \
+				is_double_param.c \
 				\
 				create_rcast_params.c malloc_rcast_params.c destroy_rcast_params.c \
 				free_rcast_params.c get_dir.c get_dir_x.c get_dir_y.c \

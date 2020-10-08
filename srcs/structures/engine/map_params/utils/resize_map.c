@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 16:33:52 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/11 11:27:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:17:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static char	**alloc_new_map()
+static char	**alloc_new_map(void)
 {
 	char			**result;
 	t_int_vector	index;
@@ -28,19 +28,21 @@ static char	**alloc_new_map()
 	}
 	return (result);
 }
-void		resize_map()
+
+void		resize_map(void)
 {
 	char			**new_map;
 	t_int_vector	index;
 
 	new_map = alloc_new_map();
 	index.y = 0;
-	while(index.y < map_size_y())
+	while (index.y < map_size_y())
 	{
 		index.x = 0;
 		while (g_engine->map_params->map[index.y][index.x] != '\0')
 		{
-			new_map[index.y][index.x] = g_engine->map_params->map[index.y][index.x];
+			new_map[index.y][index.x] =
+			g_engine->map_params->map[index.y][index.x];
 			index.x++;
 		}
 		while (index.x < map_size_x())

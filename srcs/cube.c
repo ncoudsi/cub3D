@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/06 15:51:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 07:25:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	args_check(int ac, char **av)
 		set_bmp_save(true);
 }
 
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	g_engine = malloc_engine();
 	args_check(ac, av);

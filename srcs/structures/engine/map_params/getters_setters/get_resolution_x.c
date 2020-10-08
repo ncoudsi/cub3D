@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:09:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 10:30:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:09:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	resolution_x()
+int	resolution_x(void)
 {
 	return (g_engine->map_params->resolution->x);
 }

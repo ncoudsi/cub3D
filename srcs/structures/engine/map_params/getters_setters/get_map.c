@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 12:05:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 10:38:58 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 08:10:43 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-char const	**map()
+char const	**map(void)
 {
 	return (char const **)(g_engine->map_params->map);
 }

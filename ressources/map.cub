@@ -1,9 +1,9 @@
-R 801 601
-                         NO ./ressources/lol.xpm
-SO               ./ressources/lol.xpm
-         WE                     ./ressources/lol.xpm
-EA ./ressources/lol.xpm
-S ./ressources/lol.xpm
+R 1201 901
+                         NO ./ressources/brick_wall.xpm
+SO               ./ressources/brick_wall2.xpm
+         WE                     ./ressources/black_brick_wall.xpm
+EA ./ressources/white_brick_wall.xpm
+S ./ressources/barrel.xpm
 
 C 70,100,225
 
