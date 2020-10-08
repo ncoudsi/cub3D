@@ -53,18 +53,8 @@ IFLAGS = $(foreach dir, $(INC_DIR), -I$(dir))
 #Library flag
 LFLAGS = $(foreach lib_dir, $(LIB_DIR), -L $(lib_dir)) $(foreach lib, $(LIB), -l $(lib))
 
-# Colors
-_GREY=$'\x1b[30m
-_RED=$'\x1b[31m
-_GREEN=$'\x1b[32m
-_YELLOW=$'\x1b[33m
-_BLUE=$'\x1b[34m
-_PURPLE=$'\x1b[35m
-_CYAN=$'\x1b[36m
-_WHITE=$'\x1b[37m
-
 all:
-				@echo "\n$(_BLUE)___$(NAME) Setting___\n$(_WHITE)"
+				@echo "\n___$(NAME) Setting___\n$(_WHITE)"
 				@make $(NAME)
 
 $(NAME):		$(OBJ) Makefile
@@ -74,12 +64,12 @@ $(NAME):		$(OBJ) Makefile
 				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 show:
-				@echo "$(_BLUE)\nSRC :\n$(_YELLOW)$(SRC)\n$(_WHITE)"
-				@echo "$(_BLUE)OBJ :\n$(_YELLOW)$(OBJ)\n$(_WHITE)"
-				@echo "$(_BLUE)CFLAGS :\n$(_YELLOW)$(CFLAGS)\n$(_WHITE)"
-				@echo "$(_BLUE)IFLAGS :\n$(_YELLOW)(IFLAGS)\n$(_WHITE)"
-				@echo "$(_BLUE)LFLAGS :\n$(_YELLOW)$(LFLAGS)\n$(_WHITE)"
-				@echo "$(_BLUE)LIB_DIR :\n$(_YELLOW)$(LIB_DIR)\n$(_WHITE)"
+				@echo "\nSRC :\n$(_YELLOW)$(SRC)\n$(_WHITE)"
+				@echo "OBJ :\n$(_YELLOW)$(OBJ)\n$(_WHITE)"
+				@echo "CFLAGS :\n$(_YELLOW)$(CFLAGS)\n$(_WHITE)"
+				@echo "IFLAGS :\n$(_YELLOW)(IFLAGS)\n$(_WHITE)"
+				@echo "LFLAGS :\n$(_YELLOW)$(LFLAGS)\n$(_WHITE)"
+				@echo "LIB_DIR :\n$(_YELLOW)$(LIB_DIR)\n$(_WHITE)"
 
 $(OBJ_DIR)/%.o : %.c
 				@echo "Compiling $(_YELLOW)$@$(_WHITE) ... \c"
