@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 13:33:45 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 13:36:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:25:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	get_sprite_nbr_value()
+int	get_sprite_nbr_value(void)
 {
 	int				result;
 	char			**tmp_map;

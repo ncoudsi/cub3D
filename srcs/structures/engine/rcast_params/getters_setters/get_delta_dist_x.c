@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:25:44 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:26:16 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:16:27 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	delta_dist_x()
+float	delta_dist_x(void)
 {
 	return (g_engine->rcast_params->delta_dist->x);
 }

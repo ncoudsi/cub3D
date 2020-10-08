@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 11:07:44 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 11:14:09 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:29:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_sprite	*malloc_sprite()
+t_sprite	*malloc_sprite(void)
 {
 	t_sprite	*result;
 

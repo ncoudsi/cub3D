@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_plane_x.c                                :+:      :+:    :+:   */
+/*   get_plane_x.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 11:47:15 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:47:52 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 14:16:52 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 14:17:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float   plane_x()
+float	plane_x(void)
 {
-    return (g_engine->rcast_params->plane->x);
+	return (g_engine->rcast_params->plane->x);
 }

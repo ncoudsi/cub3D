@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_time.c                                   :+:      :+:    :+:   */
+/*   get_rcast_time.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 11:56:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:56:41 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 14:20:40 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 14:21:04 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float   rcast_time()
+float	rcast_time(void)
 {
-    return (g_engine->rcast_params->time);
+	return (g_engine->rcast_params->time);
 }

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:26:22 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/18 10:41:08 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:27:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	calculate_texture_pos_x()
+int	calculate_texture_pos_x(void)
 {
 	int	result;
 	int	texture_width;

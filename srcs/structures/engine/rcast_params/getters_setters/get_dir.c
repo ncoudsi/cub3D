@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_dir.c                                    :+:      :+:    :+:   */
+/*   get_dir.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 11:27:10 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:27:47 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 14:19:10 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 14:19:21 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector const	*dir()
+t_vector const	*dir(void)
 {
-    return (g_engine->rcast_params->dir);
+	return (g_engine->rcast_params->dir);
 }

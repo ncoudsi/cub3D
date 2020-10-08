@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 13:50:29 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 16:16:39 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:33:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	set_sprite_tab_dist()
+void	set_sprite_tab_dist(void)
 {
 	int				sprite_index;
 	t_vector		pos;

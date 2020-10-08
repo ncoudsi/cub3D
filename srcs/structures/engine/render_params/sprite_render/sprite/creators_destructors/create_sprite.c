@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 10:42:44 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/28 11:06:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:28:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_sprite	create_sprite()
+t_sprite	create_sprite(void)
 {
 	t_sprite	result;
 

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_plane.c                                  :+:      :+:    :+:   */
+/*   get_plane.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 11:33:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 11:47:12 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/08 14:18:05 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 14:18:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector const	*plane()
+t_vector const	*plane(void)
 {
 	return (g_engine->rcast_params->plane);
 }

@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 11:57:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/07/15 11:57:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:17:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	pitch()
+float	pitch(void)
 {
 	return (g_engine->player->pitch);
 }

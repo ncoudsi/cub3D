@@ -6,11 +6,12 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 14:03:46 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 16:18:23 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:27:19 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
 static t_bool	is_sorted(t_sprite **tab)
 {
 	int			sprite_index;
@@ -20,7 +21,8 @@ static t_bool	is_sorted(t_sprite **tab)
 	tab_size = sprite_nbr();
 	while (sprite_index < tab_size - 1)
 	{
-		if (tab[sprite_index]->sprite_dist < tab[sprite_index + 1]->sprite_dist)
+		if (tab[sprite_index]->sprite_dist <
+		tab[sprite_index + 1]->sprite_dist)
 			return (false);
 		sprite_index++;
 	}
@@ -36,7 +38,7 @@ static void		swap_sprite(t_sprite **sprite1, t_sprite **sprite2)
 	*sprite2 = tmp;
 }
 
-void			sort_sprite_tab()
+void			sort_sprite_tab(void)
 {
 	int				sprite_index;
 	int				tab_size;
@@ -49,7 +51,8 @@ void			sort_sprite_tab()
 		sprite_index = 0;
 		while (sprite_index < tab_size - 1)
 		{
-			if (tab[sprite_index]->sprite_dist < tab[sprite_index + 1]->sprite_dist)
+			if (tab[sprite_index]->sprite_dist <
+			tab[sprite_index + 1]->sprite_dist)
 				swap_sprite(&tab[sprite_index], &tab[sprite_index + 1]);
 			sprite_index++;
 		}

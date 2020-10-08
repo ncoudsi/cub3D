@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 14:33:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/30 09:48:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:13:33 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static void	move_forward()
+static void	move_forward(void)
 {
 	t_vector	new_pos;
 
@@ -30,7 +30,7 @@ static void	move_forward()
 	set_pos(&new_pos);
 }
 
-static void	move_backward()
+static void	move_backward(void)
 {
 	t_vector	new_pos;
 
@@ -48,7 +48,7 @@ static void	move_backward()
 	set_pos(&new_pos);
 }
 
-static void	move_right()
+static void	move_right(void)
 {
 	t_vector	new_pos;
 
@@ -66,7 +66,7 @@ static void	move_right()
 	set_pos(&new_pos);
 }
 
-static void	move_left()
+static void	move_left(void)
 {
 	t_vector	new_pos;
 
@@ -84,7 +84,7 @@ static void	move_left()
 	set_pos(&new_pos);
 }
 
-void	update_player()
+void		update_player(void)
 {
 	if (g_engine->player->moves->rotation_right == true)
 		update_direction(pitch() - M_PI / 16.0f);

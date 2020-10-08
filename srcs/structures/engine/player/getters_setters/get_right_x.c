@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 13:21:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 09:57:45 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:16:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	right_x()
+float	right_x(void)
 {
 	return (g_engine->player->right->x);
 }

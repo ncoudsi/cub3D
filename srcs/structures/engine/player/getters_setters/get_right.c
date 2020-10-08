@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 13:20:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 14:27:13 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:17:54 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector const	*right()
+t_vector const	*right(void)
 {
 	return (g_engine->player->right);
 }

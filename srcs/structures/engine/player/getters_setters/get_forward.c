@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 13:18:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/09 09:29:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:17:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector const	*forward()
+t_vector const	*forward(void)
 {
 	return (g_engine->player->forward);
 }

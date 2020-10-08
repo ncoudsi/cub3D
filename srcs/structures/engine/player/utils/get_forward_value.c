@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:45:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 11:38:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:14:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_vector	get_forward_value()
+t_vector	get_forward_value(void)
 {
 	t_vector	result;
 

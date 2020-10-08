@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 12:07:18 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/15 12:08:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:39:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_render_params	*malloc_render_params()
+t_render_params	*malloc_render_params(void)
 {
 	t_render_params	*result;
 

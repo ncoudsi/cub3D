@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:10:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 13:44:00 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:15:35 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-t_player	create_player()
+t_player	create_player(void)
 {
 	t_player	result;
 

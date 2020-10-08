@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:24:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/02 10:56:21 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 12:14:14 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-float	get_pitch_value()
+float	get_pitch_value(void)
 {
 	float	result;
 

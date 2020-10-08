@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 13:34:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 16:11:26 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:27:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	load_sprite_tab()
+void	load_sprite_tab(void)
 {
 	int	index;
 	int	tab_size;

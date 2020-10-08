@@ -6,13 +6,13 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 15:17:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 15:17:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/08 14:16:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-int	step_y()
+int	step_y(void)
 {
 	return (g_engine->rcast_params->step->y);
 }
