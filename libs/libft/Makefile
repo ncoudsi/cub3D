@@ -53,29 +53,39 @@ IFLAGS = $(foreach dir, $(INC_DIR), -I$(dir))
 #Library flag
 LFLAGS = $(foreach lib_dir, $(LIB_DIR), -L $(lib_dir)) $(foreach lib, $(LIB), -l $(lib))
 
+# Colors
+_GREY=$'\x1b[30m
+_RED=$'\x1b[31m
+_GREEN=$'\x1b[32m
+_YELLOW=$'\x1b[33m
+_BLUE=$'\x1b[34m
+_PURPLE=$'\x1b[35m
+_CYAN=$'\x1b[36m
+_WHITE=$'\x1b[37m
+
 all:
-				@echo "\n___$(NAME) Setting___\n"
+				@echo "\n$(_BLUE)___$(NAME) Setting___\n$(_WHITE)"
 				@make $(NAME)
 
 $(NAME):		$(OBJ) Makefile
-				@echo "-----\nCompiling $@ ... \c"
+				@echo "-----\nCompiling $(_YELLOW)$@$(_WHITE) ... \c"
 				@ar rc $(NAME) $(OBJ)
 				@ranlib $(NAME)
-				@echo "DONE\n-----"
+				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 show:
-				@echo "\nSRC :\n$(SRC)\n"
-				@echo "OBJ :\n$(OBJ)\n"
-				@echo "CFLAGS :\n$(CFLAGS)\n"
-				@echo "IFLAGS :\n(IFLAGS)\n"
-				@echo "LFLAGS :\n$(LFLAGS)\n"
-				@echo "LIB_DIR :\n$(LIB_DIR)\n"
+				@echo "$(_BLUE)\nSRC :\n$(_YELLOW)$(SRC)\n$(_WHITE)"
+				@echo "$(_BLUE)OBJ :\n$(_YELLOW)$(OBJ)\n$(_WHITE)"
+				@echo "$(_BLUE)CFLAGS :\n$(_YELLOW)$(CFLAGS)\n$(_WHITE)"
+				@echo "$(_BLUE)IFLAGS :\n$(_YELLOW)(IFLAGS)\n$(_WHITE)"
+				@echo "$(_BLUE)LFLAGS :\n$(_YELLOW)$(LFLAGS)\n$(_WHITE)"
+				@echo "$(_BLUE)LIB_DIR :\n$(_YELLOW)$(LIB_DIR)\n$(_WHITE)"
 
 $(OBJ_DIR)/%.o : %.c
-				@echo "Compiling $@ ... \c"
+				@echo "Compiling $(_YELLOW)$@$(_WHITE) ... \c"
 				@mkdir -p $(OBJ_DIR)
 				@$(CC) $(CFLAGS) $(IFLAGS) -o $@ -c $<
-				@echo "DONE"
+				@echo "$(_GREEN)DONE$(_WHITE)"
 
 install:
 				@make -C libs/graphical_lib
@@ -84,20 +94,20 @@ re-install:
 				@make -C libs/graphical_lib re
 
 debug:			$(NAME)
-				@echo "Compiling the executable ... \c"
+				@echo "Compiling the $(_YELLOW)executable$(_WHITE) ... \c"
 				@$(CC) srcs/main.c $(NAME) $(CFLAGS) $(IFLAGS) -o debug && ./debug
-				@echo "DONE"
+				@echo "$(_GREEN)DONE$(_WHITE)"
 
 re:				fclean all
 
 clean:
-	@echo "Deleting Objects Directory $(OBJ_DIR) ... \c"
+	@echo "$(_WHITE)Deleting Objects Directory $(_YELLOW)$(OBJ_DIR)$(_WHITE) ... \c"
 	@rm -rf $(OBJ_DIR)
-	@echo "DONE\n-----"
+	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 fclean:			clean
-	@echo "Deleting library File $(NAME) ... \c"
+	@echo "Deleting library File $(_YELLOW)$(NAME)$(_WHITE) ... \c"
 	@rm -f $(NAME)
-	@echo "DONE\n-----"
+	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 .PHONY:			all debug show re clean fclean install re-install

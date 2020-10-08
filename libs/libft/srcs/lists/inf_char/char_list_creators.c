@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   char_list_creators.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 16:15:16 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/26 19:49:09 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/08 14:48:20 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char		**ft_chartab_new(size_t nb)
 {
 	char	**tab;
-	size_t		i;
+	size_t	i;
 
 	tab = (char **)malloc(sizeof(char *) * (nb + 1));
 	i = 0;

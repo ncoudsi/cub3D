@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:06:39 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/02/26 19:46:40 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/08 15:05:14 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,15 +121,17 @@ void			ft_putchar_fp(char *path, char c, char *mode);
 void			ft_putstr(char *str);
 void			ft_putstr_fd(int fd, char *str);
 void			ft_putstr_fp(char *path, char *str, char *mode);
-void  			ft_putnbr(int nb);
-void  			ft_putnbr_fd(int fd, int nb);
-void  			ft_putnbr_fp(char *path, int nb, char *mode);
+void			ft_putnbr(int nb);
+void			ft_putnbr_fd(int fd, int nb);
+void			ft_putnbr_fp(char *path, int nb, char *mode);
 char			**ft_get_file(char *path);
 void			ft_print_str_tab(char *p_name, char **p_tab);
 void			ft_print_str_tab_fd(int fd, char *p_name, char **p_tab);
-void			ft_print_str_tab_fp(char *path, char *p_name, char **p_tab, char *mode);
+void			ft_print_str_tab_fp(char *path,
+				char *p_name, char **p_tab, char *mode);
 void			ft_print_int_tab(char *p_name, int *p_tab, size_t len);
-void			ft_print_int_tab_fd(int fd, char *p_name, int *p_tab, size_t len);
+void			ft_print_int_tab_fd(int fd,
+				char *p_name, int *p_tab, size_t len);
 
 /*
 **	Prototypage des TABS.

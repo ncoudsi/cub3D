@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 21:04:53 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/25 21:05:46 by ldutriez         ###   ########.fr       */
+/*   Created: 2020/10/08 15:00:18 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 15:01:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void  ft_putnbr_fd(int fd, int nb)
+void	ft_putnbr_fd(int fd, int nb)
 {
 	if (nb < 0)
 	{

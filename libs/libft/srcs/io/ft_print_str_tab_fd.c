@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str_tab_fd.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 21:11:20 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/26 10:29:14 by ldutriez         ###   ########.fr       */
+/*   Created: 2020/10/08 15:01:04 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/08 15:01:23 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_print_str_tab_fd(int fd, char *p_name, char **p_tab)
 {
-	size_t		index;
+	size_t	index;
 
 	index = 0;
 	if (p_name != NULL)

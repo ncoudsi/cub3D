@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 17:09:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/02/25 11:59:55 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/08 14:47:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include <ctype.h>
 # include <string.h>
 # include <stdio.h>
-# include<sys/types.h>
-# include<sys/stat.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 # include <fcntl.h>
 # include "libft_structures.h"
 # include "libft_defines.h"

@@ -1,8 +1,0 @@
-Lol I overwrite
-That's insane bro
-42
-{Deux chaines de test}
------===-----
-0--->[Salut les gars, c'est un test]
-1--->[test]
------===-----

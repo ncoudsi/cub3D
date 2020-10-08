@@ -17,8 +17,6 @@ void	ft_free_tab(void **tab)
 	int	index;
 
 	index = 0;
-	if (tab == NULL)
-		return ;
 	while (tab[index] != NULL)
 	{
 		free(tab[index]);
