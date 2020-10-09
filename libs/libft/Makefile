@@ -1,16 +1,12 @@
-NAME		= libft.a
+NAME	=	libft.a
 
-CC =		gcc
+CC 		=	clang
 
 SRC_DIR = 	$(shell find srcs -type d)
 INC_DIR = 	$(shell find includes -type d)
-LIB_DIR =	$(shell find libs -type d)
 OBJ_DIR = 	objs
 
 vpath %.c $(foreach dir, $(SRC_DIR), $(dir):)
-
-# List de toute les library a linker au projet (le nom - le lib et - le .a)
-LIB =
 
 #SRC = $(foreach dir, $(SRC_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))
 SRC =		ft_f_abs.c ft_f_floor.c ft_f_roof.c ft_i_abs.c ft_i_roof.c \
@@ -54,50 +50,39 @@ IFLAGS = $(foreach dir, $(INC_DIR), -I$(dir))
 LFLAGS = $(foreach lib_dir, $(LIB_DIR), -L $(lib_dir)) $(foreach lib, $(LIB), -l $(lib))
 
 all:
-				@echo "\n___$(NAME) Setting___\n$(_WHITE)"
+				@echo "\n___$(NAME) Setting___\n"
 				@make $(NAME)
 
 $(NAME):		$(OBJ) Makefile
-				@echo "-----\nCompiling $(_YELLOW)$@$(_WHITE) ... \c"
+				@echo "-----\nCompiling $@ ... \c"
 				@ar rc $(NAME) $(OBJ)
 				@ranlib $(NAME)
-				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
+				@echo "DONE\n-----"
 
 show:
-				@echo "\nSRC :\n$(_YELLOW)$(SRC)\n$(_WHITE)"
-				@echo "OBJ :\n$(_YELLOW)$(OBJ)\n$(_WHITE)"
-				@echo "CFLAGS :\n$(_YELLOW)$(CFLAGS)\n$(_WHITE)"
-				@echo "IFLAGS :\n$(_YELLOW)(IFLAGS)\n$(_WHITE)"
-				@echo "LFLAGS :\n$(_YELLOW)$(LFLAGS)\n$(_WHITE)"
-				@echo "LIB_DIR :\n$(_YELLOW)$(LIB_DIR)\n$(_WHITE)"
+				@echo "\nSRC :\n$(SRC)\n"
+				@echo "OBJ :\n$(OBJ)\n"
+				@echo "CFLAGS :\n$(CFLAGS)\n"
+				@echo "IFLAGS :\n(IFLAGS)\n"
+				@echo "LFLAGS :\n$(LFLAGS)\n"
+				@echo "LIB_DIR :\n$(LIB_DIR)\n"
 
 $(OBJ_DIR)/%.o : %.c
-				@echo "Compiling $(_YELLOW)$@$(_WHITE) ... \c"
+				@echo "Compiling $@ ... \c"
 				@mkdir -p $(OBJ_DIR)
 				@$(CC) $(CFLAGS) $(IFLAGS) -o $@ -c $<
-				@echo "$(_GREEN)DONE$(_WHITE)"
-
-install:
-				@make -C libs/graphical_lib
-
-re-install:
-				@make -C libs/graphical_lib re
-
-debug:			$(NAME)
-				@echo "Compiling the $(_YELLOW)executable$(_WHITE) ... \c"
-				@$(CC) srcs/main.c $(NAME) $(CFLAGS) $(IFLAGS) -o debug && ./debug
-				@echo "$(_GREEN)DONE$(_WHITE)"
+				@echo "DONE"
 
 re:				fclean all
 
 clean:
-	@echo "$(_WHITE)Deleting Objects Directory $(_YELLOW)$(OBJ_DIR)$(_WHITE) ... \c"
+	@echo "Deleting Objects Directory $(OBJ_DIR) ... \c"
 	@rm -rf $(OBJ_DIR)
-	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
+	@echo "DONE\n-----"
 
 fclean:			clean
-	@echo "Deleting library File $(_YELLOW)$(NAME)$(_WHITE) ... \c"
+	@echo "Deleting library File $(NAME) ... \c"
 	@rm -f $(NAME)
-	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
+	@echo "DONE\n-----"
 
-.PHONY:			all debug show re clean fclean install re-install
+.PHONY:			all show re clean fclean

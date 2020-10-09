@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:37:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 11:38:58 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 08:38:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void			map_parsing(char **map_file, int *index)
 	char	**map;
 
 	map = (char **)ft_tab_new(1);
-	while (map_file[*index] != NULL)
+	while (map_file[*index] != NULL && map_file[*index][0] != '\0')
 	{
 		ft_add_to_tab((void *)map_file[*index], (void ***)&map);
 		(*index)++;

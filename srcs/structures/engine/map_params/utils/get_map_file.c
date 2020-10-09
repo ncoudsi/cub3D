@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:18:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 08:19:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 08:25:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	**get_map_file(int fd)
 	line = NULL;
 	while (get_next_line(fd, &line) > 0)
 		ft_add_to_tab((void *)line, (void ***)&result);
-	free(line);
+	ft_add_to_tab((void *)line, (void ***)&result);
 	return (result);
 }

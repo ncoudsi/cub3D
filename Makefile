@@ -6,11 +6,11 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/08 15:11:37 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/09 07:32:58 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	Cub3D
+NAME		=	cub3D
 
 CC			=	clang
 
@@ -152,7 +152,7 @@ SRCS		=	cube.c cube_file_fd.c \
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:%.c=%.o))
 
 #Compilation flag
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I$(dir)) -I libs/mlx
 
