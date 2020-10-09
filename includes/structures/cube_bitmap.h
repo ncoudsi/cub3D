@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 13:49:44 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:24:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 12:21:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_BITMAP_H
 # define CUBE_BITMAP_H
+
+/*
+**	Structure containing all the variables to format a .bmp file header.
+*/
 
 typedef struct	s_bitmap
 {

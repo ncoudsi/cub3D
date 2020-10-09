@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 15:04:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:24:18 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:11:58 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_SPRITE_RENDER_H
 # define CUBE_SPRITE_RENDER_H
+
+/*
+**	Structure containing all the parameters relative to sprite rendering.
+*/
 
 typedef struct		s_sprite_render
 {

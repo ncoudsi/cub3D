@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 08:22:57 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:02:23 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_MAP_PARAMS_H
 # define CUBE_MAP_PARAMS_H
+
+/*
+**	Structure containing all the parameters needed to set the .cub file.
+*/
 
 typedef struct		s_map_params
 {

@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 14:46:03 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/07 14:52:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:00:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_INT_VECTOR_H
 # define CUBE_INT_VECTOR_H
+
+/*
+**	Structure containing 2 coordinates set as entire values in int variables.
+*/
 
 typedef struct	s_int_vector
 {

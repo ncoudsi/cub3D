@@ -6,12 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:53 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:31:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:18:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_VECTOR_H
 # define CUBE_VECTOR_H
+
+/*
+**	Structure containing two coordinates, set as floats, so it can be
+**	non-entire values.
+*/
 
 typedef struct	s_vector
 {

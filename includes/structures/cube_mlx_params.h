@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:41:38 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 08:02:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:05:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_MLX_PARAMS_H
 # define CUBE_MLX_PARAMS_H
+
+/*
+**	Structure containing all the parameters needed to run the MLX functions.
+*/
 
 typedef struct	s_mlx_params
 {

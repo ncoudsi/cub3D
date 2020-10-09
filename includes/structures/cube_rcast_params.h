@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 14:29:07 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:29:14 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:07:55 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_RCAST_PARAMS_H
 # define CUBE_RCAST_PARAMS_H
+
+/*
+**	Structure containing all the values needed to perform raycasting.
+*/
 
 typedef struct		s_rcast_params
 {

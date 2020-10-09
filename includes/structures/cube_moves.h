@@ -6,12 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 13:58:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:23:36 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:05:34 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_MOVES_H
 # define CUBE_MOVES_H
+
+/*
+**	Structure containing one boolean per movement key. While set as true,
+**	movement is performed. While set as false, nothing happens.
+*/
 
 typedef struct	s_moves
 {

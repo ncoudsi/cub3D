@@ -6,12 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 11:58:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/01 13:36:03 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:10:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_RENDER_PARAMS_H
 # define CUBE_RENDER_PARAMS_H
+
+/*
+**	Main structure for the rendering aspect.
+*/
 
 typedef struct			s_render_params
 {

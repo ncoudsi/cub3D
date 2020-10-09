@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:25:20 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 12:14:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking that we run the game with proper arguments.
+*/
 
 void	args_check(int ac, char **av)
 {

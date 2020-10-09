@@ -6,12 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 13:05:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:24:16 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:16:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_TEXTURE_H
 # define CUBE_TEXTURE_H
+
+/*
+**	Structure containing parameters needed to consider a texture as an image in
+**	the MLX library.
+*/
 
 typedef struct		s_texture
 {

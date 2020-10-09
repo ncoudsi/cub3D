@@ -6,12 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 10:34:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:23:44 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:13:18 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_SPRITE_H
 # define CUBE_SPRITE_H
+
+/*
+**	Structure containing the coordinates of a sprite in the map and the
+**	distance relative to the player.
+*/
 
 typedef struct	s_sprite
 {

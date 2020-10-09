@@ -6,12 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 14:23:42 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:24:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:15:30 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_TEXT_RENDER_H
 # define CUBE_TEXT_RENDER_H
+
+/*
+**	Structure containing parameters needed for texture rendering. All the
+**	values are set after performing raycasting.
+*/
 
 typedef struct		s_text_render
 {

@@ -6,12 +6,19 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 15:43:05 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 12:19:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUBE_ENGINE_H
 # define CUBE_ENGINE_H
+
+/*
+**	Engine is the main structure of the program. It contains pointers to all
+**	the other structures needed for diverse parameters. Also contain a boolean
+**	to check if "--save" argument is on. Set in global extern since we use it
+**	in almost all the functions in the program.
+*/
 
 typedef struct			s_engine
 {
