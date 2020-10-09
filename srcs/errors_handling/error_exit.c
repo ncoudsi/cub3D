@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 16:04:31 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 08:52:46 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ static void	fill_error_tab(char **error_tab)
 	ft_strdup("Error\n[Invalid arguments to run the program]\n");
 	error_tab[BMP_ERROR] =
 	ft_strdup("Error\n[Error while creating save file.]\n");
-	error_tab[XPM_ERROR] = ft_strdup("Error\n[Invalid .xpm file]\n");
+	error_tab[XPM_ERROR] = ft_strdup("Error\n[Invalid .xpm file.]\n");
+	error_tab[LAST_ENTRY_ERROR] =
+	ft_strdup("Error\n[Map is not the last entry in .cub file.]\n");
 }
 
 static char	**malloc_error_tab(void)

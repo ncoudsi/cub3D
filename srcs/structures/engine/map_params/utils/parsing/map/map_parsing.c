@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:37:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 08:38:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 08:56:11 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,17 @@ static t_bool	is_valid_map(char **map)
 	return (true);
 }
 
+static t_bool	is_map_last_entry(char **map_file, int index)
+{
+	while (map_file[index] != NULL)
+	{
+		if (map_file[index][0] != '\0')
+			return (false);
+		index++;
+	}
+	return (true);
+}
+
 void			map_parsing(char **map_file, int *index)
 {
 	char	**map;
@@ -91,6 +102,9 @@ void			map_parsing(char **map_file, int *index)
 		ft_add_to_tab((void *)map_file[*index], (void ***)&map);
 		(*index)++;
 	}
+	if (map_file[*index] != NULL &&
+	is_map_last_entry(map_file, *index) == false)
+		error_exit(LAST_ENTRY_ERROR);
 	if (is_valid_map(map) == false || is_valid_spawn_point(map) == false)
 		error_exit(MAP_ERROR);
 	free(map);
