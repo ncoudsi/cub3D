@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:43:22 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 11:53:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 09:52:56 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_bool	is_xpm_file(char *file_path)
 	while (file_path[index] != '\0')
 		index++;
 	index -= 4;
-	if (ft_strcmp(file_path + index, ".xpm") == false)
+	if (ft_strcmp(file_path + index, ".xpm") == false &&
+	ft_strcmp(file_path + index, ".XPM") == false )
 		return (false);
 	return (true);
 }
