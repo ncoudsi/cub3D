@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:20:10 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 08:05:30 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 09:27:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ static void		fill_ceilling_color(char **splitted_line)
 		index++;
 	index++;
 	color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
+	color.int_color = (color.r << 16) + (color.g << 8) + color.b;
 	g_engine->map_params->ceiling_color = (t_color *)malloc(sizeof(t_color));
 	if (ceiling_color() == NULL)
 		error_exit(MALLOC_ERROR);
@@ -91,6 +92,7 @@ static void		fill_floor_color(char **splitted_line)
 		index++;
 	index++;
 	color.b = (unsigned char)ft_atoi(splitted_line[1] + index);
+	color.int_color = (color.r << 16) + (color.g << 8) + color.b;
 	g_engine->map_params->floor_color = (t_color *)malloc(sizeof(t_color));
 	if (floor_color() == NULL)
 		error_exit(MALLOC_ERROR);

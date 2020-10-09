@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:43:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 09:27:50 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 static void	render_ceiling(t_int_vector *camera_index)
 {
-	t_color	ceiling_color;
-
-	ceiling_color = create_color(70, 100, 225);
 	while (camera_index->y < wall_top())
 	{
-		put_pixel(*camera_index, ceiling_color);
+		put_pixel(*camera_index, *(ceiling_color()));
 		camera_index->y++;
 	}
 }
@@ -50,12 +47,9 @@ static void	render_wall(t_int_vector *camera_index)
 
 static void	render_floor(t_int_vector *camera_index)
 {
-	t_color	floor_color;
-
-	floor_color = create_color(200, 150, 20);
 	while (camera_index->y < resolution_y())
 	{
-		put_pixel(*camera_index, floor_color);
+		put_pixel(*camera_index, *(floor_color()));
 		camera_index->y++;
 	}
 }

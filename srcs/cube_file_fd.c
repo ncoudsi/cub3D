@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:28:03 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 07:40:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 09:01:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,16 @@ static t_bool	is_valid_name(char *cub_file)
 
 static t_bool	is_valid_cub_file(char *cub_file)
 {
-	t_bool	result;
 	int		len;
-	char	*copy;
 
-	result = true;
 	len = ft_strlen(cub_file);
-	copy = ft_strdup(cub_file + len - 4);
 	if (len < 5)
-		result = false;
-	else if (ft_strcmp(copy, ".cub") == false)
-		result = false;
+		return (false);
+	else if (ft_strcmp(cub_file + len - 4, ".cub") == false)
+		return (false);
 	else if (is_valid_name(cub_file) == false)
-		result = false;
-	free(copy);
-	return (result);
+		return (false);
+	return (true);
 }
 
 int				cube_file_fd(char *cub_file)
