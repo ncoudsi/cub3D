@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 16:33:52 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 08:17:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:19:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Re-allocate memory for the map, with the same length for all the lines,
+**	based on the longest line of the prior map.
+*/
 
 static char	**alloc_new_map(void)
 {
@@ -28,6 +33,12 @@ static char	**alloc_new_map(void)
 	}
 	return (result);
 }
+
+/*
+**	In order to avoid SEGV cases later on, we resize the map
+**	so each line hase the same lenght. Add empty spaces (' ')
+**	to the shorter lines.
+*/
 
 void		resize_map(void)
 {

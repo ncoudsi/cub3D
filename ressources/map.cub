@@ -11,6 +11,7 @@ R          800        600
 
                          NO ./ressources/brick_wall.xpm
          WE                     ./ressources/black_brick_wall.xpm
+EA ./ressources/white_brick_wall.xpm
 
 C               50,100,225
 F 200,100,20

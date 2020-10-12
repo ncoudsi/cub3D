@@ -6,11 +6,18 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 14:16:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 08:13:09 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:25:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Resizing resolution to the minimum size of the screen,
+**	in width, height or both depending on prior resolution settings.
+**	Minimum size is defined in cube_defines.h header.
+**	Display a message on standard to warn the user.
+*/
 
 void	resize_to_min(void)
 {
@@ -31,6 +38,12 @@ void	resize_to_min(void)
 	}
 	set_resolution(&tmp);
 }
+
+/*
+**	Resizing resolution to the maximum size of the screen,
+**	in width, height or both depending on prior resolution settings.
+**	Display a message on standard to warn the user.
+*/
 
 void	resize_to_max(void)
 {
@@ -54,6 +67,11 @@ void	resize_to_max(void)
 	}
 	set_resolution(&tmp);
 }
+
+/*
+**	In case of non coherent resolution settings (rather too small or
+**	too large), we do resize.
+*/
 
 void	resize_resolution(void)
 {

@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 14:36:29 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 16:10:04 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:27:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting all the variables in all the t_texture structures.
+*/
 
 void	load_textures(void)
 {

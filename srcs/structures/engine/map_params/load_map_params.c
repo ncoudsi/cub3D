@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 12:18:17 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:04:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ static t_bool	is_all_map_params(void)
 
 /*
 **	Setting right values in t_map_params structure. We first get the
-**	file, then parse it, then fill the right values in the variables.
+**	file, then parse it, then fill the right values in the structures.
 */
 
 void			load_map_params(int fd)

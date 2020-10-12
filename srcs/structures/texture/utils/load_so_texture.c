@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/14 15:48:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 16:05:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:27:24 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting all the variables of the t_texture structure with
+**	mlx_xpm_file_to_image() and mlx_get_data_addr.
+*/
 
 void	load_so_texture(void)
 {

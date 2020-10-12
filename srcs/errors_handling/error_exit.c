@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 12:28:25 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:34:34 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void		error_exit(int error_code)
 	char	**error_tab;
 
 	error_tab = malloc_error_tab();
-	ft_putstr_fd(error_tab[error_code], 2);
+	ft_putstr_fd(2, error_tab[error_code]);
 	ft_free_tab((void **)error_tab);
 	close_game();
 }

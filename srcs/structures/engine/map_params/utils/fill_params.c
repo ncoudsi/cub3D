@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:20:10 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 09:27:01 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:15:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Fill the t_int_vector structure with resolution values.
+*/
 
 static void		fill_resolution(char **splitted_line)
 {
@@ -24,6 +28,10 @@ static void		fill_resolution(char **splitted_line)
 	set_resolution(&res);
 	ft_free_tab((void **)splitted_line);
 }
+
+/*
+** Allocate all the t_texture structures and set their path.
+*/
 
 static void		fill_textures(char **splitted_line)
 {
@@ -54,6 +62,13 @@ static void		fill_textures(char **splitted_line)
 	}
 }
 
+
+/*
+**	Fill the t_color structure with the right values.
+**	Bits shifting is needed to fill the unsigned int (int_color)
+**	with the values of the 3 chars (r, g, b).
+*/
+
 static void		fill_ceilling_color(char **splitted_line)
 {
 	int		index;
@@ -77,6 +92,12 @@ static void		fill_ceilling_color(char **splitted_line)
 	ft_free_tab((void **)splitted_line);
 }
 
+/*
+**	Fill the t_color structure with the right values.
+**	Bits shifting is needed to fill the unsigned int (int_color)
+**	with the values of the 3 chars (r, g, b).
+*/
+
 static void		fill_floor_color(char **splitted_line)
 {
 	int		index;
@@ -99,6 +120,12 @@ static void		fill_floor_color(char **splitted_line)
 	set_floor_color(&color);
 	ft_free_tab((void **)splitted_line);
 }
+
+/*
+**	Setting all the variables in the t_map_params structure with the
+**	parsed settings. If a variable happens to be set twice, return an
+**	error and quit the program.
+*/
 
 void			fill_params(char *param_line)
 {

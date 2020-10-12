@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 11:44:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 12:18:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 13:42:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Going throught all the map to find a cardinal point. Return its coordinates
+**	as a t_vector. Since the position coordinates wont be entire values
+**	throughout the program, we dont set it as a t_int_vector.
+*/
 
 static t_vector	get_spawn_pos(void)
 {
@@ -36,6 +42,10 @@ static t_vector	get_spawn_pos(void)
 	return (result);
 }
 
+/*
+**	Allocating memory for all the pointers in the t_player structure.
+*/
+
 static void		attributes_allocation(void)
 {
 	g_engine->player->pos = malloc_vector(0, 0);
@@ -43,6 +53,10 @@ static void		attributes_allocation(void)
 	g_engine->player->right = malloc_vector(0, 0);
 	g_engine->player->moves = malloc_moves();
 }
+
+/*
+**	Setting variable in t_player structure. Need memory allocation first.
+*/
 
 void			load_player(void)
 {
