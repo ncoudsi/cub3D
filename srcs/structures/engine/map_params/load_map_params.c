@@ -6,15 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 14:25:15 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:18:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
 /*
-**	Look throught all the map to find the cardinal point corresponding to both
-**	position and direction of the player spawn.
+**	Looking throught all the map to find the cardinal point corresponding to
+**	both position and direction of the player spawn.
 */
 
 static void		fill_cardinal_point(void)
@@ -68,7 +68,7 @@ static void		fill_map_size(void)
 }
 
 /*
-**	Check if we are currently on a line defining the map in the .cub file.
+**	Checking if we are currently on a line defining the map in the .cub file.
 */
 
 static t_bool	is_map_line(char *line)
@@ -86,7 +86,8 @@ static t_bool	is_map_line(char *line)
 }
 
 /*
-**	Checking if all the needed parameters as been set.
+**	Checking if all the needed parameters as been set. If any of them
+**	is still unset (due to a prior error), return false.
 */
 
 static t_bool	is_all_map_params(void)
@@ -117,9 +118,8 @@ static t_bool	is_all_map_params(void)
 }
 
 /*
-**	Main function to set right values in t_map_params structure.
-**	We first get the file, then parse it, then fill the right values
-**	in the variables.
+**	Setting right values in t_map_params structure. We first get the
+**	file, then parse it, then fill the right values in the variables.
 */
 
 void			load_map_params(int fd)

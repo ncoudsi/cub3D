@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:28:03 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 09:01:10 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:08:58 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking the validity of the file name. Must contain at least one
+**	alphanumeric character.
+*/
 
 static t_bool	is_valid_name(char *cub_file)
 {
@@ -28,6 +33,10 @@ static t_bool	is_valid_name(char *cub_file)
 	return (false);
 }
 
+/*
+**	Checking that the file is a .cub file and has a valid file name.
+*/
+
 static t_bool	is_valid_cub_file(char *cub_file)
 {
 	int		len;
@@ -41,6 +50,10 @@ static t_bool	is_valid_cub_file(char *cub_file)
 		return (false);
 	return (true);
 }
+
+/*
+**	Returning the file descriptor of a file after checking his validity.
+*/
 
 int				cube_file_fd(char *cub_file)
 {

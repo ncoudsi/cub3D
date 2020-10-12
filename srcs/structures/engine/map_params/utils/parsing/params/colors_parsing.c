@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:58:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 11:59:14 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:04:06 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking the numeric value of a color. Must not exceed 255.
+*/
 
 static t_bool	is_color_value(char *color_line, int index)
 {
@@ -21,6 +25,12 @@ static t_bool	is_color_value(char *color_line, int index)
 		return (false);
 	return (true);
 }
+
+/*
+**	Checking the validity of a color value. First, it must contain only
+**	digits or ','. Then, any numeric value must be between 0 and 255.
+**	Finaly, it must contain only 2 ','.
+*/
 
 static t_bool	is_valid_color(char *color_line)
 {
@@ -48,6 +58,11 @@ static t_bool	is_valid_color(char *color_line)
 		return (false);
 	return (true);
 }
+
+/*
+**	Parsing colors settings. Must have 2 entries (key, color value (r, g, b)).
+**	Key must have only 1 character. Then, checking validity of the color value.
+*/
 
 void			colors_parsing(char **colors_line)
 {

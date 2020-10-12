@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 15:19:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 10:42:23 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:28:25 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Fill the error tab with all the error messages.
+*/
 
 static void	fill_error_tab(char **error_tab)
 {
@@ -36,6 +40,10 @@ static void	fill_error_tab(char **error_tab)
 	ft_strdup("Error\n[Map is not the last entry in .cub file.]\n");
 }
 
+/*
+**	Memory allocation for the error tab, containing all error messages.
+*/
+
 static char	**malloc_error_tab(void)
 {
 	char	**result;
@@ -45,12 +53,17 @@ static char	**malloc_error_tab(void)
 	return (result);
 }
 
+/*
+**	When an error occurs in the program, write a message on standard
+**	error then close the program.
+*/
+
 void		error_exit(int error_code)
 {
 	char	**error_tab;
 
 	error_tab = malloc_error_tab();
-	ft_putstr(error_tab[error_code]);
+	ft_putstr_fd(error_tab[error_code], 2);
 	ft_free_tab((void **)error_tab);
 	close_game();
 }

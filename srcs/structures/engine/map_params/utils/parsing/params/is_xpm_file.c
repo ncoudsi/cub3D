@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:43:22 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 10:18:03 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:35:36 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking if a file has .xpm suffix. We shall check afterwards if the .xpm
+**	file is well formated.
+*/
 
 t_bool	is_xpm_file(char *file_path)
 {

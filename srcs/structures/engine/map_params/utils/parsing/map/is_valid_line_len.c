@@ -6,13 +6,18 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:19:30 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 11:36:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:58:28 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-static t_bool	bigger_line_check(char **map, int index,
+/*
+**	Checking the validity of the line in the case where the actual line
+**	is longer than the next one.
+*/
+
+static t_bool	longer_line_check(char **map, int index,
 size_t line_len, size_t next_line_len)
 {
 	while (next_line_len < line_len)
@@ -25,7 +30,12 @@ size_t line_len, size_t next_line_len)
 	return (true);
 }
 
-static t_bool	smaller_line_check(char **map, int index,
+/*
+**	Checking the validity of the line in the case where the actual line
+**	is shorter than the next one.
+*/
+
+static t_bool	shorter_line_check(char **map, int index,
 size_t line_len, size_t next_line_len)
 {
 	while (next_line_len > line_len)
@@ -38,6 +48,13 @@ size_t line_len, size_t next_line_len)
 	return (true);
 }
 
+/*
+**	Checking if a line is valid, depending on its length and
+**	next line lenght. Since every tile shall be walled, the
+**	longer line must have only walls or empty spaces ('1' or ' ')
+**	on characters that exceed the shorter line lenght.
+*/
+
 t_bool			is_valid_line_len(char **map, int index)
 {
 	size_t	line_len;
@@ -48,10 +65,10 @@ t_bool			is_valid_line_len(char **map, int index)
 	line_len = ft_strlen(map[index]);
 	next_line_len = ft_strlen(map[index + 1]);
 	if (line_len > next_line_len &&
-	bigger_line_check(map, index, line_len, next_line_len) == false)
+	longer_line_check(map, index, line_len, next_line_len) == false)
 		return (false);
 	else if (line_len < next_line_len &&
-	smaller_line_check(map, index, line_len, next_line_len) == false)
+	shorter_line_check(map, index, line_len, next_line_len) == false)
 		return (false);
 	return (true);
 }

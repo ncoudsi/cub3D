@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 13:28:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 10:46:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 11:46:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ void	args_check(int ac, char **av)
 	else if (ac == 3)
 		set_bmp_save(true);
 }
+
+/*
+**	Main function of the program. First we allocate memory for the main
+**	structure wich is a global. Then we set all the values in the structure.
+**	After that, we run the game as a loop that ends only in case of error or
+**	when the user decide to quit.
+*/
 
 int		main(int ac, char **av)
 {

@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:37:28 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 08:56:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 12:47:07 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking the whole map for invalid entries. If one is found, return false.
+*/
 
 static t_bool	is_only_map_entries(char **map)
 {
@@ -30,6 +34,11 @@ static t_bool	is_only_map_entries(char **map)
 	}
 	return (true);
 }
+
+/*
+**	Checking validity of the spawn point : must have one, but can't
+**	have more.
+*/
 
 static t_bool	is_valid_spawn_point(char **map)
 {
@@ -59,6 +68,12 @@ static t_bool	is_valid_spawn_point(char **map)
 	return (true);
 }
 
+/*
+**	Checking the validity of the map throught 2 steps :
+**	the map must contain only valid characters, any walkable
+**	tile ('0') must be walled so the player can't go out of the map.
+*/
+
 static t_bool	is_valid_map(char **map)
 {
 	t_int_vector	index;
@@ -81,6 +96,11 @@ static t_bool	is_valid_map(char **map)
 	return (true);
 }
 
+/*
+**	Checking that the map is the last element in the .cub file.
+**	(Mandatory in the exercise subject).
+*/
+
 static t_bool	is_map_last_entry(char **map_file, int index)
 {
 	while (map_file[index] != NULL)
@@ -91,6 +111,12 @@ static t_bool	is_map_last_entry(char **map_file, int index)
 	}
 	return (true);
 }
+
+/*
+**	Parsing the map of the .cub file. First we allocate memory so we can
+**	consider the map as a 2 dimensions array. Then we check the validity
+**	of the entries throught static functions.
+*/
 
 void			map_parsing(char **map_file, int *index)
 {
