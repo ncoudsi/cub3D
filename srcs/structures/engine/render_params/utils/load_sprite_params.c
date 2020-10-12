@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 13:32:37 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:25:54 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:42:29 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	First, counting all the sprites on the map. Then loading the array
+**	containing all the sprites. Afterwards, allocating memory for all the
+**	sprite rendering related variables.
+*/
 
 void	load_sprite_params(void)
 {

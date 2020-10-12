@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 13:31:12 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:25:59 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:40:33 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Allocating memory for the array containing all the x coordinates where the
+**	rays collided with the texture.
+*/
 
 void	load_texture_params(void)
 {

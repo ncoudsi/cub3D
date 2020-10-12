@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 10:42:35 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:38:23 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:38:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting the 2 structures contained in t_render_params.
+*/
 
 void		load_render_params(void)
 {

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 08:37:09 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:40:46 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:47:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ static void		write_bmp_image_data(int fd)
 		index++;
 	}
 }
+
+/*
+**	Creating a bitmap file to save a screenshot of the program, then quit the
+**	program.
+*/
 
 void			create_bmp(void)
 {

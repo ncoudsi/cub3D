@@ -6,11 +6,19 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 13:34:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:27:29 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:45:59 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting the sprite array. First counting the number of sprites on the map,
+**	then allocating memory accordingly. Afterwards, setting the position of
+**	each sprite. Then, we set the distance of each sprite from the player's
+**	spawn position. Finally, we sort the array, further sprites first, closer
+**	ones after, so when we draw, the closest one appears in the foreground.
+*/
 
 void	load_sprite_tab(void)
 {

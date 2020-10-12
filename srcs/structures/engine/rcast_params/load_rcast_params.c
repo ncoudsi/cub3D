@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 12:00:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 13:43:28 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 16:28:18 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Allocating memory for all the pointers in t_rcast_params srtucture.
+*/
 
 static void	attributes_allocation(void)
 {
@@ -29,6 +33,10 @@ static void	attributes_allocation(void)
 	(int *)malloc(sizeof(int) * resolution_x());
 }
 
+/*
+**	Filling perp_wall_dist_tab array with 0 value.
+*/
+
 static void	fill_perp_wall_dist_tab(float value)
 {
 	int	index;
@@ -40,6 +48,10 @@ static void	fill_perp_wall_dist_tab(float value)
 		index++;
 	}
 }
+
+/*
+**	Allocating memory for t_rcast_params structure, then setting its variable.
+*/
 
 void		load_rcast_params(void)
 {
