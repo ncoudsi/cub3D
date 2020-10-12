@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:45:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/25 15:16:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 10:44:16 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void			error_exit_vector(t_int_vector pos, int error_code)
 	ft_putstr(" pos.y = ");
 	ft_putnbr(pos.y);
 	ft_free_tab((void **)vector_error_tab);
-	exit(0);
+	close_game();
 }
