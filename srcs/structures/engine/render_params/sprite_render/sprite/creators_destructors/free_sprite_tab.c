@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 11:37:59 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:27:57 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/12 10:16:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	free_sprite_tab(t_sprite **to_free, int tab_size)
 		free_sprite(to_free[index]);
 		index++;
 	}
+	free(to_free);
 }
