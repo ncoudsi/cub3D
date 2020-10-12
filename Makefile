@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/09 09:37:26 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/09 15:45:04 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,7 +123,7 @@ SRCS		=	cube.c cube_file_fd.c \
 				\
 				create_engine.c malloc_engine.c destroy_engine.c free_engine.c \
 				load_game.c close_game.c get_map_params.c \
-				get_mlx_params.c get_player.c get_rcast_params.c \
+				get_mlx_params.c get_player.c get_rcast_params.c  get_render_params.c get_moves.c \
 				get_bmp_save.c set_bmp_save.c \
 				\
 				run_game.c update_game.c get_pixel_index.c put_pixel.c draw_rectangle.c \

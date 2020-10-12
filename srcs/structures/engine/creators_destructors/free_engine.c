@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 12:07:43 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:59:03 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 15:31:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	free_engine(void)
 {
-	destroy_engine(*g_engine);
+	if (g_engine != NULL)
+		destroy_engine(*g_engine);
 	free(g_engine);
 }

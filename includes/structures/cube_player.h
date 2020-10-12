@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:55:01 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 13:06:14 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 15:44:41 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void			set_forward(t_vector *value);
 t_vector const	*right();
 float			right_x();
 float			right_y();
+t_moves const	*moves();
 void			set_right(t_vector *value);
 float			move_speed();
 void			set_move_speed(int value);

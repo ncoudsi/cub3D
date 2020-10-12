@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 10:21:33 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 08:48:12 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 14:30:37 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking all the parameters (including the map itself) of the .cub file.
+**	To perform the parsing, we split each line before parsing it, so we parse
+**	only the parameters without all the whitespaces.
+*/
 
 void	cube_file_parsing(char **map_file)
 {

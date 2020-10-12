@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 14:00:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 14:47:39 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 13:25:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting values in all the structures contained in t_engine, to run the
+**	program. If bmp_save is set as true, we don't run the game, but jump in
+**	create_bmp() and quit the program.
+*/
 
 void	load_game(int fd)
 {

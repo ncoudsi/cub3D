@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 12:13:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 08:27:01 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 14:25:15 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Look throught all the map to find the cardinal point corresponding to both
+**	position and direction of the player spawn.
+*/
 
 static void		fill_cardinal_point(void)
 {
@@ -31,6 +36,12 @@ static void		fill_cardinal_point(void)
 		index.y++;
 	}
 }
+
+/*
+**	Going throught all the map to define its size. Since all the lines
+**	in the map don't necessarly have the same size, we set the absolute
+**	size in y, and the longest line size in x.
+*/
 
 static void		fill_map_size(void)
 {
@@ -56,6 +67,10 @@ static void		fill_map_size(void)
 	set_map_size(&size);
 }
 
+/*
+**	Check if we are currently on a line defining the map in the .cub file.
+*/
+
 static t_bool	is_map_line(char *line)
 {
 	int	index;
@@ -69,6 +84,10 @@ static t_bool	is_map_line(char *line)
 	}
 	return (true);
 }
+
+/*
+**	Checking if all the needed parameters as been set.
+*/
 
 static t_bool	is_all_map_params(void)
 {
@@ -96,6 +115,12 @@ static t_bool	is_all_map_params(void)
 		return (false);
 	return (true);
 }
+
+/*
+**	Main function to set right values in t_map_params structure.
+**	We first get the file, then parse it, then fill the right values
+**	in the variables.
+*/
 
 void			load_map_params(int fd)
 {

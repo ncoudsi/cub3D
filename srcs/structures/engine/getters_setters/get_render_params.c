@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_mlx_params.c                               :+:      :+:    :+:   */
+/*   get_render_params.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:57:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 15:40:35 by ncoudsi          ###   ########.fr       */
+/*   Created: 2020/10/09 15:34:10 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/09 15:34:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
 
-void	destroy_mlx_params(t_mlx_params to_destroy)
+t_render_params const	*render_params()
 {
-	if (mlx_ptr() != NULL)
-		free(to_destroy.mlx_ptr);
-	if (win_ptr() != NULL)
-		free(to_destroy.win_ptr);
-	if (img_ptr() != NULL)
-		free(to_destroy.img_ptr);
-	if (pixels() != NULL)
-		free(to_destroy.pixels);
+	return (g_engine->render_params);
 }

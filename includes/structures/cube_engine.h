@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 11:54:11 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 12:19:13 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/09 15:33:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ t_map_params const		*map_params();
 t_mlx_params const		*mlx_params();
 t_player const			*player();
 t_rcast_params const	*rcast_params();
+t_render_params const	*render_params();
 t_bool					bmp_save();
 void					set_bmp_save(t_bool value);
 #endif
