@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   load_we_texture.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/14 15:48:54 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/12 13:27:31 by ncoudsi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "cube.h"
+
+/*
+**	Setting all the variables of the t_texture structure with
+**	mlx_xpm_file_to_image() and mlx_get_data_addr.
+*/
+
+void	load_we_texture(void)
+{
+	t_texture	*tmp_texture;
+
+	tmp_texture = (t_texture *)we_texture();
+	set_text_ptr(mlx_xpm_file_to_image(mlx_ptr(), tmp_texture->path,
+	&tmp_texture->dimension->x, &tmp_texture->dimension->y), tmp_texture);
+	if (text_ptr(tmp_texture) == NULL)
+		error_exit(XPM_ERROR);
+	tmp_texture->texels = mlx_get_data_addr(tmp_texture->text_ptr,
+	&tmp_texture->bits_per_texel, &tmp_texture->text_size_line,
+	&tmp_texture->text_endian);
+}
