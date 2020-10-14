@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 15:19:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:54:42 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 09:07:40 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking wich side of a map square the ray has hit, then setting the
+**	related variable.
+*/
 
 void	side_detection(void)
 {

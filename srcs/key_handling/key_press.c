@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 14:52:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/07 15:43:27 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 09:40:49 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting variables according to pressed keys.
+*/
 
 int	key_press(int key)
 {

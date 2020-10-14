@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:26:22 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:27:48 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 09:23:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Calculating the texture position (in x axis) the ray has hit. Since we have
+**	a different texture for each side of a wall, we first determine wich
+**	texture we are on.
+*/
 
 int	calculate_texture_pos_x(void)
 {

@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 10:08:06 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:54:24 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 09:06:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting map_pos depending on where on the map the ray hits a wall.
+**	To avoid SEGV cases, we consider the map borders as walls.
+*/
 
 void	hitpoint_detection(void)
 {

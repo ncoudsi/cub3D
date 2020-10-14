@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 08:01:14 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 12:04:55 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 09:25:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting the variables in t_mlx_params structure, needed for further
+**	rendering throught MLX functions.
+*/
 
 void	load_mlx_params(void)
 {

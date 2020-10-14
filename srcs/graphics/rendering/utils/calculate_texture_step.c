@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 14:50:33 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:50:39 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 10:03:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Calculating the texture step. Depending on the distance of the texture from
+**	the camera, the step defines the ratio between pixels of the screen and
+**	texels (pisxel of the texture).
+*/
 
 void	calculate_texture_step(t_int_vector *camera_index)
 {

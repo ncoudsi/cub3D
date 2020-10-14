@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/09 09:27:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 10:03:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Drawing ceiling part of the stripe.
+*/
 
 static void	render_ceiling(t_int_vector *camera_index)
 {
@@ -20,6 +24,10 @@ static void	render_ceiling(t_int_vector *camera_index)
 		camera_index->y++;
 	}
 }
+
+/*
+**	Drawing wall part of the stripe.
+*/
 
 static void	render_wall(t_int_vector *camera_index)
 {
@@ -45,6 +53,10 @@ static void	render_wall(t_int_vector *camera_index)
 	}
 }
 
+/*
+**	Drawing floor part of the stripe.
+*/
+
 static void	render_floor(t_int_vector *camera_index)
 {
 	while (camera_index->y < resolution_y())
@@ -53,6 +65,11 @@ static void	render_floor(t_int_vector *camera_index)
 		camera_index->y++;
 	}
 }
+
+/*
+**	Drawing sprites. The further ones from the camera first,
+**	the closer ones next.
+*/
 
 static void	render_sprites(void)
 {
@@ -66,6 +83,12 @@ static void	render_sprites(void)
 		sprite_index++;
 	}
 }
+
+/*
+**	Going through all the screen in the x axis, and drawing stripe by stripe,
+**	from the top, to the bottom. Afterwards, we draw the sprites, from the
+**	further to the closer. Finaly, we put the image on screen.
+*/
 
 void		rendering(void)
 {

@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 11:27:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:43:18 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 08:10:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Drawing the ceiling part of the stripe.
+*/
 
 static void	render_ceiling(t_int_vector *camera_index)
 {
@@ -23,6 +27,10 @@ static void	render_ceiling(t_int_vector *camera_index)
 		camera_index->y++;
 	}
 }
+
+/*
+**	Drawing the wall part of the stripe.
+*/
 
 static void	render_wall(t_int_vector *camera_index)
 {
@@ -48,6 +56,10 @@ static void	render_wall(t_int_vector *camera_index)
 	}
 }
 
+/*
+**	Drawing the floor part of the stripe.
+*/
+
 static void	render_floor(t_int_vector *camera_index)
 {
 	t_color	floor_color;
@@ -59,6 +71,11 @@ static void	render_floor(t_int_vector *camera_index)
 		camera_index->y++;
 	}
 }
+
+/*
+**	Drawing sprites. The further ones from the camera first,
+**	the closer ones next.
+*/
 
 static void	render_sprites(void)
 {
@@ -72,6 +89,12 @@ static void	render_sprites(void)
 		sprite_index++;
 	}
 }
+
+/*
+**	Going throught every pixel (in x axis) of the screen to draw stripe
+**	by stripe. For each stripe we draw from the top to the bottom (ceiling>
+**	wall>floor). Only afterwards, we draw all the sprites.
+*/
 
 void		bmp_rendering(void)
 {

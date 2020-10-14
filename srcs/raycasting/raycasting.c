@@ -6,11 +6,18 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 13:56:48 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 10:02:13 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 08:24:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Raycasting is ment to simulate a 3 dimension rendering by calculating
+**	the distance separating the camera from an object. In order to perform
+**	that, we go through every pixel of the x axis of the screen, computing
+**	then setting variables for further rendering.
+*/
 
 void	raycasting(void)
 {

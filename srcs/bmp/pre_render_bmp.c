@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 10:33:08 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:25:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 08:05:42 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Rendering the first image of the program. It will be written in the bitmap
+**	file instead of being displayed on the screen.
+*/
 
 void	pre_render_bmp(void)
 {
