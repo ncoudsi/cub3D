@@ -17,5 +17,5 @@ distance between the hit point and the player. Based on this distance, we render
 in a specific size. This simulates perspective in a 3 dimension world.
 
 The project is coded in C language, still I tried to structure the program as if we were
-in an object oriented language like C++. The whole code is commented except getters, setters,
-creators and destructors.
+in an object oriented language like C++ (see the structures headers for better insight).
+The whole code is commented except getters, setters, creators and destructors.
