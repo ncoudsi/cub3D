@@ -22,6 +22,5 @@ int	key_press(int key)
 		close_game();
 	if (is_movement_key(key) == true || is_rotation_key(key) == true)
 		set_moves(key);
-	printf("%d\n", key);
 	return (key);
 }
