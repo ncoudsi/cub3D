@@ -17,3 +17,6 @@ in a specific size. This simulates perspective in a 3 dimension world.
 The project is coded in C language, still I tried to structure the program as if we were
 in an object oriented language like C++. The whole code is commented except getters, setters,
 creators and destructors.
+
+You will find 2 versions of the program, one for Mac OS and one for Linux. No Windows version
+available.
