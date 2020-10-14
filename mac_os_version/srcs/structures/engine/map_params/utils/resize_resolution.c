@@ -50,9 +50,8 @@ void	resize_to_max(void)
 	t_int_vector	screen_size;
 	t_int_vector	tmp;
 
-	screen_size = create_int_vector(0, 0);
+	screen_size = create_int_vector(1920, 1080);
 	tmp = create_int_vector(resolution_x(), resolution_y());
-	mlx_get_screen_size(mlx_ptr(), &screen_size.x, &screen_size.y);
 	if (resolution_x() > screen_size.x)
 		tmp.x = screen_size.x;
 	if (resolution_y() > screen_size.y)

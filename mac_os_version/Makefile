@@ -23,7 +23,7 @@ OBJS_DIR	= 	objs
 vpath %.c $(foreach dir, $(SRCS_DIR), $(dir))
 
 # List de toute les library a linker au projet (le nom - le lib et - le .a)
-LIB			=	ft mlx mlx_Linux
+LIB			=	ft mlx
 FRAMEWORK	=	OpenGL Appkit
 
 #SRCS = $(foreach dir, $(SRCS_DIR), $(foreach file, $(wildcard $(dir)/*.c), $(notdir $(file))))

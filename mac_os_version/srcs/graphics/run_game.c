@@ -23,6 +23,6 @@ void	run_game(void)
 	mlx_loop_hook(mlx_ptr(), &update_game, NULL);
 	mlx_hook(win_ptr(), KEY_PRESS, (1L << 0), &key_press, NULL);
 	mlx_hook(win_ptr(), KEY_RELEASE, (1L << 1), &key_release, NULL);
-	mlx_hook(win_ptr(), 33, (1L << 17), &close_game, NULL);
+	mlx_hook(win_ptr(), 17, 0, &close_game, NULL);
 	mlx_loop(mlx_ptr());
 }

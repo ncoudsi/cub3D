@@ -33,13 +33,13 @@
 **	MLX KEY CODES
 */
 
-# define ESC_KEY 65307
-# define W_KEY 119
-# define S_KEY 115
-# define A_KEY 97
-# define D_KEY 100
-# define RIGHT_ARROW 65363
-# define LEFT_ARROW 65361
+# define ESC_KEY 53
+# define W_KEY 13
+# define S_KEY 1
+# define A_KEY 0
+# define D_KEY 2
+# define RIGHT_ARROW 124
+# define LEFT_ARROW 123
 
 /*
 **	MLX EVENT CODES
