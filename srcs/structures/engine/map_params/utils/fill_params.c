@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 08:20:10 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/12 13:15:01 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 11:32:57 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ static void		fill_textures(char **splitted_line)
 		ft_free_tab((void **)splitted_line);
 	}
 }
-
 
 /*
 **	Fill the t_color structure with the right values.

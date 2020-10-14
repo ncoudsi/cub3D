@@ -6,7 +6,7 @@
 #    By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/03 15:39:58 by ncoudsi           #+#    #+#              #
-#    Updated: 2020/10/14 10:32:19 by ncoudsi          ###   ########.fr        #
+#    Updated: 2020/10/14 11:30:27 by ncoudsi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,13 +69,14 @@ SRCS		=	cube.c cube_file_fd.c \
 				get_relative_sprite_pos_x.c get_relative_sprite_pos_y.c set_relative_sprite_pos_x.c set_relative_sprite_pos_y.c \
 				get_transformed_pos_x.c get_transformed_pos_y.c set_transformed_pos_x.c set_transformed_pos_y.c \
 				set_sprite_tab_pos.c \
+				\
 				create_player.c malloc_player.c destroy_player.c free_player.c \
 				get_forward.c set_forward.c get_forward_x.c get_forward_y.c \
 				get_pos.c set_pos.c get_pos_x.c get_pos_y.c get_right.c \
 				set_right.c get_right_x.c get_right_y.c set_moves.c unset_moves.c \
 				load_player.c update_player.c get_move_speed.c set_move_speed.c get_rotation_speed.c \
 				set_rotation_speed.c get_pitch.c set_pitch.c get_pitch_value.c \
-				get_forward_value.c get_right_value.c update_direction.c \
+				get_forward_value.c get_right_value.c update_direction.c wall_collision.c \
 				\
 				create_map_params.c malloc_map_params.c destroy_map_params.c \
 				free_map_params.c load_map_params.c get_map_file.c \
