@@ -1,6 +1,7 @@
 # cub3D
 
 This is a graphical project for 42 school.
+
 The idea is to simulate a 3 dimension render based on a 2 dimension map, using the raycasting.
 The user must be able to move throughtout the map (using WASD keys for movement, left and right
 arrows for rotation). You can open the subject.pdf file for better insight on what is mandatory.
