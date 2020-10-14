@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 11:27:05 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/14 08:10:22 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 10:30:32 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static void	render_sprites(void)
 /*
 **	Going throught every pixel (in x axis) of the screen to draw stripe
 **	by stripe. For each stripe we draw from the top to the bottom (ceiling>
-**	wall>floor). Only afterwards, we draw all the sprites.
+**	wall>floor). Only afterwards, we draw all the sprites and the minimap.
 */
 
 void		bmp_rendering(void)
@@ -111,4 +111,5 @@ void		bmp_rendering(void)
 		camera_index.x++;
 	}
 	render_sprites();
+	render_minimap();
 }

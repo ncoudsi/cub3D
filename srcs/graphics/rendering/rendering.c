@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 14:38:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/14 10:03:52 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/14 10:30:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static void	render_sprites(void)
 /*
 **	Going through all the screen in the x axis, and drawing stripe by stripe,
 **	from the top, to the bottom. Afterwards, we draw the sprites, from the
-**	further to the closer. Finaly, we put the image on screen.
+**	further to the closer, then the minimap. Finaly, we put the image on screen.
 */
 
 void		rendering(void)
@@ -106,5 +106,6 @@ void		rendering(void)
 		camera_index.x++;
 	}
 	render_sprites();
+	render_minimap();
 	mlx_put_image_to_window(mlx_ptr(), win_ptr(), img_ptr(), 0, 0);
 }
