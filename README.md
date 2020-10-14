@@ -1,5 +1,7 @@
 # cub3D
 
+<img align="center" src="save.bmp" alt="Screenshot of the game" />
+
 This is a graphical project for 42 school.
 
 The idea is to simulate a 3 dimension render based on a 2 dimension map, using the raycasting.
