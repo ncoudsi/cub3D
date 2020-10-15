@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 09:23:10 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:39:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 08:24:51 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Checking if the pixel of the sprite texture we are about to draw is on the
+**	screen and not hidden by another object.
+*/
 
 t_bool	is_drawable_sprite_pixel(t_int_vector sprite_pixel_index)
 {

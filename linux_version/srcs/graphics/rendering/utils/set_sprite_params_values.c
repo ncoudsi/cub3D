@@ -6,11 +6,18 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 14:17:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:38:28 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 08:45:48 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Setting variables relative to the sprite position. At first, we set the
+**	absolute position of the sprite (its position in the map). Then its
+**	relative position to the player, the in a matter of proper rendering later
+**	on, we set its transformed position after a matrix inversion.
+*/
 
 static void	set_poses_values(int sprite_index)
 {
@@ -29,6 +36,11 @@ static void	set_poses_values(int sprite_index)
 	relative_sprite_pos_y()));
 	set_transformed_pos(&tmp_transformed_pos);
 }
+
+/*
+**	Setting variables for sprite rendering. We first determine where on the
+**	screen the sprite will be, then its dimensions.
+*/
 
 void		set_sprite_params_values(int sprite_index)
 {

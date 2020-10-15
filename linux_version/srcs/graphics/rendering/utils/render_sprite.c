@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 13:27:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:39:41 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 08:20:14 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Rendering a sprite, pixel by pixel, from left to right and from top to
+**	bottom.
+*/
 
 void	render_sprite(void)
 {

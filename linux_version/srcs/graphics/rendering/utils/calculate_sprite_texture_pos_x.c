@@ -6,11 +6,17 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 09:14:16 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/02 13:38:43 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 08:23:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Calculating on the x axis, wich pixel of the sprite texture we want to draw.
+**	Depends of multiple variables, mainly, the base size of the texture and of
+**	the screen and the sprite width, relative to its distance to the camera.
+*/
 
 void	calculate_sprite_texture_pos_x(t_int_vector sprite_pixel_index)
 {
