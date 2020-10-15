@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 14:47:57 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:48:19 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 09:20:47 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Rendering the player on the minimap. Represented as a circle whose center is
+**	on player's position.
+*/
 
 void	render_minimap_player(void)
 {

@@ -6,7 +6,7 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 11:22:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 07:23:31 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 09:33:52 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ int			get_pixel_index(t_int_vector pos);
 void		put_pixel(t_int_vector pos, t_color color);
 void		draw_rectangle(t_vector pos, t_vector dimension, t_color color);
 void		draw_circle(t_vector center, int radius, t_color color);
-t_vector	get_minimap_tiles_nbr();
-t_vector	get_minimap_tile_size(t_vector minimap_size);
+t_vector	get_minimap_tile_size();
 t_vector	map_pos_to_pixel_pos(t_vector map_pos);
 void		render_minimap();
 void		render_minimap_wall(t_int_vector map_index);

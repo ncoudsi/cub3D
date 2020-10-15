@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 14:47:31 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:47:47 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 09:13:15 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Renderig the minimap. Different colors for the walls, and the tiles.
+**	A circle for the player.
+*/
 
 void	render_minimap(void)
 {

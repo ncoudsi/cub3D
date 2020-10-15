@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 13:08:09 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:51:35 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 09:22:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Rendering a single colored circle.
+*/
 
 void	draw_circle(t_vector center, int radius, t_color color)
 {

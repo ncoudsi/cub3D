@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 12:28:41 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/09/29 14:50:53 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 09:16:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cube.h"
+
+/*
+**	Rendering a single colored rectangle.
+*/
 
 void	draw_rectangle(t_vector pos, t_vector dimension, t_color color)
 {
