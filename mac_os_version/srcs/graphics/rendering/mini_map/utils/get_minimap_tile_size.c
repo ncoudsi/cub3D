@@ -22,6 +22,6 @@ t_vector	get_minimap_tile_size()
 	t_vector	result;
 
 	result.x = resolution_x() / map_size_x() / 5;
-	result.y = resolution_y() / map_size_x() / 5;
+	result.y = resolution_y() / map_size_y() / 5;
 	return (result);
 }
