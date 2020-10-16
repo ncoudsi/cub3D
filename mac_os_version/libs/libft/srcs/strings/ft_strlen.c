@@ -6,20 +6,24 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 14:01:19 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/03 17:24:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 12:15:43 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(char *p_src)
-{
-	size_t		len;
+/*
+**	Counting the lenght of a string and returning it.
+*/
 
-	len = 0;
-	if (p_src == NULL)
+size_t		ft_strlen(char *src)
+{
+	size_t	result;
+
+	result = 0;
+	if (src == NULL)
 		return (0);
-	while (p_src[len] != '\0')
-		len++;
-	return (len);
+	while (src[result] != '\0')
+		result++;
+	return (result);
 }

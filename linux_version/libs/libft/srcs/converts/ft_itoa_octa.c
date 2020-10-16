@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:36:45 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/03 16:40:34 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 13:40:09 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Converting an integer value into a string filled with numerical characters
+**	refering to the value, in an octadecimal base.
+*/
 
 char	*ft_itoa_octa(long long int nbr)
 {

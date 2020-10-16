@@ -6,24 +6,28 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 14:55:32 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/02/25 21:18:14 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/15 10:31:58 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_strcmp(char *p_src, char *p_target)
-{
-	size_t	i;
+/*
+**	Cheking if 2 strings are entirely similar.
+*/
 
-	i = 0;
-	if (p_src == NULL || p_target == NULL)
+t_bool	ft_strcmp(char *src, char *target)
+{
+	size_t	index;
+
+	index = 0;
+	if (src == NULL || target == NULL)
 		return (0);
-	while (p_src[i] != '\0' || p_target[i] != '\0')
+	while (src[index] != '\0' || target[index] != '\0')
 	{
-		if (p_src[i] != p_target[i])
+		if (src[index] != target[index])
 			return (false);
-		i++;
+		index++;
 	}
 	return (true);
 }

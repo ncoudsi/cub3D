@@ -6,11 +6,16 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:30:21 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/03 16:32:38 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 13:38:38 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Converting an integer value into a string filled with numerical characters
+**	refering to the value.
+*/
 
 char		*ft_itoa(long long int nbr)
 {

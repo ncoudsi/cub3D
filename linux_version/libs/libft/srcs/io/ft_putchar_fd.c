@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 14:53:02 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/10/08 14:53:11 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/15 14:05:34 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Printing a character in a file.
+*/
 
 void	ft_putchar_fd(int fd, char c)
 {

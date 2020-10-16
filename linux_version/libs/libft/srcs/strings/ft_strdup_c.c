@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup_c.c                                      :+:      :+:    :+:   */
+/*   ft_strduc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,18 @@
 
 #include "libft.h"
 
-char	*ft_strdup_c(char p_c)
-{
-	char	*dup;
+/*
+**	Allocating memory for a new string containing only c character.
+**	Then returns the string.
+*/
 
-	dup = (char *)malloc(sizeof(char) * 2);
-	if (dup == NULL)
+char	*ft_strdup_c(char c)
+{
+	char	*result;
+
+	result = ft_strnew(1);
+	if (result == NULL)
 		return (NULL);
-	dup[0] = p_c;
-	dup[1] = '\0';
-	return (dup);
+	result[0] = c;
+	return (result);
 }

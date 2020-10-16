@@ -3,67 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rm_charset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 18:59:06 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/26 19:54:49 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/16 11:29:01 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_bool	is_not_in_cs(char p_c, char *p_charset)
-{
-	int		index;
+/*
+**	Counting the lenght of the string without the characters of
+**	the charset and returning it.
+*/
 
-	index = 0;
-	while (p_charset && p_charset[index])
-	{
-		if (p_c == p_charset[index])
-			return (false);
-		index++;
-	}
-	return (true);
-}
-
-static int		str_len_without_cs(char *p_str, char *p_charset)
+static int		len_without_charset(char *str, char *charset)
 {
 	int result;
 	int index;
 
 	result = 0;
 	index = 0;
-	while (p_str && p_str[index])
+	if (str == NULL)
+		return (result);
+	while (str[index] != '\0')
 	{
-		if (is_not_in_cs(p_str[index], p_charset))
+		if (is_char_in_str(str[index], charset) == false)
 			result++;
 		index++;
 	}
 	return (result);
 }
 
-char			*ft_rm_charset(char *p_str, char *p_charset)
+/*
+**	Removing all characters of a charset of a string and returning
+**	the cleaned string.
+*/
+
+char			*ft_rm_charset(char *str, char *charset)
 {
 	char	*result;
 	int		index;
-	int		index2;
-	int		len_without_c;
+	int		result_index;
 
+	if (str == NULL)
+		return (NULL);
 	index = 0;
-	index2 = 0;
-	len_without_c = str_len_without_cs(p_str, p_charset);
-	result = ft_strnew(len_without_c);
+	result_index = 0;
+	result = ft_strnew(len_without_charset(str, charset));
 	if (result == NULL)
 		return (NULL);
-	while (p_str && p_str[index])
+	while (str[index] != '\0')
 	{
-		if (is_not_in_cs(p_str[index], p_charset))
+		if (is_char_in_str(str[index], charset) == false)
 		{
-			result[index2] = p_str[index];
-			index2++;
+			result[result_index] = str[index];
+			result_index++;
 		}
 		index++;
 	}
-	free(p_str);
+	free(str);
 	return (result);
 }

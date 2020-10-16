@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/14 14:11:26 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/02/25 12:11:30 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/16 12:30:59 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Creating a new 2 dimensions array of size entries. Heap allocated.
+*/
 
 void	**ft_tab_new(int size)
 {

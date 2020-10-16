@@ -6,24 +6,29 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 15:19:55 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/04 15:50:24 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 11:54:31 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *p_src, char *p_dest)
-{
-	int	i;
+/*
+**	Copying the characters of src string in dest string. Returns dest after the
+**	copy. Note that we do not proceed to any memory allocation.
+*/
 
-	i = 0;
-	if (p_src == NULL || p_dest == NULL)
+char	*ft_strcpy(char *src, char *dest)
+{
+	int	index;
+
+	index = 0;
+	if (src == NULL || dest == NULL)
 		return (NULL);
-	while (p_src[i] != '\0')
+	while (src[index] != '\0')
 	{
-		p_dest[i] = p_src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	p_dest[i] = '\0';
-	return (p_dest);
+	dest[index] = '\0';
+	return (dest);
 }

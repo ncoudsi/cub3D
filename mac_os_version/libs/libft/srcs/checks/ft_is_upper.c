@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_upper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:25:38 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/25 12:36:24 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/14 15:36:22 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_is_upper(char p_c)
+/*
+**	Checking if a character is an upper case alphabetic.
+*/
+
+t_bool	ft_is_upper(char c)
 {
-	if (p_c >= 'A' && p_c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (true);
 	return (false);
 }

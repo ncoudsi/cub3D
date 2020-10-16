@@ -6,30 +6,34 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 13:46:00 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/03 17:23:49 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 11:58:17 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *p_src)
-{
-	int		i;
-	int		len;
-	char	*dup;
+/*
+**	Copying the characters of src string in a new string. Note that we allocate
+**	memory for the new string before copying.
+*/
 
-	if (p_src == NULL)
+char	*ft_strdup(char *src)
+{
+	int		index;
+	int		len;
+	char	*result;
+
+	if (src == NULL)
 		return (NULL);
-	len = ft_strlen(p_src);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (dup == NULL)
+	len = ft_strlen(src);
+	result = ft_strnew(len);
+	if (result == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len)
+	index = 0;
+	while (index < len)
 	{
-		dup[i] = p_src[i];
-		i++;
+		result[index] = src[index];
+		index++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (result);
 }

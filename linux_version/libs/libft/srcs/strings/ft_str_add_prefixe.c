@@ -6,20 +6,24 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 11:02:39 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/11 11:21:50 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 11:51:13 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_str_add_prefixe(char *p_prefixe, char **p_str)
+/*
+**	Adding a prefixe to a string. Free the old string, re-allocate the new one.
+*/
+
+void		ft_str_add_prefixe(char *prefixe, char **str)
 {
 	char	*tmp;
 
-	if (p_prefixe == NULL || p_str == NULL)
+	if (prefixe == NULL)
 		return ;
-	tmp = ft_strdup(*p_str);
-	free(*p_str);
-	*p_str = ft_strjoin(p_prefixe, tmp);
+	tmp = ft_strdup(*str);
+	free(*str);
+	*str = ft_strjoin(prefixe, tmp);
 	free(tmp);
 }

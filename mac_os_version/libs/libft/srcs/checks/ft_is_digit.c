@@ -6,11 +6,15 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 10:28:38 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/02/25 12:34:56 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/14 15:35:12 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Checking if a character is numeric.
+*/
 
 t_bool	ft_is_digit(char c)
 {

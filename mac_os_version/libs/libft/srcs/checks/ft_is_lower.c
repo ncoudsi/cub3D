@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_lower.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldutriez <ldutriez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 12:27:37 by ldutriez          #+#    #+#             */
-/*   Updated: 2020/02/25 12:36:28 by ldutriez         ###   ########.fr       */
+/*   Updated: 2020/10/14 15:35:56 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_is_lower(char p_c)
+/*
+**	Checking if a character is a lower case alphabetic.
+*/
+
+t_bool	ft_is_lower(char c)
 {
-	if (p_c >= 'a' && p_c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (true);
 	return (false);
 }

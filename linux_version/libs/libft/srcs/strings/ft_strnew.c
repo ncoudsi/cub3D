@@ -6,26 +6,30 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 13:39:13 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/02 18:09:37 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 12:16:39 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t p_len)
-{
-	char		*new;
-	size_t		i;
+/*
+**	Allocating memory for a new string of len lenght and filling it with '\0'.
+*/
 
-	new = (char *)malloc(sizeof(char) * (p_len + 1));
-	if (new == NULL)
+char	*ft_strnew(size_t len)
+{
+	char		*result;
+	size_t		index;
+
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
 		return (NULL);
-	i = 0;
-	while (i < p_len)
+	index = 0;
+	while (index < len)
 	{
-		new[i] = '\0';
-		i++;
+		result[index] = '\0';
+		index++;
 	}
-	new[i] = '\0';
-	return (new);
+	result[index] = '\0';
+	return (result);
 }

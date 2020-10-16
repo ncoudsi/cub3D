@@ -6,20 +6,24 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 18:32:29 by ncoudsi           #+#    #+#             */
-/*   Updated: 2019/12/11 11:21:43 by ncoudsi          ###   ########.fr       */
+/*   Updated: 2020/10/16 11:51:45 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_str_add_suffix(char **p_str, char *p_suffix)
+/*
+**	Adding a suffix to a string. Free the old string, re-allocate the new one.
+*/
+
+void	ft_str_add_suffix(char **str, char *suffix)
 {
 	char	*tmp;
 
-	if (p_str == NULL || p_suffix == NULL)
+	if (suffix == NULL)
 		return ;
-	tmp = ft_strdup(*p_str);
-	free(*p_str);
-	*p_str = ft_strjoin(tmp, p_suffix);
+	tmp = ft_strdup(*str);
+	free(*str);
+	*str = ft_strjoin(tmp, suffix);
 	free(tmp);
 }

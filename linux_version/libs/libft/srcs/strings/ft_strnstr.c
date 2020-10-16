@@ -3,33 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tguilbar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 15:09:03 by tguilbar          #+#    #+#             */
-/*   Updated: 2020/02/25 15:10:44 by tguilbar         ###   ########.fr       */
+/*   Created: 2020/10/14 16:32:44 by ncoudsi           #+#    #+#             */
+/*   Updated: 2020/10/14 16:42:56 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+**	Searching for the full needle string is found in the haystack string, but
+**	only checking len characters. If needle is found, returns a pointer on
+**	haystack string, starting at the first character of needle. If needle is
+**	not found, returns NULL.
+*/
+
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t	haystack_index;
+	size_t	needle_index;
 
-	i = 0;
-	if (!*needle)
-		return ((char*)haystack);
-	while (haystack[i] && i < len)
+	haystack_index = 0;
+	if (needle == NULL || ft_strlen(needle) == 0)
+		return (haystack);
+	while (haystack[haystack_index] != '\0' && haystack_index < len)
 	{
-		j = 0;
-		while (needle[j] == haystack[i + j] && i + j < len)
+		needle_index = 0;
+		while (needle[needle_index] == haystack[haystack_index + needle_index]
+		&& haystack_index + needle_index < len)
 		{
-			if (needle[j + 1] == '\0')
-				return ((char*)haystack + i);
-			j++;
+			if (needle[needle_index + 1] == '\0')
+				return (haystack + haystack_index);
+			needle_index++;
 		}
-		i++;
+		haystack_index++;
 	}
 	return (NULL);
 }

@@ -6,92 +6,117 @@
 /*   By: ncoudsi <ncoudsi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 10:57:07 by ncoudsi           #+#    #+#             */
-/*   Updated: 2020/01/27 09:49:56 by tguilbar         ###   ########.fr       */
+/*   Updated: 2020/10/16 12:32:10 by ncoudsi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_word_count(char *p_src, char p_sep)
-{
-	size_t i;
-	size_t count;
+/*
+**	Counting how many words we have after splitting the initial string.
+*/
 
-	i = 0;
-	count = 0;
-	while (p_src[i] != '\0')
+static size_t	word_count(char *src, char sep)
+{
+	size_t index;
+	size_t result;
+
+	index = 0;
+	result = 0;
+	while (src[index] != '\0')
 	{
-		if (p_src[i] == p_sep)
-			i++;
-		if (p_src[i] != '\0' && p_src[i] != p_sep)
+		if (src[index] == sep)
+			index++;
+		if (src[index] != '\0' && src[index] != sep)
 		{
-			count++;
-			while (p_src[i] != '\0' && p_src[i] != p_sep)
-				i++;
+			result++;
+			while (src[index] != '\0' && src[index] != sep)
+				index++;
 		}
 	}
-	return (count);
+	return (result);
 }
 
-static void		*ft_clear(char **p_tab, int p_j)
+/*
+**	In case of error, free everything.
+*/
+
+static void		clear(char **tab, int tab_index)
 {
-	while (p_j >= 0)
+	while (tab_index >= 0)
 	{
-		free(p_tab[p_j]);
-		p_j--;
+		free(tab[tab_index]);
+		tab_index--;
 	}
-	free(p_tab);
-	return (NULL);
+	free(tab);
 }
 
-static size_t	ft_wordlen(char *p_src, char p_sep)
+/*
+**	Counting the size of a word, wich is ended whenever we encounter
+**	a separator.
+*/
+
+static size_t	word_len(char *src, char sep)
 {
 	size_t	result;
 
 	result = 0;
-	while (p_src[result] != '\0' && p_src[result] != p_sep)
+	while (src[result] != '\0' && src[result] != sep)
 		result++;
 	return (result);
 }
 
-static char		**ft_fill_tab(char **p_tab, char *p_src,
-												char p_sep, size_t tab_size)
-{
-	size_t i;
-	size_t j;
+/*
+**	Filling the char ** containing the splitted strings.
+*/
 
-	i = 0;
-	j = 0;
-	while (j < tab_size)
+static void		fill_tab(char **tab, char *src,
+				char sep, size_t tab_size)
+{
+	size_t index;
+	size_t tab_index;
+
+	index = 0;
+	tab_index = 0;
+	while (tab_index < tab_size)
 	{
-		while (p_src[i] != '\0' && p_src[i] == p_sep)
-			i++;
-		if (p_src[i] != '\0')
+		while (src[index] != '\0' && src[index] == sep)
+			index++;
+		if (src[index] != '\0')
 		{
-			p_tab[j] = ft_strsub(p_src, i, ft_wordlen(p_src + i, p_sep));
-			if (p_tab[j] == NULL)
-				return (ft_clear(p_tab, j));
+			tab[tab_index] = ft_strsub(src, index,
+			word_len(src + index, sep));
+			if (tab[tab_index] == NULL)
+			{
+				clear(tab, tab_index);
+				return ;
+			}
 		}
-		while (p_src[i] != '\0' && p_src[i] != p_sep)
-			i++;
-		j++;
+		while (src[index] != '\0' && src[index] != sep)
+			index++;
+		tab_index++;
 	}
-	p_tab[j] = NULL;
-	return (p_tab);
+	tab[tab_index] = NULL;
 }
 
-char			**ft_split(char *p_src, char p_sep)
+/*
+**	Splitting a string into multiple ones depending on sep character.
+**	Returns a pointer to the first string of the multiple new ones.
+*/
+
+char			**ft_split(char *src, char sep)
 {
 	size_t	tab_size;
 	char	**result;
 
-	if (p_src == NULL || p_sep == '\0')
+	if (src == NULL || sep == '\0')
 		return (NULL);
-	tab_size = ft_word_count(p_src, p_sep);
-	result = (char **)malloc(sizeof(char *) * (tab_size + 1));
+	tab_size = word_count(src, sep);
+	result = (char **)ft_tab_new(tab_size);
 	if (result == NULL)
 		return (NULL);
-	if (ft_fill_tab(result, p_src, p_sep, tab_size) == NULL)
+	fill_tab(result, src, sep, tab_size);
+	if (result == NULL)
 		return (NULL);
 	return (result);
 }
